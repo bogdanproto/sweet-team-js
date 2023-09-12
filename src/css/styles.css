@@ -8,7 +8,45 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 @import url('./reset.css');
 @import url('./common.css');
-@import url('./header.css');
+@import url('./section/header.css');
+@import url('./section/hero.css');
 
 :root {
+  /* ---------------element colors-----------------  */
+
+  /* background */
+  --color-page-bcg: rgb(248, 248, 248, 100%);
+  --color-menu-mobile-bcg: rgb(155, 181, 55, 100%);
+
+  /* text */
+  --color-title-text: rgb(5, 5, 5, 100%);
+  --color-green-title-text: rgb(155, 181, 55, 100%);
+
+  /* cards */
+  --color-card-hero-text: rgb(248, 248, 248, 60%);
+  --color-card-text: rgb(248, 248, 248, 100%);
+
+  /* filter */
+  --color-selector-text: rgb(5, 5, 5, 50%);
+  --color-selector-categ-text: rgb(5, 5, 5, 30%);
+  --color-selector-categ: rgb(5, 5, 5, 20%);
+
+  /* button */
+  --color-button-text: #050505;
+  --color-button-card-bcg: rgb(155, 181, 55, 100%);
+
+  /* rating */
+  --color-rating-bcg: rgb(238, 161, 12, 100%);
+
+  /* hover and select color */
+  --color-hover-bcg: rgb(155, 181, 55, 100%);
+  --color-select-open-bcg: rgb(255, 255, 255, 100%);
+
+  /* ---------------animation --------------------------*/
+
+  /* Transition */
+  --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* shadow */
+  --reviews-card-shadow: 0px 9.04932px 26.5717px rgba(215, 228, 249, 0.25);
 }
