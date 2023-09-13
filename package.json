@@ -23,6 +23,7 @@
     "rater-js": "^1.0.1",
     "slick-carousel": "^1.8.1",
     "slim-select": "^2.6.0",
+    "swiper": "^10.2.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }

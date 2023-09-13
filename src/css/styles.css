@@ -10,6 +10,12 @@
 @import url('./common.css');
 @import url('./section/header.css');
 @import url('./section/hero.css');
+@import url('./section/favorites.css');
+@import url('./section/all-categories.css');
+@import url('./section/recipes.css');
+@import url('./section/popular.css');
+@import url('./section/modal-recipe.css');
+@import url('./section/modal-rating.css');
 
 :root {
   /* ---------------element colors-----------------  */

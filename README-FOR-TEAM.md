@@ -27,7 +27,8 @@
 
 6. Libraries(всі ліби додані до проекту, просто робіть імпорт):
 
-6.1 Слайдер https://kenwheeler.github.io/slick/
+6.1 Слайдер https://kenwheeler.github.io/slick/ або
+https://swiperjs.com/get-started
 
 6.2 Селектори npm install slim-select
 
