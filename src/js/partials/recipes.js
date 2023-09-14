@@ -1,6 +1,5 @@
-import SlimSelect from 'slim-select';
-import 'slim-select/dist/slimselect';
 
+import SlimSelect from 'slim-select';
 // const elements = {
 //   timeSelect: document.querySelector('.time-select'),
 //   areaSelect: document.querySelector('.area-select'),
