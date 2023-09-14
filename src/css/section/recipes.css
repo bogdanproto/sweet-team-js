@@ -149,10 +149,30 @@ root {
 
   border-radius: 8px;
   border: none;
-  transition: var(--transition-dur-func);
+  transition: color var(--transition-dur-func);
 }
 
 .recipe-card-btn:hover,
 .recipe-card-btn:focus {
   color: var(--color-hover-text);
+}
+
+.recipe-heart-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.recipe-heart-icon {
+  fill: rgba(248, 248, 248, 0);
+  stroke: rgba(248, 248, 248, 0.9);
+  stroke-width: 2;
+  transition: fill var(--transition-dur-func);
+}
+
+.recipe-heart-button:hover .recipe-heart-icon {
+  fill: rgba(248, 248, 248, 0.9);
 }
