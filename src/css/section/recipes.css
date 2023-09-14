@@ -44,7 +44,9 @@ root {
 
 @media only screen and (min-width: 1200px) {
   .recipe-container {
-    max-width: 846px;
+    max-width: 910px;
+    padding-right: 64px;
+    padding-left: 64px;
   }
 }
 
@@ -118,6 +120,10 @@ root {
   font-size: 12px;
   line-height: 1.33;
 
+  /* ... в 2рядковому тексті */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -137,6 +143,10 @@ root {
   padding: 8px 14px;
   color: var(--color-card-text);
   background-color: var(--color-button-card-bcg);
+
+  font-size: 12px;
+  font-weight: 500;
+
   border-radius: 8px;
   border: none;
   transition: var(--transition-dur-func);
