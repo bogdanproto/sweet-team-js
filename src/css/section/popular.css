@@ -1,0 +1,65 @@
+.popular-section-title {
+  text-transform: uppercase;
+  color: var(--color-title-text);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  /* text-align: center; */
+  margin-bottom: 20px;
+}
+
+.popular-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.popular-list-style {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.popular-image {
+  width: 64px;
+  height: 64px;
+}
+
+.popular-text {
+  height: 64px;
+  overflow: hidden;
+}
+
+.popular-recipe-name {
+  color: var(--color-title-text);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.28;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.popular-recipe {
+  overflow: hidden;
+  color: rgba(5, 5, 5, 0.8);
+  text-overflow: ellipsis;
+  /* whitespace: nowrap; */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.33;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .popular-container {
+    width: 176px;
+  }
+}
+
+/* @media only screen and (min-width: 1200px) {
+} */
