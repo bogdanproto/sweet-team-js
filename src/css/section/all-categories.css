@@ -1,0 +1,44 @@
+/* Тимчасові стилі, просто для візуалізації секції */
+
+.all-categories {
+  /* outline: 1px solid blue; */
+  margin: 80px auto 10px 20px;
+}
+
+/* Дивна поведінка click */
+.all-categories-btn {
+  padding: 14px 29px;
+  border-radius: 15px;
+
+  font-size: 18px;
+
+  color: var(--color-selector-text);
+  background-color: var(--color-page-bcg);
+  border-color: var(--color-selector-categ);
+}
+
+.all-categories-btn:hover {
+  color: var(--color-card-text);
+  background-color: var(--color-hover-bcg);
+  border-color: var(--color-hover-bcg);
+}
+
+.all-categories-list {
+  /* outline: 1px solid tomato; */
+  height: 200px;
+  margin-top: 24px;
+  overflow-y: scroll;
+}
+
+.all-categories-item {
+  padding: 9px 0;
+
+  font-size: 16px;
+  color: var(--color-selector-categ-text);
+
+  cursor: pointer;
+}
+
+.all-categories-selected {
+  color: var(--color-hover-bcg);
+}
