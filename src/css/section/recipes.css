@@ -157,12 +157,20 @@ root {
   color: var(--color-hover-text);
 }
 
-.recipe-heart-button {
+.recipe-heart-label {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: none;
-  border: none;
+  display: inline-block;
+}
+
+.recipe-heart-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -173,6 +181,12 @@ root {
   transition: fill var(--transition-dur-func);
 }
 
-.recipe-heart-button:hover .recipe-heart-icon {
+.recipe-heart-checkbox:checked + .recipe-heart-icon {
   fill: rgba(248, 248, 248, 0.9);
+}
+
+.time-select,
+.area-select,
+.ingridients-select {
+  display: none;
 }
