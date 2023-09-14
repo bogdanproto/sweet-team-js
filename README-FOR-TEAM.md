@@ -30,7 +30,7 @@
 6.1 Слайдер https://kenwheeler.github.io/slick/ або
 https://swiperjs.com/get-started
 
-6.2 Селектори npm install slim-select
+6.2 Селектори https://slimselectjs.com/
 
 6.3 Рейтінг https://fredolss.github.io/rater-js/
 
