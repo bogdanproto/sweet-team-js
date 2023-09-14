@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   src: local('Inter Regular'), local('Inter-Regular'),
     url('/fonts/inter-regular.woff2') format('woff2'),
     url('/fonts/inter-regular.woff') format('woff');
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   src: local('Inter Medium'), local('Inter-Medium'),
     url('/fonts/inter-medium.woff2') format('woff2'),
     url('/fonts/inter-medium.woff') format('woff');
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   src: local('Inter SemiBold'), local('Inter-SemiBold'),
     url('/fonts/inter-semibold.woff2') format('woff2'),
     url('/fonts/inter-semibold.woff') format('woff');
