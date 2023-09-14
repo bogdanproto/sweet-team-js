@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="../css/section/order-now.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+<section>
+
+<!-- MODAL MENU BUTTON-->
+
+<!--Modal menu---->
+<div class="backdrop is-hidde" data-modal>
+    <div class="modal">
+        <button type="button" class="btn-modal-close" data-modal-close>
+            <svg class="icon-close">
+                <use href=""></use>
+            </svg>
+        </button>
+        <h2 class="title-modal">ORDER NOW</h2>
+
+        <!-- Modal menu form-->
+        <form class="callback-form" name="callback-form" novalidate>
+            <div class="callback-form-inputs">
+                <!-- Name -->
+                <div class="modal-field">
+                    <label class="label-title" for="buyer-name">Name</label>
+                    <input class="modal-input" type="text" name="buyer-name" placeholder="Enter your full name"
+                    pattern="[a-z]{1,15}" title="Username should only contain lowercase letters. e.g. john"
+                    autofocus required id="bueyr-name">
+                </div>
+                <!-- Phone number -->
+                <div class="modal-field">
+                    <label class="label-title" for="buyer-phone-number">Phone number</label>
+                    <input class="modal-input" type="tel" name="buyer-tel" placeholder="Enter your phone"
+                        id="buyer-tel" required />
+                </div>
+                <!--Email-->
+                <div class="modal-field">
+                    <label class="label-title" for="buyer-email">Card number</label>
+                    <input class="modal-input" type="text" name="buyer-email" pattern="[a-z]{1,15}"
+                        placeholder="Enter your email" id="buyer-email" required />
+                </div>
+                <!-- Comments-->
+                <div class="modal-field">
+                    <label class="label-title" for="buyer-comment">Comments</label>
+                    <textarea class="form-comment modal-input" placeholder="Enter your text"
+                        id="buyer-comment"></textarea>
+                </div>
+            </div>
+            <div class="order">
+                
+                <!--Send button-->
+                <button class="send-btn" type="submit">Send</button>
+                <!--That nobody read-->
+                <span class="info-text">By clicking on “Send message” button, you agree to our
+                    <a href="https://privacy.microsoft.com/en-us" class="link-license">Privacy Policy</a>
+                    , and allow Promodo to use this information for marketing
+                    purposes.</span>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
