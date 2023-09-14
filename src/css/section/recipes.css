@@ -190,3 +190,61 @@ root {
 .ingridients-select {
   display: none;
 }
+
+/* стилі на інпут */
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label[for='recipe-input'] {
+  font-size: 14px;
+  color: rgba(5, 5, 5, 0.5);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 278px;
+  margin-bottom: 44px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.search-recipe {
+  padding-left: 48px; /* 18px (ширина іконки) + 12px (відступ) */
+  display: flex;
+  padding-right: 122px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 15px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.search-recipe::placeholder {
+  color: var(--color-selector-text);
+}
+
+.search-icon {
+  fill: var(--color-selector-text);
+}
