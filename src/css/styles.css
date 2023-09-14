@@ -18,6 +18,7 @@
 @import url('./section/popular.css');
 @import url('./section/modal-recipe.css');
 @import url('./section/modal-rating.css');
+@import url('../../node_modules/slim-select/dist/slimselect.css');
 
 :root {
   /* ---------------element colors-----------------  */
