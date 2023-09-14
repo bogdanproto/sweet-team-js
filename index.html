@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/recipes-84feda2b.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/recipes-895856c0.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/recipes-ce3c105b.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/recipes-38b3da4d.css">
   </head>
   <body>
     <header class="header">
@@ -65,18 +65,34 @@
         <section class="recipes">
   <div class="recipe-container">
 
+<div class="search-container">
+    <label for="recipe-input">Search</label>
+    <div class="input-wrapper">
+        <svg class="search-icon" width="18" height="18">
+            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-search"></use>
+        </svg>
+        <input type="text" class="js-search-recipe search-recipe" placeholder="Enter Text">
+    </div>
+</div>
+
 <select class="time-select"></select>
 <select class="area-select"></select>
 <select class="ingridients-select"></select>
 
+
+
     <ul class=" recipe-list">
       <li class="recipe-list-item recipe-card">
         <img src="https://www.themealdb.com/images/media/meals/qtwtss1468572261.jpg" alt="Mediterranean Pasta Salad">
-        <button class = "recipe-heart-button">
-            <svg class="recipe-heart-icon" width="22" height="22">
-                        <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-heart"></use>
-                      </svg>
-        </button>
+
+<label class="recipe-heart-label">
+  <input type="checkbox" class="recipe-heart-checkbox">
+  <svg class="recipe-heart-icon" width="22" height="22">
+    <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-heart"></use>
+  </svg>
+</label>
+
+
     <div class="recipe-info">
         <h2 class="recipe-title">Mediterranean  Salad</h2>
         <p class="recipe-description">A salad made with pasta, vegetables (such as tomatoes, cucumbers, and olives), feta cheese, and a dressing made with olive oil and lemon juice.</p>
