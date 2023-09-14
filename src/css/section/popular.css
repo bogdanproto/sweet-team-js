@@ -5,8 +5,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
-  /* text-align: center; */
+  line-height: 1.28;
   margin-bottom: 20px;
 }
 
@@ -15,10 +14,11 @@
   flex-direction: column;
   gap: 24px;
 }
+
 .popular-list-style {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  /* gap: 16px; */
 }
 
 .popular-image {
@@ -29,6 +29,8 @@
 .popular-text {
   height: 64px;
   overflow: hidden;
+  white-space: nowrap;
+  margin-left: 16px;
 }
 
 .popular-recipe-name {
@@ -46,20 +48,75 @@
   overflow: hidden;
   color: rgba(5, 5, 5, 0.8);
   text-overflow: ellipsis;
-  /* whitespace: nowrap; */
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.33;
-  white-space: nowrap;
 }
 
 @media only screen and (min-width: 768px) {
   .popular-container {
     width: 176px;
   }
+
+  .popular-lists {
+    gap: 16px;
+  }
+
+  .popular-text {
+    height: 67px;
+    overflow: hidden;
+    width: 120px;
+  }
+
+  .popular-section-title {
+    margin-bottom: 32px;
+    line-height: 1.33;
+  }
+
+  .popular-recipe-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+  }
+
+  .popular-recipe {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .popular-image {
+    width: 48px;
+    height: 48px;
+  }
 }
 
-/* @media only screen and (min-width: 1200px) {
-} */
+@media only screen and (min-width: 1200px) {
+  .popular-container {
+    width: 235px;
+  }
+
+  .popular-section-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.16;
+  }
+
+  .popular-lists {
+    gap: 32px;
+  }
+
+  .popular-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .popular-text {
+    height: 64px;
+    overflow: hidden;
+    width: 155px;
+  }
+}
