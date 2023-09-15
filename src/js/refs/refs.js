@@ -1,5 +1,7 @@
 export const refs = {
   body: document.querySelector('body'),
+  allCategoriesBtn: document.querySelector('.all-categories-btn'),
+  allCategoriesList: document.querySelector('.all-categories-list'),
 
   //favorites page
   filterFavorites: document.querySelector('.favorites-cards-filter'),
@@ -7,4 +9,5 @@ export const refs = {
     '.favorites-cards-container'
   ),
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
+
 };
