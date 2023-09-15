@@ -18,32 +18,59 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="chef">
-              <picture>
-                <source srcset="${imgWebpUrl}" type="img/webp" />
-                <source srcset="${imgUrl}" type="img/png" />
-                <img class="chef-photo" alt="" />
-              </picture>
+              <img
+                class="chef-photo"
+                src="${cook.imgWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="chef-photo"
+                src="${cook.imgUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
             </div>
             <div class="dish">
-              <picture>
-                <source srcset="${imgWebpUrl}" type="img/webp" />
-                <source srcset="${imgUrl}" type="img/png" />
-                <img class="dish-photo" alt="" />
-              </picture>
-              <h2 class="dish-title"></h2>
-              <p class="dish-origin"></p>
+              <img
+                class="dish-photo"
+                src="${topic.imgWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="dish-photo"
+                src="${topic.imgUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
+              <h2 class="dish-title">${topic.name}</h2>
+              <p class="dish-origin">${topic.area}</p>
             </div>
             <div class="card">
-              <picture>
-                <source srcset="${previewWebpUrl}" type="img/webp" />
-                <source srcset="${previewUrl}" type="img/png" />
-                <img class="card-img" src="" alt="" />
-              </picture>
+              <img
+                class="card-photo"
+                src="${topic.previewWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="card-photo"
+                src="${topic.previewUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
