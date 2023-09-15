@@ -3,6 +3,7 @@ import './js/api/api-service';
 import './js/partials/all-categories';
 import './js/partials/favorites-recipes';
 import './js/partials/recipes';
+import { loadFavoritesData } from './js/partials/favorites-recipes';
 import './js/partials/popular';
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -19,6 +20,7 @@ function loadDataOnHomePage() {
 
 function loadDataOnFavoritesPage() {
   console.log('Data Favorites was loaded');
+  loadFavoritesData();
 }
 
 // const currentPage = window.location.href;

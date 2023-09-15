@@ -14,16 +14,19 @@ async function loadAllCategories() {
   try {
     const allCategories = await getAllCategories();
     refs.allCategoriesList.innerHTML = createAllCategoriesMarkup(allCategories);
+    onKitListenerAllCategories();
   } catch (error) {
     Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
 }
 
 // "Тимчасовий" виклик функції. Потім буде перенесений в main.js на подію load
-loadAllCategories();
+// loadAllCategories();
 
-refs.allCategoriesList.addEventListener('click', onSelectCategory);
-refs.allCategoriesBtn.addEventListener('click', onResetCategory);
+function onKitListenerAllCategories() {
+  refs.allCategoriesList.addEventListener('click', onSelectCategory);
+  refs.allCategoriesBtn.addEventListener('click', onResetCategory);
+}
 
 function onSelectCategory(evt) {
   onResetCategory();

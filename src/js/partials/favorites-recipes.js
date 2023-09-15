@@ -7,6 +7,15 @@ const testObj = {
   limit: 20,
 };
 
+function onKitListnerFavorites() {
+  refs.filterFavorites.addEventListener('click', toFilterCards);
+}
+
+function offKitListnerFavorites() {
+  refs.filterFavorites.removeEventListener('click', toFilterCards);
+}
+
+//main function for favorites
 export async function loadFavoritesData() {
   const response = await getAllRecipes(testObj);
   const arrayMeal = response.results;
@@ -14,12 +23,12 @@ export async function loadFavoritesData() {
   if (!arrayMeal.length) {
     refs.recipesContainerFavorites.classList.add('visually-hidden');
     refs.emptyContainerFavorites.classList.remove('visually-hidden');
+    return;
   }
 
   const buttonList = toMarkUpFilterFavorites(arrayMeal);
   refs.filterFavorites.insertAdjacentHTML('beforeend', buttonList);
+  onKitListnerFavorites(); //switch listner kit for page
 
   refs.recipesContainerFavorites.classList.remove('visually-hidden');
 }
-
-// loadFavoritesData();

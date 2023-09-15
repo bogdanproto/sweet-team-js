@@ -12,6 +12,7 @@ export function toMarkUpFilterFavorites(arr) {
     .join('');
 
   return (
-    `<button class="btn-favorites-filter btn">All categories</button>` + markup
+    `<button class="btn-favorites-filter-active btn-favorites-filter btn">All categories</button>` +
+    markup
   );
 }
