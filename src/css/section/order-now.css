@@ -43,21 +43,17 @@
 }
 
 /*----------------------Кнопка закриття---------*/
-.icon-close {
-    width: 10px;
-    height: 10px;
-}
+/* .icon-close {
+    width: 24px;
+    height: 24px;
+} */
 
 .btn-modal-close {
     position: absolute;
-    width: 24px;
-    height: 24px;
-
     top: 16px;
-    right: 16px;
-    /* background: var(--main-white-color);
-    color: var(--dark-green-color); */
+    right: 16px;    
     border: none;
+    background-color: #fff;
 
     display: flex;
     justify-content: center;
@@ -98,13 +94,13 @@
 }
 
 /*-----------Перевірка вводу на коректність--------*/
-/* .modal-input:focus:invalid {
+.modal-input:focus:invalid {
     border-color: red;
 }
 
-.modal-input::focus:valid {
-    border-color: var(--dark-green-color);
-} */
+.modal-input:focus:valid {
+    border-color: green;
+}
 
 /*----------------------Коментар------------*/
 .form-comment {
