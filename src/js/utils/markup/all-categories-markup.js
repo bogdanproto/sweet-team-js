@@ -6,3 +6,5 @@ export function createAllCategoriesMarkup(array) {
     )
     .join('');
 }
+
+// По ТЗ повинні бути кнопки, але простими li зручніше
