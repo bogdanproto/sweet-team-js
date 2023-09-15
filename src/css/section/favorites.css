@@ -1,0 +1,33 @@
+.favorites-cards-container {
+  display: none;
+}
+
+.favorites-cards-filter {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 15px;
+  padding-bottom: 8px;
+}
+
+.btn-favorites-filter {
+  min-width: max-content;
+}
+
+.favorites-empty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: calc(100vh - 100px);
+}
+
+.favorites-empty-container-text {
+  display: block;
+  text-align: center;
+}
+
+.favorites-empty-container-logo {
+  display: block;
+}
