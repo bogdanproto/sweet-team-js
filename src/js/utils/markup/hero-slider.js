@@ -24,9 +24,7 @@ const hero_slider = new Swiper(`.js-hero-slider`{
 
 // функція яка повертає картинки майстерклас
 
-const swiperContainer = document.querySelector('.swiper-slide'),
-
-swiper-slide
+const swiperContainer = document.querySelector('.swiper-slide')
 
 function getAllEvents(slides) {
   const markup = slides.map(({cook.imgWebpUrl, cook.imgUrl,
