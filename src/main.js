@@ -5,7 +5,9 @@ import './js/partials/favorites-recipes';
 import './js/partials/recipes';
 import { loadFavoritesData } from './js/partials/favorites-recipes';
 import './js/partials/popular';
+import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
+import { loadRecipes } from './js/partials/recipes';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
@@ -17,8 +19,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function loadDataOnHomePage() {
   console.log('Data Home was loaded');
+  loadAllCategories();
   showPopularRecipes();
-  
+  loadRecipes();
 }
 
 function loadDataOnFavoritesPage() {
