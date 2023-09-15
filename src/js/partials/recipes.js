@@ -6,21 +6,21 @@ import { createRecipeMarkup } from '../utils/markup/recipe-markup';
 
 // =====================================================================
 
-const observer = new IntersectionObserver(loadMoreRecipes, {rootMargin: '600px'});
+const observer = new IntersectionObserver(loadMoreRecipes, {
+  rootMargin: '300px',
+});
 
-
+const params = {
+  category: '',
+  title: '',
+  page: 1,
+  limit: 6,
+  time: '',
+  area: '',
+  ingredient: '',
+};
 
 async function loadRecipes() {
-  const params = {
-    category: '',
-    title: '',
-    page: 1,
-    limit: 6,
-    time: '',
-    area: '',
-    ingredient: '',
-  };
-
   try {
     const { results: allRecipes, totalPages } = await getAllRecipes(params);
     refs.recipesList.insertAdjacentHTML(
@@ -31,7 +31,7 @@ async function loadRecipes() {
     if (params.page < totalPages) {
       observer.observe(refs.recipesGuard);
     } else {
-      observer.unobserve
+      observer.unobserve;
     }
 
     params.page += 1;
