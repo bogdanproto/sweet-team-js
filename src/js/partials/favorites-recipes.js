@@ -22,4 +22,4 @@ export async function loadFavoritesData() {
   refs.recipesContainerFavorites.classList.remove('visually-hidden');
 }
 
-loadFavoritesData();
+// loadFavoritesData();

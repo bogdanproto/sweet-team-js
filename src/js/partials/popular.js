@@ -3,13 +3,13 @@ import { createPopularMarkup } from '../utils/markup/popular-markup';
 
 async function showPopularRecipes() {
   try {
-    const POPULAR_DATA = await getAllPopularResipes();
+    const popularData = await getAllPopularResipes();
 
-    const POPULAR_MARKUP = createPopularMarkup(POPULAR_DATA);
+    const popularMarkup = createPopularMarkup(popularData);
 
-    const POPULAR_LIST = document.querySelector('.popular-lists');
+    const popularList = document.querySelector('.popular-lists');
 
-    POPULAR_LIST.insertAdjacentHTML('beforeend', POPULAR_MARKUP);
+    popularList.insertAdjacentHTML('beforeend', popularMarkup);
   } catch (error) {
     console.error('Error fetching or displaying popular recipes:', error);
   }
