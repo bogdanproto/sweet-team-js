@@ -82,37 +82,6 @@ function displayCardsInfo(slides) {
         </div>`).join("");
 }
 
-
-
-
-
-/* <div class="swiper-slide">
-            <div class="chef">
-              <picture>
-                <source srcset="${cook.imgWebpUrl}" type="img/webp" />
-                <source srcset="${cook.imgUrl}" type="img/png" />
-                <img class="chef-photo" src="${cook}"  />
-              </picture>
-            </div>
-            <div class="dish">
-              <picture>
-                <source srcset="${topic.imgWebpUrl}" type="img/webp" />
-                <source srcset="${topic.imgUrl}" type="img/png" />
-                <img class="dish-photo" src="${topic}"  />
-              </picture>
-              <h2 class="dish-title">${topic.name}</h2>
-              <p class="dish-origin">${topic.area}</p>
-            </div>
-            <div class="card">
-              <picture>
-                <source srcset="${topic.previewWebpUrl}" type="img/webp" />
-                <source srcset="${topic.previewUrl}" type="img/png" />
-                <img class="card-img" src="${topic}"  />
-              </picture>
-            </div>
-          </div>
-        </div> */
-
         
 //   ініцілізація слайдеру
 
