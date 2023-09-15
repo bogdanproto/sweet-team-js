@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 1200px) {
   .favorites-hero {
-    max-width: 1080px;
+    max-width: 1016px;
 
     background-image: url('../../img/favorites/hero-favorites-tablet.jpg');
   }
@@ -33,7 +33,7 @@
 .favorites-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 24px;
 }
 
@@ -58,9 +58,20 @@
   .favorites-cards-container {
     gap: 32px 16px;
   }
+
+  .favorites-cards-container .js-recipe {
+    width: calc((100% - 32px) / 3);
+  }
+
   .favorites-cards-filter {
     gap: 15px;
     margin-top: 64px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .favorites-cards-container .js-recipe {
+    width: calc((100% - 48px) / 4);
   }
 }
 

@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
 function loadDataOnHomePage() {
   console.log('Data Home was loaded');
   showPopularRecipes();
+  
 }
 
 function loadDataOnFavoritesPage() {
