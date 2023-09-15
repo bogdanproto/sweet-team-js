@@ -1,7 +1,7 @@
 import { getAllPopularResipes } from '../api/api-service';
 import { createPopularMarkup } from '../utils/markup/popular-markup';
 
-async function showPopularRecipes() {
+export async function showPopularRecipes() {
   try {
     const popularData = await getAllPopularResipes();
 
@@ -14,5 +14,3 @@ async function showPopularRecipes() {
     console.error('Error fetching or displaying popular recipes:', error);
   }
 }
-
-showPopularRecipes();
