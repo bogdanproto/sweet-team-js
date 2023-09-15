@@ -4,10 +4,11 @@ function createRecipeMarkup(arr) {
       ({
         _id,
         title,
+        category,
         description,
         preview,
         rating,
-      }) => `<li class="recipe-list-item recipe-card" data-id="${_id}">
+      }) => `<li class="recipe-list-item recipe-card js-recipe" data-id="${_id}" data-category="${category.toLowerCase()}">
   <img src="${preview}" alt="${title}">
 
 <label class="recipe-heart-label">
@@ -22,7 +23,7 @@ function createRecipeMarkup(arr) {
     <p class="recipe-description">${description}</p>
     <div class="recipe-rating-btn-cover">
     <p class="recipe-rating">${rating}</p>
-    <button class="recipe-card-btn">See recipe</button>
+    <button class="recipe-card-btn js-modal-recipe-open">See recipe</button>
     </div>
 </div>
 </li>`

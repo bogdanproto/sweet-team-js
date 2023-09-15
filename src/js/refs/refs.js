@@ -9,5 +9,5 @@ export const refs = {
     '.favorites-cards-container'
   ),
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
-
+  heroContainerFavorites: document.querySelector('.favorites-hero'),
 };

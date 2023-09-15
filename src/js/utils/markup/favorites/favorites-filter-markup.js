@@ -7,12 +7,12 @@ export function toMarkUpFilterFavorites(arr) {
     .filter((category, index, arr) => arr.indexOf(category) === index)
     .map(
       category =>
-        `<button class="btn-favorites-filter btn">${category}</button>`
+        `<button class="btn-favorites-filter btn" data-category="${category.toLowerCase()}">${category}</button>`
     )
     .join('');
 
   return (
-    `<button class="btn-favorites-filter-active btn-favorites-filter btn">All categories</button>` +
+    `<button class="btn-favorites-filter-active btn-favorites-filter btn" data-category="all">All categories</button>` +
     markup
   );
 }
