@@ -2,8 +2,8 @@
   <div class="container">
     <div class="left-side">
       <h1 class="hero-title">
-        Learn to Cook <span class="hero-words">Tasty Treats'</span>Customizable
-        Masterclass
+        Learn to Cook
+        <span class="hero-words"> Tasty Treats'</span> Customizable Masterclass
       </h1>
       <p class="hero-text">
         TastyTreats - Customize Your Meal with Ingredient Options and
@@ -11,6 +11,43 @@
       </p>
       <button class="btn" type="button">Order now</button>
     </div>
-    <div class="right-side"></div>
+    <div class="right-side">
+      <!-- Slider main container -->
+      <div class="swiper js-hero-slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+
+          <div class="swiper-slide">
+            <div class="chef">
+              <picture>
+                <source srcset="${imgWebpUrl}" type="img/webp" />
+                <source srcset="${imgUrl}" type="img/png" />
+                <img class="chef-photo" alt="" />
+              </picture>
+            </div>
+            <div class="dish">
+              <picture>
+                <source srcset="${imgWebpUrl}" type="img/webp" />
+                <source srcset="${imgUrl}" type="img/png" />
+                <img class="dish-photo" alt="" />
+              </picture>
+              <h2 class="dish-title"></h2>
+              <p class="dish-origin"></p>
+            </div>
+            <div class="card">
+              <picture>
+                <source srcset="${previewWebpUrl}" type="img/webp" />
+                <source srcset="${previewUrl}" type="img/png" />
+                <img class="card-img" src="" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
   </div>
 </section>

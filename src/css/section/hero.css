@@ -7,15 +7,25 @@ background-color: var(--color-page-bcg);
 .hero-title {
   color: var(--color-title-text);
   margin-bottom: 16px ;
+  text-transform: uppercase; 
 
 }
 
 .hero-words {
   color: var(--color-green-title-text);
+  font-style: italic;
+  text-transform: uppercase;
   
 }
 
 .hero-text {
   color: var(--color-title-text);
   margin-bottom: 32px;
+  line-height: 24px;
+  
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
