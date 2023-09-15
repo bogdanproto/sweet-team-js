@@ -4,6 +4,7 @@ import './js/partials/all-categories';
 import './js/partials/favorites-recipes';
 import './js/partials/recipes';
 import { loadFavoritesData } from './js/partials/favorites-recipes';
+import './js/partials/popular';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {

@@ -32,22 +32,3 @@ export async function loadFavoritesData() {
 
   refs.recipesContainerFavorites.classList.remove('visually-hidden');
 }
-
-function toFilterCards(evt) {
-  if (!evt.target.classList.contains('btn')) {
-    return;
-  }
-
-  //change active
-  clearBtnFilter();
-  evt.target.classList.add('btn-favorites-filter-active');
-}
-
-//clearButtonFilter
-function clearBtnFilter(evt) {
-  const listBtn = refs.filterFavorites.querySelectorAll(
-    '.btn-favorites-filter '
-  );
-
-  listBtn.forEach(btn => btn.classList.remove('btn-favorites-filter-active'));
-}

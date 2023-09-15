@@ -1,3 +1,10 @@
+.popular-container {
+  padding: 40px 20px 0 20px;
+  height: 242px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .popular-section-title {
   text-transform: uppercase;
   color: var(--color-title-text);
@@ -18,18 +25,16 @@
 .popular-list-style {
   display: flex;
   flex-direction: row;
-  /* gap: 16px; */
 }
 
 .popular-image {
   width: 64px;
   height: 64px;
+  border-radius: 8px;
 }
 
 .popular-text {
   height: 64px;
-  overflow: hidden;
-  white-space: nowrap;
   margin-left: 16px;
 }
 
@@ -41,23 +46,28 @@
   font-weight: 600;
   line-height: 1.28;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 
 .popular-recipe {
-  overflow: hidden;
   color: rgba(5, 5, 5, 0.8);
-  text-overflow: ellipsis;
-  font-family: Inter;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 1.33;
+  width: 255px;
+  height: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 @media only screen and (min-width: 768px) {
   .popular-container {
+    padding: 64px 0 0 0;
     width: 176px;
+    height: 436px;
   }
 
   .popular-lists {
@@ -66,7 +76,6 @@
 
   .popular-text {
     height: 67px;
-    overflow: hidden;
     width: 120px;
   }
 
@@ -85,6 +94,11 @@
   .popular-recipe {
     font-size: 10px;
     line-height: 1.4;
+    width: 120px;
+    height: 41px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 
   .popular-image {
@@ -96,6 +110,7 @@
 @media only screen and (min-width: 1200px) {
   .popular-container {
     width: 235px;
+    height: 514px;
   }
 
   .popular-section-title {
@@ -116,7 +131,10 @@
 
   .popular-text {
     height: 64px;
-    overflow: hidden;
+    width: 155px;
+  }
+
+  .popular-recipe {
     width: 155px;
   }
 }
