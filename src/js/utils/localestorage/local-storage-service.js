@@ -20,30 +20,4 @@ function getFavRec() {
   return JSON.parse(localStorage.getItem('favRecData')) || [];
 }
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Перевірка статусу чекбоксу фейворіт <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// let favRecData = getFavRec();
-// console.log(favRecData);
-
-// console.log(refs.inputRecipe.children);
-
-// function makeItChecked(arrayli,arrayLS) {
-//   for (const li of arrayli) {
-//     if ((arrayLS.findIndex(RecData => RecData._id === li.dataset.id)) >= 0 ) {
-//       li.children[0].checked = true
-//     }
-    
-
-//   }
-// }
-
-// if (favRecData.length === 0 || favRecData === null) {
-//   // change the ref
-//   refs.input.checked = false;
-  
-// } else if (favRecData.length > 0) {
-//     // change the ref
-//   makeItChecked(refs.inputRecipe.children, favRecData);
-// }
-
-
-export { onLikeClick, getFavRec };
+export { onLikeClick, getFavRec};
