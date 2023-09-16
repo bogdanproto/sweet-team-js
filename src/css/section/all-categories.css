@@ -24,6 +24,8 @@
   transition: color var(--transition-dur-func),
     background-color var(--transition-dur-func),
     border-color var(--transition-dur-func);
+  transition: color var(--transition-dur-func), background-color var(--transition-dur-func), border-color var(--transition-dur-func);
+
 }
 
 .all-categories-btn:hover,
@@ -45,10 +47,12 @@
 
   font-size: 16px;
   color: var(--color-selector-categ-text);
+  transition: color var(--transition-dur-func);
 
   cursor: pointer;
 }
 
-.all-categories-selected {
+.all-categories-item:hover,
+.selected-category {
   color: var(--color-hover-bcg);
 }
