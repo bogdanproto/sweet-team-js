@@ -1,3 +1,58 @@
 <header class="header">
-  <h1>header</h1>
+  <div class="header-container">
+    <ul class="header-pages">
+      <li><a class="header-pages-item" href="../index.html">Home</a></li>
+      <li>
+        <a class="header-pages-item" href="../favorites.html">Favorites</a>
+      </li>
+    </ul>
+    <a class="header-name" href="../index.html">
+      <span class="header-name-span">tasty</span>treats.</a
+    >
+    <ul class="header-list-svg">
+      <li class="header-icon-svg">
+        <button class="header-basket">
+          <svg width="24" height="24">
+            <use href="../img/sprite.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-icon-svg burger-svg">
+        <button class="menu-toggle js-open-menu">
+          <svg width="32" height="32">
+            <use href="../img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <label class="switch toggle">
+      <input type="checkbox" id="themeSwitch" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <!-- Header Mob menu -->
+  <div class="mobile-menu menu-container js-menu-container" id="mobile-menu">
+    <div class="mobile-menu-container">
+      <button class="header-mobile_close-btn js-close-menu menu-toggle">
+        <svg class="header-mobile-menu_close-icon" width="16" height="16">
+          <use href="../img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="header-mobile_modal-menu list">
+        <li class="header-mobile_modal-item header-mob-home">
+          <a class="header-mobile_modal-link link " href="../index.html">Home</a>
+        </li>
+        <li class="header-mobile_modal-item">
+          <a class="header-mobile_modal-link link" href="../favorites.html"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </div>
+   
+      <button class="header-mob-switcher"></button>
+  
+  </div>
+  <script src="../js/partials/burger-menu.js"></script>
 </header>
