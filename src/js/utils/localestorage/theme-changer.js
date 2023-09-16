@@ -2,7 +2,7 @@ import { refs } from '../refs/refs';
 
 // refs.input.addEventListener('click', themeChangerTolocalStorage); // <<<<<<<< need to change the ref
 
-export  function themeChangerTolocalStorage(event) {
+function themeChangerTolocalStorage(event) {
   event.target.checked ? localStorage.setItem('themeColor', 'dark') : localStorage.setItem('themeColor', 'white');
   let theme = localStorage.getItem('themeColor');
 if (theme === 'white') {
@@ -15,6 +15,7 @@ if (theme === 'white') {
 }
 
 
+function stylesAfterReload() {
 let currentStyle = localStorage.getItem('themeColor');
 
 if (currentStyle === 'white' || currentStyle === null) {
@@ -27,4 +28,7 @@ if (currentStyle === 'white' || currentStyle === null) {
   refs.input.checked = true;
     // Add here class with dark design to elemtnts
    document.querySelector('body').style.backgroundColor = "black"
+  }
 }
+
+export { themeChangerTolocalStorage, stylesAfterReload };
