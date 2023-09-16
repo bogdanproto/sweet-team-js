@@ -1,3 +1,5 @@
+import { refs } from '../refs/refs';
+
 // refs.input.addEventListener('click', themeChangerTolocalStorage); // <<<<<<<< need to change the ref
 
 export  function themeChangerTolocalStorage(event) {
