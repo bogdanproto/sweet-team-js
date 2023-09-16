@@ -1,5 +1,9 @@
 export const refs = {
   body: document.querySelector('body'),
+
+  //hero
+  swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),
+
   // All Categories
   allCategoriesBtn: document.querySelector('.all-categories-btn'),
   allCategoriesList: document.querySelector('.all-categories-list'),
@@ -15,4 +19,4 @@ export const refs = {
   ),
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
   heroContainerFavorites: document.querySelector('.favorites-hero'),
-}
+};
