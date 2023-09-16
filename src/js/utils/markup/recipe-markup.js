@@ -26,7 +26,7 @@ function createRecipeMarkup(arr) {
     <h2 class="recipe-title">${title}</h2>
     <p class="recipe-description">${description}</p>
     <div class="recipe-rating-btn-cover">
-    <p class="recipe-rating">${rating}</p>
+    <p class="recipe-rating">${parseFloat(rating).toFixed(2)}</p>
     <div class="recipe-rating-stars" data-rating="${rating}" id="rating-${_id}"></div>
     <button class="recipe-card-btn js-modal-recipe-open">See recipe</button>
     </div>
