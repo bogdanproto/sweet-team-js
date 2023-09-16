@@ -31,10 +31,10 @@ getAllEvents()
 function displayCardsInfo(slides) {
   console.log(slides)
   return slides.map(item =>
-    `<div class="swiper-wrapper">
+    `<div class="swiper-wrapper img-slider-wrapper">
          
-    <div class="swiper-slide">
-    <div class="chef">
+    <div class="swiper-slide img-slider-image">
+    <div class="img-slider-chef">
               <img
                 class="chef-photo"
                 src="${item.cook.imgUrl}"
@@ -51,7 +51,7 @@ function displayCardsInfo(slides) {
                height="588"
               />
             </div>
-            <div class="dish">
+            <div class="img-slider-dish">
               <img
                 class="dish-photo"
                 src="${item.topic.imgUrl}"
@@ -62,7 +62,7 @@ function displayCardsInfo(slides) {
               <h2 class="dish-title">${item.topic.name}</h2>
               <p class="dish-origin">${item.topic.area}</p>
             </div>
-            <div class="card">
+            <div class="img-slider-card">
               <img
                 class="card-photo"
                 src="${item.topic.previewUrl}"
@@ -85,18 +85,17 @@ function displayCardsInfo(slides) {
         
 //   ініцілізація слайдеру
 
-// const hero_slider = new Swiper('.js-hero-slider', {
-//     direction: 'vertical',
-//     loop: true,
+new Swiper('.hero-slider', {
+  direction: 'vertical',
+  loop: true,
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
 
-//   // Default parameters
-//   slidesPerView: 1,
-//   spaceBetween: 16,
-
-// });      
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  
+});
+    
 

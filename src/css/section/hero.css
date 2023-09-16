@@ -25,11 +25,6 @@ background-color: var(--color-page-bcg);
   
 }
 
-/* .swiper {
-  width: 600px;
-  height: 300px;
-} */
-
 .hero-container{
   max-width: 1200px;
     margin-left: auto;
@@ -51,3 +46,36 @@ background-color: var(--color-page-bcg);
 .right-side{
   
 } 
+
+.swiper-slide{
+  text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .swiper {
+  width: 600px;
+  height: 300px;
+} */
+
+
+
+.img-slider-chef
+.img-slider-dish
+.img-slider-card{
+  max-width: 100%;
+
+}
+
+.hero-slider{
+  padding: 30px 0 70px 0;
+}
+
+.img-slider, swiper-pagination{
+  bottom: 0;
+
+}
+
