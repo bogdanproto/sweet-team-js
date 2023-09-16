@@ -12,6 +12,8 @@ import { loadRecipes } from './js/partials/recipes';
 import './js/utils/listners/recipe-list-listener';
 import { switchOnRecipeCardsListner } from './js/utils/listners/recipe-list-listener';
 import { loadHeroData } from './js/partials/hero';
+import './js/partials/order-now';
+import { onSwitchHomeListners } from './js/utils/listners/listeners';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
@@ -28,6 +30,7 @@ function loadDataOnHomePage() {
   showPopularRecipes();
   loadRecipes();
   switchOnRecipeCardsListner();
+  onSwitchHomeListners();
 }
 
 function loadDataOnFavoritesPage() {
