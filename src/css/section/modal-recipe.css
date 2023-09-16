@@ -1,0 +1,43 @@
+.modal-recipe {
+  background-color: rgba(255, 255, 255, 1);
+
+  width: 335px;
+  height: 905px;
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  border-radius: 15px;
+}
+
+.modal-recipe-close {
+  position: absolute;
+  top: 14px;
+  left: 301px;
+}
+
+.modal-recipe-video {
+  margin: 40px 20px 0;
+}
+
+.modal-recipe-title {
+  color: #050505;
+
+  margin: 20px 20px 14px;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 133.333%;
+  text-transform: uppercase;
+}
+.modal-recipe-tags {
+}
+.modal-recipe-rating {
+}
+.modal-recipe-ingredients {
+}
+.modal-recipe-favorite-btn {
+}
