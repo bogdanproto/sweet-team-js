@@ -1,4 +1,5 @@
 import { refs } from '../../refs/refs';
+import { onLikeClick } from '../localestorage/local-storage-service';
 
 function addListenerOnElement(element, eventType, callback) {
   element.addEventListener(eventType, callback);
@@ -8,7 +9,7 @@ function switchOnRecipeCardsListner() {
   addListenerOnElement(refs.recipesList, 'click', onClickHandle);
 }
 
-// Залежно від того на що клікнув користувач сердечко чи кномку викликає відповідну коллбек ф-ю handleHeartClick або handleSeeRecipeClick
+// Залежно від того на що клікнув користувач сердечко чи кнопку викликає відповідну коллбек ф-ю handleHeartClick або handleSeeRecipeClick
 function onClickHandle(event) {
   const clickedElement = event.target;
   const cardElement = findParentWithClass(clickedElement, 'js-recipe');
@@ -21,7 +22,11 @@ function onClickHandle(event) {
     clickedElement.classList.contains('recipe-heart-icon') ||
     clickedElement.classList.contains('recipe-heart-label')
   ) {
-    handleHeartClick(cardId);
+    // Отримуємо стан чекбокса
+    const heartCheckbox = cardElement.querySelector('.recipe-heart-checkbox');
+    const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
+
+    onLikeClick(cardId, isHeartChecked);
     return;
   }
 
@@ -38,9 +43,10 @@ function findParentWithClass(element, className) {
   return element;
 }
 
-function handleHeartClick(cardId) {
-  console.log(`Heart clicked for card with ID: ${cardId}`);
-}
+// function handleHeartClick(cardId, status) {
+//   console.log(`Heart clicked for card with ID: ${cardId}`);
+//   onLikeClick(cardId, status);
+// }
 
 function handleSeeRecipeClick(cardId) {
   console.log(`See Recipe button clicked for card with ID: ${cardId}`);
