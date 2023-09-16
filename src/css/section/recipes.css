@@ -161,6 +161,8 @@ root {
 
 .recipe-heart-label {
   position: absolute;
+  z-index: 100;
+
   top: 16px;
   right: 16px;
   display: inline-block;
@@ -177,14 +179,18 @@ root {
 }
 
 .recipe-heart-icon {
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.6));
+}
+
+.recipe-heart-icon path {
   fill: rgba(248, 248, 248, 0);
-  stroke: rgba(248, 248, 248, 0.9);
+  stroke: rgb(248, 248, 248);
   stroke-width: 2;
   transition: fill var(--transition-dur-func);
 }
 
-.recipe-heart-checkbox:checked + .recipe-heart-icon {
-  fill: rgba(248, 248, 248, 0.9);
+.recipe-heart-checkbox:checked + .recipe-heart-icon path {
+  fill: rgb(248, 248, 248);
 }
 
 .time-select,
