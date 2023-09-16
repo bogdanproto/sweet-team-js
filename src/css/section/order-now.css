@@ -59,6 +59,10 @@
     justify-content: center;
     align-items: center;
 }
+.btn-modal-close:hover {
+    width: 35px;
+    transition: 0.5s;
+}
 
 /*-----------------Форма для заповнення------------*/
 
@@ -94,13 +98,13 @@
 }
 
 /*-----------Перевірка вводу на коректність--------*/
-.modal-input:focus:invalid {
+/* .modal-input:focus:invalid {
     border-color: red;
 }
 
 .modal-input:focus:valid {
     border-color: green;
-}
+} */
 
 /*----------------------Коментар------------*/
 .form-comment {
@@ -129,7 +133,10 @@
     border: none;
 }
 
-.send-btn:hover {}
+.send-btn:hover {
+    color: #FFF;
+    transition: 0.5s;
+}
 
 .order {
     padding-top: 40px;
@@ -150,3 +157,101 @@
 .link-license {
     text-decoration: underline;
 }
+
+
+/* @media screen and (min-width: 375px) and (max-width: 767px) { */
+@media screen and (max-width: 767px) {
+    .modal {
+        width: 335px;
+        overflow: auto;
+        max-height: 1073px;
+    }
+
+    .model-card {
+        width: 276px;
+    }
+
+    .model-card>.model-info>.model {
+        margin-top: 39px;
+        margin-bottom: 4px;
+    }
+
+    .model-card>.model-info>.price {
+        margin-top: 4px;
+    }
+}
+
+/*-----------------планшетна версія------------------*/
+/* @media screen and (min-width: 768px) {
+    .modal {
+        padding: 40px;
+        width: 744px;
+        overflow: auto;
+        max-height: 670px;
+
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #productsList {}
+
+    .model-card {
+        width: 276px;
+    }
+
+    .model-card>.model-info>.model {
+        margin-top: 39px;
+        margin-bottom: 4px;
+    }
+
+    .model-card>.model-info>.price {
+        margin-top: 4px;
+    }
+
+    .icon-close {
+        width: 12px;
+        height: 12px;
+    }
+
+    .btn-modal-close {
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .label-title {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+
+    .modal-input {
+        font-size: 16px;
+        line-height: 1.12;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .modal {
+        flex-direction: row;
+        width: 904px;
+        min-height: 694px;
+
+        gap: 40px;
+    }
+
+    .callback-form {
+        gap: 40px;
+    }
+
+    .callback-form-inputs {
+        gap: 24px;
+    }
+
+    .info-text {
+        width: 391px;
+    }
+}
+
+
+ */
