@@ -1,17 +1,18 @@
-import refs from './refs.js';
+import { refs } from '../refs/refs';
+import { addOrder } from '../api/api-service';
 
 const toggleModal = () => {
   refs.modal.classList.toggle('is-hidden');
   document.body.classList.toggle('no-scroll');
 }
-
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
 function sendForm() {
   const form = document.querySelector('.callback-form');
 
-  form.addEventListener('submit', function(event) {
+  const handleSubmit = async function(event) {
     event.preventDefault();
 
     const name = document.getElementById('buyer-name').value;
@@ -26,28 +27,24 @@ function sendForm() {
       comments: comments
     };
 
-    fetch('https://tasty-treats-backend.p.goit.global/api/orders', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
 
-      // Clear form
-      form.reset();
+      const result = await addOrder(data);
 
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      // Error message
-    });
-  });
+  }
+
+  form.addEventListener('submit', handleSubmit);
+
+  const onEscKeyPress = function(event) {
+    if (event.code === 'Escape') {
+      toggleModal();
+      // Remove event listener
+      document.removeEventListener('keydown', onEscKeyPress);
+    }
+  }
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+  document.addEventListener('keydown', onEscKeyPress);
 }
 
 sendForm(); // Call the function to activate the form submission
-
-
