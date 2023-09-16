@@ -6,6 +6,8 @@
 */
 @import url('./fonts.css');
 @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import url('../../node_modules/slim-select/dist/slimselect.css');
+@import url(../../node_modules/swiper/swiper-bundle.css);
 @import url('./reset.css');
 @import url('./common.css');
 @import url('./section/section-main.css');
@@ -17,8 +19,9 @@
 @import url('./section/popular.css');
 @import url('./section/modal-recipe.css');
 @import url('./section/modal-rating.css');
+@import url('./section/order-now.css');
+
 @import url('./section/favorites.css');
-@import url('../../node_modules/slim-select/dist/slimselect.css');
 
 :root {
   /* ---------------element colors-----------------  */

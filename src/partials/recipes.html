@@ -2,21 +2,24 @@
   <div class="recipe-container">
     <div class="search-container">
       <label for="recipe-input">Search</label>
-      <div class="input-wrapper">
-        <svg class="search-icon" width="18" height="18">
-          <use href="./img/sprite.svg#icon-search"></use>
-        </svg>
-        <input
-          type="text"
-          class="js-search-recipe search-recipe"
-          placeholder="Enter Text"
-        />
-      </div>
+      <form action="">
+        <div class="input-wrapper">
+          <svg class="search-icon" width="18" height="18">
+            <use href="./img/sprite.svg#icon-search"></use>
+          </svg>
+          <input
+            type="text"
+            class="js-search-recipe search-recipe"
+            placeholder="Enter Text"
+          />
+        </div>
+        <div class="select-wrapper">
+          <select class="time-select"></select>
+        <select class="area-select"></select>
+        <select class="ingredients-select"></select>
+        </div>
+      </form>
     </div>
-
-    <select class="time-select"></select>
-    <select class="area-select"></select>
-    <select class="ingredients-select"></select>
 
     <ul class="recipe-list"></ul>
     <div class="recipes-guard"></div>
