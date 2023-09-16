@@ -15,4 +15,9 @@ export const refs = {
   ),
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
   heroContainerFavorites: document.querySelector('.favorites-hero'),
+
+   //modal window
+  openModalBtn: document.querySelector('[data-modal-open]'),
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  modal: document.querySelector('[data-modal]'),
 }

@@ -1,24 +1,14 @@
-// ==================Modal window=============
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+import refs from './refs.js';
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+const toggleModal = () => {
+  refs.modal.classList.toggle('is-hidden');
+  document.body.classList.toggle('no-scroll');
+}
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-    document.body.classList.toggle('no-scroll');
-  }
-})();
+refs.openModalBtn.addEventListener('click', toggleModal);
+refs.closeModalBtn.addEventListener('click', toggleModal);
 
-
-// ===============Send to beck-end info=========================
-
-document.addEventListener('DOMContentLoaded', function() {
+function sendForm() {
   const form = document.querySelector('.callback-form');
 
   form.addEventListener('submit', function(event) {
@@ -56,5 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Error message
     });
   });
-});
+}
+
+sendForm(); // Call the function to activate the form submission
+
 
