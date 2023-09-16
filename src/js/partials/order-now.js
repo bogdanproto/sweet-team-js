@@ -28,7 +28,7 @@ function sendForm() {
     };
 
 
-      const result = await addOrder(data);
+     const result = addOrder(data);
 
   }
 
