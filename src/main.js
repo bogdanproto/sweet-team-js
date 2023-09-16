@@ -4,6 +4,7 @@ import './js/partials/all-categories';
 import './js/partials/favorites-recipes';
 import './js/partials/recipes';
 import { loadFavoritesData } from './js/partials/favorites-recipes';
+import './js/partials/hero-slider';
 import './js/partials/popular';
 import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
