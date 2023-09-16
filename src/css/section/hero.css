@@ -1,8 +1,17 @@
 
 .section-hero {
 background-color: var(--color-page-bcg);
-  
+padding-top: 40px;
+padding-bottom: 40px;
+
 }
+
+ @media only screen and (min-width: 768px) {
+   .section-hero {
+     padding-top: 93px;
+     padding-bottom: 80px;
+   }
+ }
 
 .hero-title {
   color: var(--color-title-text);
@@ -29,10 +38,18 @@ background-color: var(--color-page-bcg);
   max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-  
     display: flex;
     justify-content: center;
     gap: 30px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-container{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 .left-side {
@@ -41,6 +58,15 @@ background-color: var(--color-page-bcg);
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+  .left-side {
+    flex-direction:row;
+      align-items: flex-start;
+      gap: 16px;
+  }
 }
 
 .right-side{
