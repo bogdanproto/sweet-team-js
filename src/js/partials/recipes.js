@@ -3,7 +3,7 @@ import { Notify } from 'notiflix';
 import { refs } from '../refs/refs';
 import { getAllRecipes } from '../api/api-service';
 import { createRecipeMarkup } from '../utils/markup/recipe-markup';
-
+import { addStarRating } from '../utils/markup/star-rating';
 // =====================================================================
 
 const observer = new IntersectionObserver(loadMoreRecipes, {
@@ -27,6 +27,8 @@ async function loadRecipes() {
       'beforeend',
       createRecipeMarkup(allRecipes)
     );
+    // Raiting
+    addStarRating(allRecipes);
 
     if (params.page < totalPages) {
       observer.observe(refs.recipesGuard);
