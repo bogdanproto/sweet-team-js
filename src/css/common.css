@@ -10,6 +10,20 @@ body {
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -54,18 +68,4 @@ body {
 .btn:focus {
   color: var(--color-hover-text);
   background-color: var(--color-hover-bcg);
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-right: 32px;
-    padding-left: 32px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1080px;
-  }
 }
