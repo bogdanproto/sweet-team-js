@@ -43,11 +43,6 @@ function findParentWithClass(element, className) {
   return element;
 }
 
-// function handleHeartClick(cardId, status) {
-//   console.log(`Heart clicked for card with ID: ${cardId}`);
-//   onLikeClick(cardId, status);
-// }
-
 function handleSeeRecipeClick(cardId) {
   console.log(`See Recipe button clicked for card with ID: ${cardId}`);
 }
