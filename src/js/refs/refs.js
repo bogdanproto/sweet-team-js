@@ -3,6 +3,7 @@ export const refs = {
 
   //hero
   swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),
+  heroBtn: document.querySelector('.hero-btn'),
 
   // All Categories
   allCategoriesBtn: document.querySelector('.all-categories-btn'),
@@ -19,4 +20,9 @@ export const refs = {
   ),
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
   heroContainerFavorites: document.querySelector('.favorites-hero'),
+
+  //modal window
+  openModalBtn: document.querySelector('[data-modal-open]'),
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  modal: document.querySelector('[data-modal]'),
 };
