@@ -73,11 +73,11 @@
 .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--color-menu-mobile-bcg);
+  background: var(--color-menu-mobile-bcg); 
 }
 
 .hero-event {
