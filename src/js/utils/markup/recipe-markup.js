@@ -14,7 +14,7 @@ function createRecipeMarkup(arr) {
 <label class="recipe-heart-label">
   <input type="checkbox" class="recipe-heart-checkbox">
   <svg class="recipe-heart-icon" width="22" height="22">
-    <use href="../img/sprite.svg#icon-heart"></use>
+    <use href="../../../img/sprite.svg#icon-heart"></use>
   </svg>
 </label>
 
