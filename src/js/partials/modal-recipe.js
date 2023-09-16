@@ -2,7 +2,7 @@ import { refs } from '../refs/refs.js';
 import { getAllRecipes } from '../api/api-service.js';
 import { modalRecipeCard } from '../utils/markup/modal-recipe-card.js';
 
-refs.modalRecipeOpen.addEventListener('click', modalRecipeOpen);
+// refs.modalRecipeOpen.addEventListener('click', modalRecipeOpen);
 
 // Функция открытия или закрытия окна с рецептом
 function modalRecipeOpen(evt) {
