@@ -1,12 +1,21 @@
 
 .section-hero {
 background-color: var(--color-page-bcg);
-  
+padding-top: 40px;
+padding-bottom: 40px;
+
 }
+
+ @media only screen and (min-width: 768px) {
+   .section-hero {
+     padding-top: 93px;
+     padding-bottom: 80px;
+   }
+ }
 
 .hero-title {
   color: var(--color-title-text);
-  margin-bottom: 16px ;
+  margin-top: 166px;
   text-transform: uppercase; 
 
 }
@@ -25,7 +34,74 @@ background-color: var(--color-page-bcg);
   
 }
 
-.swiper {
+.hero-container{
+  max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-container{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.left-side {
+  display: flex;
+    width: 446px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+  .left-side {
+    flex-direction:row;
+      align-items: flex-start;
+      gap: 16px;
+  }
+}
+
+.right-side{
+  
+} 
+
+.swiper-slide{
+  text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .swiper {
   width: 600px;
   height: 300px;
+} */
+
+
+
+.img-slider-chef
+.img-slider-dish
+.img-slider-card{
+  max-width: 100%;
+
 }
+
+.hero-slider{
+  padding: 30px 0 70px 0;
+}
+
+.img-slider, swiper-pagination{
+  bottom: 0;
+
+}
+
