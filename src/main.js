@@ -1,9 +1,9 @@
 import './js/utils/theme/theme';
 import './js/api/api-service';
+import './js/partials/modal-recipe';
 import './js/partials/all-categories';
 import './js/partials/favorites-recipes';
 import './js/partials/recipes';
-import './js/partials/modal-recipe';
 import { loadFavoritesData } from './js/partials/favorites-recipes';
 import './js/partials/hero-slider';
 import './js/partials/popular';

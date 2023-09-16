@@ -18,6 +18,6 @@ export const refs = {
 
   // Modal recipe
   modalRecipe: document.querySelector('.js-modal-recipe'),
-  modalRecipeOpen: document.querySelector('.recipe-card-btn'),
+  modalRecipeOpen: document.querySelector('.js-modal-recipe-open'),
   modalRecipeClose: document.querySelector('.js-modal-recipe-close'),
 };

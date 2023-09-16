@@ -1,4 +1,5 @@
 import { refs } from '../../refs/refs';
+import { modalRecipeOpen } from '../../partials/modal-recipe';
 
 function addListenerOnElement(element, eventType, callback) {
   element.addEventListener(eventType, callback);
@@ -44,6 +45,7 @@ function handleHeartClick(cardId) {
 
 function handleSeeRecipeClick(cardId) {
   console.log(`See Recipe button clicked for card with ID: ${cardId}`);
+  modalRecipeOpen(cardId);
 }
 
-export { onClickHandle, switchOnRecipeCardsListner };
+export { onClickHandle, switchOnRecipeCardsListner, handleSeeRecipeClick };

@@ -1,37 +1,37 @@
-import { getAllEvents} from '../api/api-service'
+import { getAllEvents } from '../api/api-service';
 
-// // import Swiper JS
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // функція яка повертає картинки майстерклас
 
-const swiperContainer = document.querySelector('.swiper-wrapper')
-
+const swiperContainer = document.querySelector('.swiper-wrapper');
 
 getAllEvents()
-  .then((data) => {
+  .then(data => {
     if (data.length === 0) {
-      return
+      return;
     }
     swiperContainer.insertAdjacentHTML('beforeend', displayCardsInfo(data));
   })
-  .catch ( (err)=> {
-   console.log(err)      
+  .catch(err => {
+    console.log(err);
   });
 
-
-
-{/* <img class="chef-photo" src="${item.cook.imgWebpUrl}"  /> */}
-
+{
+  /* <img class="chef-photo" src="${item.cook.imgWebpUrl}"  /> */
+}
 
 function displayCardsInfo(slides) {
-  console.log(slides)
-  return slides.map(item =>
-    `<div class="swiper-wrapper img-slider-wrapper">
+  console.log(slides);
+  return slides
+    .map(
+      item =>
+        `<div class="swiper-wrapper img-slider-wrapper">
          
     <div class="swiper-slide img-slider-image">
     <div class="img-slider-chef">
@@ -79,23 +79,20 @@ function displayCardsInfo(slides) {
                />
             </div>
           </div>
-        </div>`).join("");
+        </div>`
+    )
+    .join('');
 }
 
-        
 //   ініцілізація слайдеру
 
 new Swiper('.hero-slider', {
   direction: 'vertical',
   loop: true,
 
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-  
 });
-    
-
