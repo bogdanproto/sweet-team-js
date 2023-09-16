@@ -8,6 +8,8 @@ import './js/partials/popular';
 import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
 import { loadRecipes } from './js/partials/recipes';
+import './js/utils/listners/recipe-list-listener';
+import { switchOnRecipeCardsListner } from './js/utils/listners/recipe-list-listener';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
@@ -22,6 +24,7 @@ function loadDataOnHomePage() {
   loadAllCategories();
   showPopularRecipes();
   loadRecipes();
+  switchOnRecipeCardsListner();
 }
 
 function loadDataOnFavoritesPage() {

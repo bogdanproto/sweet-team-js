@@ -31,21 +31,23 @@ root {
 .recipe-container {
   min-width: 320px;
   max-width: 375px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  padding-top: 40px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .recipe-container {
     max-width: 560px;
-    padding-right: 32px;
+    /* padding-right: 32px; */
     padding-left: 32px;
+    padding-top: 0;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .recipe-container {
     max-width: 910px;
-    padding-right: 64px;
+    /* padding-right: 64px; */
     padding-left: 64px;
   }
 }
@@ -226,10 +228,11 @@ label[for='recipe-input'] {
 
 .search-recipe {
   padding-left: 48px; /* 18px (ширина іконки) + 12px (відступ) */
-  display: flex;
-  padding-right: 122px;
   padding-top: 14px;
   padding-bottom: 14px;
+  min-width: 335px;
+
+  display: flex;
   align-items: flex-start;
   gap: 32px;
   border-radius: 15px;
