@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-bac72d10.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-bae10cf3.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-e458494d.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-739424b8.css">
   </head>
   <body>
     <header class="header container">
@@ -18,7 +18,7 @@
 
     <main>
       <section class="section-hero">
-  <div class="container">
+  <div class="hero-container">
     <div class="left-side">
       <h1 class="hero-title">
         Learn to Cook
@@ -32,37 +32,64 @@
     </div>
     <div class="right-side">
       <!-- Slider main container -->
-      <div class="swiper js-hero-slider">
+      <div class="swiper-container  hero-slider">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper img-slider-wrapper">
           <!-- Slides -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="chef">
-              <picture>
-                <source srcset="${imgWebpUrl}" type="img/webp" />
-                <source srcset="${imgUrl}" type="img/png" />
-                <img class="chef-photo" alt="" />
-              </picture>
+              <img
+                class="chef-photo"
+                src="${cook.imgWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="chef-photo"
+                src="${cook.imgUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
             </div>
             <div class="dish">
-              <picture>
-                <source srcset="${imgWebpUrl}" type="img/webp" />
-                <source srcset="${imgUrl}" type="img/png" />
-                <img class="dish-photo" alt="" />
-              </picture>
-              <h2 class="dish-title"></h2>
-              <p class="dish-origin"></p>
+              <img
+                class="dish-photo"
+                src="${topic.imgWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="dish-photo"
+                src="${topic.imgUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
+              <h2 class="dish-title">${topic.name}</h2>
+              <p class="dish-origin">${topic.area}</p>
             </div>
             <div class="card">
-              <picture>
-                <source srcset="${previewWebpUrl}" type="img/webp" />
-                <source srcset="${previewUrl}" type="img/png" />
-                <img class="card-img" src="" alt="" />
-              </picture>
+              <img
+                class="card-photo"
+                src="${topic.previewWebpUrl}"
+                alt="img/webp"
+                width="412"
+                height="588"
+              />
+              <img
+                class="card-photo"
+                src="${topic.previewUrl}"
+                alt="img/png"
+                width="351"
+                height="422"
+              />
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
