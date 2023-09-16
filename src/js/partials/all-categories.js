@@ -7,7 +7,7 @@ import { createAllCategoriesMarkup } from '../utils/markup/all-categories-markup
 // =====================================================
 
 // Значення ID категорії для фільтрації рецептів.
-let nextSelectedCategoryId = null;
+let nextSelectedCategory = null;
 
 // Завантажує перелік категорій.
 async function loadAllCategories() {
@@ -20,21 +20,17 @@ async function loadAllCategories() {
   }
 }
 
-// "Тимчасовий" виклик функції. Потім буде перенесений в main.js на подію load
-// loadAllCategories();
-
 function onKitListenerAllCategories() {
   refs.allCategoriesList.addEventListener('click', onSelectCategory);
   refs.allCategoriesBtn.addEventListener('click', onResetCategory);
 }
 
+// Дає вибрати лише 1 категорію
 function onSelectCategory(evt) {
   onResetCategory();
 
   const nextSelectedCategory = evt.target;
   nextSelectedCategory.classList.add('all-categories-selected');
-
-  nextSelectedCategoryId = nextSelectedCategory.id;
 }
 
 function onResetCategory() {
@@ -43,7 +39,7 @@ function onResetCategory() {
   );
 
   currentSelectedCategory?.classList.remove('all-categories-selected');
-  nextSelectedCategoryId = null;
+  nextSelectedCategory = null;
 }
 
-export { nextSelectedCategoryId };
+export { loadAllCategories };
