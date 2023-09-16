@@ -1,8 +1,10 @@
 import { Notify } from 'notiflix';
 
 import { refs } from '../refs/refs';
+import { params } from '../refs/params';
 import { getAllCategories } from '../api/api-service';
 import { createAllCategoriesMarkup } from '../utils/markup/all-categories-markup';
+import { loadRecipes, clearRecipes } from './recipes';
 
 // =====================================================
 
@@ -22,24 +24,31 @@ async function loadAllCategories() {
 
 function onKitListenerAllCategories() {
   refs.allCategoriesList.addEventListener('click', onSelectCategory);
-  refs.allCategoriesBtn.addEventListener('click', onResetCategory);
+  refs.allCategoriesBtn.addEventListener('click', onAllCategories);
 }
 
 // Дає вибрати лише 1 категорію
 function onSelectCategory(evt) {
-  onResetCategory();
+  resetCategory();
+  clearRecipes();
 
   const nextSelectedCategory = evt.target;
-  nextSelectedCategory.classList.add('all-categories-selected');
+  nextSelectedCategory.classList.add('selected-category');
+  const nameOfCategory = nextSelectedCategory.textContent;
+  params.category = nameOfCategory;
+  loadRecipes();
 }
 
-function onResetCategory() {
-  const currentSelectedCategory = document.querySelector(
-    '.all-categories-selected'
-  );
+function onAllCategories() {
+  clearRecipes();
+  resetCategory();
+  loadRecipes();
+}
 
-  currentSelectedCategory?.classList.remove('all-categories-selected');
+function resetCategory() {
+  const currentSelectedCategory = document.querySelector('.selected-category');
+  currentSelectedCategory?.classList.remove('selected-category');
   nextSelectedCategory = null;
 }
 
-export { loadAllCategories };
+export { loadAllCategories, nextSelectedCategory };
