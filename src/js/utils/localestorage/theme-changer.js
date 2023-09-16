@@ -1,4 +1,4 @@
-refs.input.addEventListener('click', themeChangerTolocalStorage); // <<<<<<<< need to change the ref
+// refs.input.addEventListener('click', themeChangerTolocalStorage); // <<<<<<<< need to change the ref
 
 export  function themeChangerTolocalStorage(event) {
   event.target.checked ? localStorage.setItem('themeColor', 'dark') : localStorage.setItem('themeColor', 'white');
