@@ -14,7 +14,13 @@ import {
 
 // =============================================
 
-refs.searchInput.addEventListener('input', debounce(onSearchInput, 300));
+function onKitListenerSearchAndFilters() {
+  refs.searchInput.addEventListener('input', debounce(onSearchInput, 300));
+  refs.timeFilter.addEventListener('change', onTimeChange);
+  refs.areaFilter.addEventListener('change', onAreaChange);
+  refs.ingredientFilter.addEventListener('change', onIngredientChange);
+  // refs.resetFiltersBtn.addEventListener('click', resetFilters);
+}
 
 function onSearchInput(evt) {
   const searchQuery = evt.target.value.trim();
@@ -37,7 +43,6 @@ function loadTimeOptions() {
     },
   });
 }
-loadTimeOptions();
 
 // =========================================================================
 
@@ -57,8 +62,6 @@ async function loadAreaOptions() {
     console.log(error);
   }
 }
-
-loadAreaOptions();
 
 // =========================================================================
 
@@ -80,13 +83,6 @@ async function loadIngredientsOptions() {
   }
 }
 
-loadIngredientsOptions();
-
-refs.timeFilter.addEventListener('change', onTimeChange);
-refs.areaFilter.addEventListener('change', onAreaChange);
-refs.ingredientFilter.addEventListener('change', onIngredientChange);
-refs.resetFiltersBtn.addEventListener('click', resetFilters);
-
 function onTimeChange(evt) {
   clearRecipes();
   params.time = isNaN(Number.parseInt(evt.target.value))
@@ -104,13 +100,21 @@ function onAreaChange(evt) {
 function onIngredientChange(evt) {
   clearRecipes();
   // console.dir(evt.target.attribute)
-  console.dir(evt.target)
+  console.dir(evt.target);
   params.ingredient = evt.currentTarget.value;
   loadRecipes();
 }
 
-function resetFilters(evt) {
-  evt.preventDefault();
+// function resetFilters(evt) {
+//   evt.preventDefault();
 
-  refs.filterForm.reset();
+//   refs.filterForm.reset();
+// }
+
+function loadFiltersOption() {
+  loadTimeOptions();
+  loadAreaOptions();
+  loadIngredientsOptions();
+  onKitListenerSearchAndFilters()
 }
+export { loadFiltersOption };

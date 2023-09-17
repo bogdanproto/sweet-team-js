@@ -11,7 +11,7 @@ export async function loadHeroData() {
     refs.swiperWrapperHero.insertAdjacentHTML('beforeend', markup);
 
     const heroSwiper = new Swiper('.swiper-hero', {
-      slidesPerView: 1,
+      slidesPerView: 0.8,
       spaceBetween: 40,
       pagination: {
         el: '.swiper-pagination',

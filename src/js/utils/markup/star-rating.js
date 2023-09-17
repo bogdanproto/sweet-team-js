@@ -1,6 +1,7 @@
 import rater from 'rater-js';
 
 function addStarRating(recipes) {
+  console.log(recipes);
   recipes.forEach(({ _id, rating }) => {
     const raterElement = document.querySelector(`#rating-${_id}`);
     if (raterElement) {

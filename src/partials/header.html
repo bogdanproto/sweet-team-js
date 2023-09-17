@@ -1,5 +1,64 @@
 <header class="header container">
-  <a href="favorites.html">Favorites</a>
-  <a href="index.html">Home</a>
-  <h1>header</h1>
+  <div class="header-container">
+    <ul class="header-pages">
+      <li><a class="header-pages-item" href="index.html">Home</a></li>
+      <li>
+        <a class="header-pages-item" href="favorites.html">Favorites</a>
+      </li>
+    </ul>
+    <a class="header-name" href="index.html">
+      <span class="header-name-span">tasty</span>treats.</a
+    >
+    <ul class="header-list-svg">
+      <li class="header-icon-svg">
+        <button class="header-basket">
+          <svg class="header-icon-svg-img" width="24" height="24">
+            <use href="./img/sprite.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-icon-svg burger-svg">
+        <button class="header-menu-toggle js-header-open-menu">
+          <svg class="header-icon-svg-img" width="32" height="32">
+            <use href="./img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <label class="header-switch toggle">
+      <div class="pretty p-switch p-fill">
+        <input type="checkbox" id="themeSwitch" />
+        <div class="state">
+          <label></label>
+        </div>
+      </div>
+    </label>
+  </div>
+  <!-- Header Mob menu -->
+  <div
+    class="mobile-menu header-menu-container js-header-menu-container"
+    id="mobile-menu"
+  >
+    <div class="mobile-menu-container">
+      <button
+        class="header-mobile-close-btn js-header-close-menu header-menu-toggle"
+      >
+        <svg class="header-mobile-menu-close-icon" width="32" height="32">
+          <use href="./img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="header-mobile_modal-menu list">
+        <li class="header-mobile_modal-item header-mob-home">
+          <a class="header-mobile_modal-link link" href="index.html">Home</a>
+        </li>
+        <li class="header-mobile_modal-item">
+          <a class="header-mobile_modal-link link" href="favorites.html"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- <button class="header-mob-switcher"></button> -->
+  </div>
 </header>
