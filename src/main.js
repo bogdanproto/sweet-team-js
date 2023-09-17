@@ -10,12 +10,14 @@ import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
 import { loadRecipes } from './js/partials/recipes';
 import './js/partials/search&filters';
-import {loadFiltersOption } from './js/partials/search&filters';
+import { loadFiltersOption } from './js/partials/search&filters';
 import './js/utils/listners/recipe-list-listener';
 import { switchOnRecipeCardsListner } from './js/utils/listners/recipe-list-listener';
 import { loadHeroData } from './js/partials/hero';
 import './js/partials/order-now';
-import { onSwitchHomeListners } from './js/utils/listners/listeners';
+import { onSwitchHeroListners } from './js/utils/listners/listeners';
+import './js/partials/burger-menu';
+import { onSwitchHeaderListners } from './js/utils/listners/listeners';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
@@ -33,12 +35,14 @@ function loadDataOnHomePage() {
   loadRecipes();
   loadFiltersOption();
   switchOnRecipeCardsListner();
-  onSwitchHomeListners();
+  onSwitchHeroListners();
+  onSwitchHeaderListners();
 }
 
 function loadDataOnFavoritesPage() {
   console.log('Data Favorites was loaded');
   loadFavoritesData();
+  onSwitchHeaderListners();
 }
 
 // const currentPage = window.location.href;

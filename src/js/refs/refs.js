@@ -1,6 +1,13 @@
 export const refs = {
   body: document.querySelector('body'),
 
+  //header
+
+  headerOrder: document.querySelector('.header-icon-svg'),
+  mobileMenu: document.querySelector('.js-header-menu-container'),
+  openMenuBtn: document.querySelector('.js-header-open-menu'),
+  closeMenuBtn: document.querySelector('.js-header-close-menu'),
+
   //hero
   swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),
   heroBtn: document.querySelector('.hero-btn'),
