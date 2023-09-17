@@ -7,6 +7,7 @@ export const refs = {
   mobileMenu: document.querySelector('.js-header-menu-container'),
   openMenuBtn: document.querySelector('.js-header-open-menu'),
   closeMenuBtn: document.querySelector('.js-header-close-menu'),
+  themeSwitch: document.querySelector('#themeSwitch'),
 
   //hero
   swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),

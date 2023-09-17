@@ -73,7 +73,7 @@
 
 [dark] {
   /* text */
-  --color-page-bcg: rgb(255, 255, 255, 100%);
+  --color-page-bcg: rgb(22, 22, 22, 100%);
   --color-title-text: rgb(5, 5, 5, 100%);
   --color-element-bcg: rgb(255, 255, 255, 100%);
   --color-title-text: rgb(255, 255, 255, 100%);

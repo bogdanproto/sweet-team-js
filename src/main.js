@@ -18,6 +18,7 @@ import './js/partials/order-now';
 import { onSwitchHeroListners } from './js/utils/listners/listeners';
 import './js/partials/burger-menu';
 import { onSwitchHeaderListners } from './js/utils/listners/listeners';
+import './js/utils/theme/theme-changer';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
