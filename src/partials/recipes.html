@@ -1,42 +1,47 @@
-<section class="recipes">
-  <div class="filters-container">
-    <form class="filter-form">
-      <!-- <div class="search-container"> -->
-        <label for="recipe-input">Search</label>
-        <div class="input-wrapper">
-          <svg class="search-icon" width="18" height="18">
+<section class="recipes-section">
+  <div class="form-container">
+    <form class="form-filters">
+      <div class="search-wrapper">
+        <label class="search-label" for="recipe-input">Search</label>
+        <input
+          type="text"
+          class="js-search-recipe search-recipe"
+          placeholder="Enter Text"
+        />
+        <div class="search-icon">
+          <svg width="18" height="18">
             <use href="./img/sprite.svg#icon-search"></use>
           </svg>
-          <input
-            type="text"
-            class="js-search-recipe search-recipe"
-            placeholder="Enter Text"
-          />
-        <!-- </div> -->
+        </div>
+        <div class="reset-search-icon is-hidden">
+          <svg width="18" height="18">
+            <use href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </div>
       </div>
 
-      <!-- <div class="select-wrapper"> -->
-        <label for="select">Time
-          <select class="time-select"></select>
-        </label>
+      <div class="select-wrapper time-wrapper">
+        <label class="select-label" for="time-select">Time</label>
+        <select class="time-select" id="time-select"></select>
+      </div>
 
-        <label for="select">Area
-          <select class="area-select"></select>
-        </label>
+      <div class="select-wrapper area-wrapper">
+        <label class="select-label" for="area-select">Area</label>
+        <select class="area-select" id="area-select"></select>
+      </div>
 
-        <label for="select">Ingredients
-          <select class="ingredient-select"></select>
-        </label>
-
-      <!-- </div> -->
+      <div class="select-wrapper ingredient-wrapper">
+        <label class="select-label" for="ingredient-select">Ingredients</label>
+        <select class="ingredient-select" id="ingredient-select"></select>
+      </div>
     </form>
 
-    <div class="reset-btn-container">
-      <!-- <svg class="x-icon" width="18" height="18">
-        <use href="./img/sprite.svg#icon-x"></use>
-      </svg> -->
+    <div class="reset-filters-container">
       <button class="reset-filters-btn js-reset-filters-btn">
-        Reset the filters
+        <svg class="reset-filters-icon" width="16" height="16">
+          <use href="./img/sprite.svg#icon-close"></use>
+        </svg>
+        Reset all filters
       </button>
     </div>
   </div>
