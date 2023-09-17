@@ -16,9 +16,6 @@
     visibility: hidden;
     transform: scale(0.5);
 }
-.backdrop.no-scroll {
-    overflow: hidden;
-}
 
 /*-----------------modal------------*/
 .buy {

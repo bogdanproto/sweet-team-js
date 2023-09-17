@@ -12,29 +12,49 @@ export function onShowOrderForm() {
   sendForm();
 }
 
-function sendForm() {
+async function sendForm() {
   const form = document.querySelector('.callback-form');
 
-  const handleSubmit = async function (event) {
-    event.preventDefault();
+  try {
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
 
-    const name = document.getElementById('buyer-name').value;
-    const phone = document.getElementById('buyer-phone').value;
-    const email = document.getElementById('buyer-email').value;
-    const comments = document.getElementById('buyer-comment').value;
+      const name = document.getElementById('buyer-name').value;
+      const phone = document.getElementById('buyer-phone').value;
+      const email = document.getElementById('buyer-email').value;
+      const comments = document.getElementById('buyer-comment').value;
 
-    const data = {
-      name: name,
-      phone: phone,
-      email: email,
-      comments: comments,
-    };
+      const data = {
+        name: name,
+        phone: phone,
+        email: email,
+        comments: comments,
+      };
 
-      const result = addOrder(data);
+      console.log('Sending request to:', 'https://tasty-treats-backend.p.goit.global/api/orders');
 
+      const response = await fetch('https://tasty-treats-backend.p.goit.global/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(data).toString()
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Success:', result);
+
+      // Clear form
+      form.reset();
+
+    });
+  } catch (error) {
+    console.error('Error:', error);
   }
-
-  form.addEventListener('submit', handleSubmit);
 
   const onEscKeyPress = function (event) {
     if (event.code === 'Escape') {
