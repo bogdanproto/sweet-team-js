@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-e0a31306.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-bd558ba3.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-819c3c5a.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-20a58b03.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
   <div class="header-container">
     <ul class="header-pages">
       <li><a class="header-pages-item" href="index.html">Home</a></li>
@@ -24,22 +24,26 @@
     <ul class="header-list-svg">
       <li class="header-icon-svg">
         <button class="header-basket">
-          <svg width="24" height="24">
-            <use href="../img/sprite.svg#icon-shopping-cart"></use>
+          <svg class="header-icon-svg-img" width="24" height="24">
+            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-shopping-cart"></use>
           </svg>
         </button>
       </li>
       <li class="header-icon-svg burger-svg">
         <button class="header-menu-toggle js-header-open-menu">
-          <svg width="32" height="32">
-            <use href="../img/sprite.svg#icon-burger"></use>
+          <svg class="header-icon-svg-img" width="32" height="32">
+            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-burger"></use>
           </svg>
         </button>
       </li>
     </ul>
     <label class="header-switch toggle">
-      <input type="checkbox" id="themeSwitch" />
-      <span class="slider round"></span>
+      <div class="pretty p-switch p-fill">
+        <input type="checkbox" id="themeSwitch" />
+        <div class="state">
+          <label></label>
+        </div>
+      </div>
     </label>
   </div>
   <!-- Header Mob menu -->
@@ -49,10 +53,10 @@
   >
     <div class="mobile-menu-container">
       <button
-        class="header-mobile_close-btn js-header-close-menu header-menu-toggle"
+        class="header-mobile-close-btn js-header-close-menu header-menu-toggle"
       >
-        <svg class="header-mobile-menu_close-icon" width="16" height="16">
-          <use href="../img/sprite.svg#icon-close"></use>
+        <svg class="header-mobile-menu-close-icon" width="32" height="32">
+          <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
         </svg>
       </button>
 
@@ -67,10 +71,8 @@
         </li>
       </ul>
     </div>
-
-    <button class="header-mob-switcher"></button>
+    <!-- <button class="header-mob-switcher"></button> -->
   </div>
-  <script src="../js/partials/burger-menu.js"></script>
 </header>
 
     <main>
@@ -94,6 +96,89 @@
 </section>
 
     </main>
+    <section>
+  <!--Modal menu---->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="btn-modal-close" data-modal-close>
+        <svg class="icon-close" width="24" height="24">
+          <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="title-modal">ORDER NOW</h2>
+
+      <!-- Modal menu form-->
+      <form class="callback-form" name="callback-form">
+        <div class="callback-form-inputs">
+          <!-- Name -->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-name">Name</label>
+            <input
+              class="modal-input"
+              type="text"
+              placeholder="Enter your name"
+              required
+              pattern="[A-Za-zA-Яа-я]+$"
+              minlength="2"
+              autofocus
+              id="buyer-name"
+            />
+          </div>
+          <!-- Phone number -->
+          <div class="modal-field">
+            <label class="label-title" for="phone">Phone number</label>
+            <input
+              class="modal-input"
+              placeholder="123-45-67"
+              type="tel"
+              id="buyer-phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              required
+            />
+          </div>
+          <!--Email-->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-email">Email</label>
+            <input
+              class="modal-input"
+              type="email"
+              placeholder="Enter your email"
+              id="buyer-email"
+              type="email"
+              id="buyer-email"
+              name="email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            />
+          </div>
+          <!-- Comments-->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-comment">Comments</label>
+            <textarea
+              class="form-comment modal-input"
+              placeholder="Enter your text"
+              id="buyer-comment"
+            ></textarea>
+          </div>
+        </div>
+        <div class="order">
+          <!--Send button-->
+          <button class="send-btn" type="submit">Send</button>
+          <!--That nobody read-->
+          <span class="info-text"
+            >By clicking on “Send message” button, you agree to our
+            <a href="https://privacy.microsoft.com/en-us" class="link-license"
+              >Privacy Policy</a
+            >
+            , and allow Promodo to use this information for marketing
+            purposes.</span
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
     
   </body>
 </html>
