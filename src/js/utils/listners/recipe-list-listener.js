@@ -1,5 +1,6 @@
 import { refs } from '../../refs/refs';
 import { onLikeClick } from '../localestorage/local-storage-service';
+import { modalRecipeOpen } from '../../partials/modal-recipe';
 
 export function addListenerOnElement(element, eventType, callback) {
   element.addEventListener(eventType, callback);
@@ -31,7 +32,7 @@ function onClickHandle(event) {
   }
 
   if (clickedElement.classList.contains('recipe-card-btn')) {
-    handleSeeRecipeClick(cardId);
+    modalRecipeOpen(cardId);
     return;
   }
 }
@@ -41,10 +42,6 @@ function findParentWithClass(element, className) {
     element = element.parentElement;
   }
   return element;
-}
-
-function handleSeeRecipeClick(cardId) {
-  console.log(`See Recipe button clicked for card with ID: ${cardId}`);
 }
 
 export { onClickHandle, switchOnRecipeCardsListner };
