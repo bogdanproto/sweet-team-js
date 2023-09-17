@@ -1,12 +1,13 @@
 import { getFavRec } from '../localestorage/local-storage-service';
 
 // get from Local Storage favorite recipes and create array of IDs
-const favoriteRecipes = getFavRec();
-const favoriteIds = favoriteRecipes.map(favorite => favorite._id);
 
 // Функция отрисовки элементов карточки
 export function modalRecipeCard(recipeItem) {
-  const { _id, title, rating, instructions, thumb, preview, time } = recipeItem;
+  const favoriteRecipes = getFavRec();
+  const favoriteIds = favoriteRecipes.map(favorite => favorite._id);
+
+  const { _id, title, rating, instructions, thumb, time } = recipeItem;
   const isFavorite = favoriteIds.includes(_id);
 
   const recipeTags = recipeItem.tags
@@ -36,7 +37,9 @@ export function modalRecipeCard(recipeItem) {
   <ul>${recipeIngredients}</ul>
   <ul class="modal-recipe-tags">${recipeTags}</ul>
 <p class="modal-recipe-text">${instructions}</p>
-<button class="recipe-card-btn modal-recipe-favorite-btn" type="button">Add to favotiry</button></div>`;
+<button class="recipe-card-btn modal-recipe-favorite-btn" type="button">${
+      isFavorite ? 'Remove from' : 'Add to'
+    } favotiry</button></div>`;
   } else {
     return `<div class="modal-recipe"><button class="js-modal-recipe-close modal-recipe-close-btn" type="button"><svg class="modal-recipe-svg" width="24px" height="24px">
   <use href="../../../img/sprite.svg#icon-close"></use>
