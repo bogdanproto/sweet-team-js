@@ -1,7 +1,7 @@
 import { refs } from '../../refs/refs';
 import { onLikeClick } from '../localestorage/local-storage-service';
 
-function addListenerOnElement(element, eventType, callback) {
+export function addListenerOnElement(element, eventType, callback) {
   element.addEventListener(eventType, callback);
 }
 

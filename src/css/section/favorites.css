@@ -24,13 +24,14 @@
 
 @media only screen and (min-width: 1200px) {
   .favorites-hero {
-    max-width: 1016px;
+    max-width: 1080px;
 
     background-image: url('../../img/favorites/hero-favorites-tablet.jpg');
   }
 }
 
 .favorites-cards-container {
+  padding-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -48,10 +49,6 @@
 
   margin-top: 40px;
   margin-bottom: 24px;
-}
-
-.favorites-cards-container .recipe-heart-icon {
-  fill: rgba(248, 248, 248, 0.9);
 }
 
 @media only screen and (min-width: 768px) {
