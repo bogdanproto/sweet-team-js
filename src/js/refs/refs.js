@@ -9,6 +9,12 @@ export const refs = {
   allCategoriesBtn: document.querySelector('.all-categories-btn'),
   allCategoriesList: document.querySelector('.all-categories-list'),
   // Recipes
+  searchInput: document.querySelector('.js-search-recipe'),
+  filterForm: document.querySelector('.filter-form'),
+  timeFilter: document.querySelector('.time-select'),
+  areaFilter: document.querySelector('.area-select'),
+  ingredientFilter: document.querySelector('.ingredient-select'),
+  resetFiltersBtn: document.querySelector('.js-reset-filters-btn'),
   recipesSection: document.querySelector('.recipes'),
   recipesList: document.querySelector('.recipe-list'),
   recipesGuard: document.querySelector('.recipes-guard'),
