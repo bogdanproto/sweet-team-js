@@ -104,7 +104,7 @@ function onAreaChange(evt) {
 function onIngredientChange(evt) {
   clearRecipes();
   // console.dir(evt.target.attribute)
-  console.dir(evt.target)
+  console.dir(evt.target);
   params.ingredient = evt.currentTarget.value;
   loadRecipes();
 }

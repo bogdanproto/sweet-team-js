@@ -17,11 +17,14 @@
   background-color: rgba(255, 255, 255, 1);
 
   width: 335px;
+  height: 95vh;
+
+  overflow: auto;
 
   position: absolute;
   top: calc(50%);
   left: calc(50%);
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -50%);
 
   border-radius: 15px;
 }
@@ -99,6 +102,10 @@
 .modal-recipe-ing-item {
   color: var(--color-title-text);
 
+  position: relative;
+  top: 0px;
+  left: 0px;
+
   display: flex;
   margin: 0 20px 22px;
   justify-content: space-between;
@@ -119,7 +126,7 @@
   content: '';
 
   position: absolute;
-  top: 26px;
+  bottom: -6px;
   left: 0;
 
   display: block;

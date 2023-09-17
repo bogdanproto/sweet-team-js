@@ -1,10 +1,15 @@
-// import { addStarRating } from '../../utils/markup/star-rating';
+import { onLikeClick } from '../localestorage/local-storage-service';
 
 // Функция отрисовки элементов карточки
 export function modalRecipeCard(recipeItem) {
   const { _id, title, rating, instructions, thumb, time } = recipeItem;
 
   // addStarRating(recipeItem);
+
+  // const heartCheckbox = cardElement.querySelector('.recipe-heart-checkbox');
+  // const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
+
+  // onLikeClick(_id, isHeartChecked);
 
   const recipeTags = recipeItem.tags
     .map(tag => `<li class="modal-recipe-tags-item">${tag}</li>`)
@@ -26,8 +31,8 @@ export function modalRecipeCard(recipeItem) {
 <img class="modal-recipe-image" src="${thumb}" alt="${title}" width="295px" height="295px">
 <h2 class="modal-recipe-title">${title}</h2>
   <div class="modal-recipe-info-rating">
-  <p class="modal-recipe-rating">${rating}</p>
-  <div class="recipe-rating-stars" data-rating="${rating}" id="rating-${_id}"></div>
+  <p class="modal-recipe-rating">${parseFloat(rating).toFixed(1)}</p>
+  <div class="recipe-rating-stars" data-rating="${rating}" id="modal-recipe-rating-${_id}"></div>
   <p class="modal-recipe-time">${time} min</p>
   </div>
   <ul class="modal-recipe-ingredients">${recipeIngredients}</ul>
@@ -42,8 +47,8 @@ export function modalRecipeCard(recipeItem) {
 <img class="modal-recipe-image" src="${thumb}" alt="${title}" width="467px" height="250px">
 <div class="modal-recipe-info-rating">
 <ul class="modal-recipe-tags">${recipeTags}</ul> 
-  <p class="modal-recipe-rating">${rating}</p>
-  <div class="recipe-rating-stars" data-rating="${rating}" id="rating-${_id}"></div>
+  <p class="modal-recipe-rating">${parseFloat(rating).toFixed(1)}</p>
+  <div class="recipe-rating-stars" data-rating="${rating}" id="modal-recipe-rating-${_id}"></div>
   <p class="modal-recipe-time">${time} min</p>
   </div>
   <ul class="modal-recipe-ingredients">${recipeIngredients}</ul>
