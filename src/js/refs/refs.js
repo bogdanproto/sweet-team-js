@@ -35,6 +35,12 @@ export const refs = {
   emptyContainerFavorites: document.querySelector('.favorites-empty-container'),
   heroContainerFavorites: document.querySelector('.favorites-hero'),
 
+  // Modal recipe
+  modalRecipe: document.querySelector('.js-modal-recipe'),
+  modalRecipeOpenBtn: document.querySelector('.js-modal-recipe-open'),
+  modalRecipeCloseBtn: document.querySelector('.js-modal-recipe-close'),
+  modalRecipeFavorite: document.querySelector('.modal-recipe-favorite-btn'),
+
   //modal window
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
