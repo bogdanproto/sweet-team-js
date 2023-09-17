@@ -1,34 +1,27 @@
 import { refs } from '../refs/refs.js';
 import { getResipesById } from '../api/api-service.js';
 import { modalRecipeCard } from '../utils/markup/modal-recipe-card.js';
+import { modalRecipeAddStars } from '../utils/markup/modal-recipe-stars.js';
+import { modalRecipeListeners } from '../utils/listners/modal-recipe-listeners.js';
 import { onLikeClick } from '../utils/localestorage/local-storage-service.js';
-import rater from 'rater-js';
 
 let dataId = null;
 
-// Функция открытия или закрытия окна с рецептом
-export async function modalRecipeOpen(cardId) {
+// Открытие или закрытие окна с рецептом
+async function modalRecipeOpen(cardId) {
   refs.modalRecipe.classList.toggle('is-hidden');
 
   const data = await getResipesById(cardId);
   refs.modalRecipe.innerHTML = modalRecipeCard(data);
-  modalRecipeCloseListener();
-  addStarRating(data._id, data.rating);
+  modalRecipeAddStars(data._id, data.rating);
 
   dataId = data._id;
 
-  startListener();
+  modalRecipeListeners();
 }
 
-function startListener() {
-  const modalRecipeFavorite = document.querySelector(
-    '.modal-recipe-favorite-btn'
-  );
-
-  modalRecipeFavorite.addEventListener('click', testClick);
-}
-
-function testClick(evt) {
+// Действие кнопки "Add to favorite" / "Remove from favorite"
+function modalRecipeFavClick(evt) {
   const recipeHeartCheckbox = document.querySelector(
     `[data-id="${dataId}"] .recipe-heart-checkbox`
   );
@@ -55,32 +48,4 @@ function testClick(evt) {
   }
 }
 
-function modalRecipeCloseListener() {
-  const closeButton = document.querySelector('.js-modal-recipe-close');
-  if (closeButton) {
-    closeButton.addEventListener('click', modalRecipeClose);
-  }
-}
-
-function modalRecipeClose() {
-  const modalRecipeFavorite = document.querySelector(
-    '.modal-recipe-favorite-btn'
-  );
-
-  modalRecipeFavorite.removeEventListener('click', testClick);
-
-  refs.modalRecipe.classList.toggle('is-hidden');
-  refs.modalRecipe.innerHTML = '';
-}
-
-function addStarRating(_id, rating) {
-  const raterElement = document.querySelector(`#modal-recipe-rating-${_id}`);
-  if (raterElement) {
-    rater({
-      element: raterElement,
-      max: 5,
-      rating: rating,
-      readOnly: true,
-    });
-  }
-}
+export { modalRecipeOpen, modalRecipeFavClick };
