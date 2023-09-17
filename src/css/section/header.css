@@ -73,7 +73,7 @@
   padding-right: 20px;
   color: #fff;
 }
-.menu-toggle {
+.header-menu-toggle {
   min-height: 32px;
   min-width: 32px;
   display: flex;
@@ -91,7 +91,7 @@
 .js-open-menu {
   transition: fill var(--transition-dur-func);
 }
-.menu-container {
+.header-menu-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -101,7 +101,7 @@
   transition: transform 250ms ease-in-out;
 }
 
-.menu-container.is-open {
+.header-menu-container.is-open {
   transform: translateX(0);
 }
 .header-basket:hover,
@@ -142,7 +142,7 @@
   .header-pages {
     display: none;
   }
-  .switch {
+  .header-switch {
     display: none;
   }
   .header-container {
