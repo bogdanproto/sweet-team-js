@@ -41,6 +41,7 @@ function loadDataOnHomePage() {
   onSwitchHeaderListners();
 }
 
+
 function loadDataOnFavoritesPage() {
   console.log('Data Favorites was loaded');
   loadFavoritesData();
