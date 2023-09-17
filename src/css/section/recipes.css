@@ -5,14 +5,180 @@ root {
   --indent-row: 24px;
 }
 
+.recipes {
+  /* outline: 1px solid red; */
+  min-width: 320px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .recipes {
+    width: 512px;
+    padding-left: 16px;
+    padding-top: 27px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .recipes {
+    width: 814px;
+    padding-top: 37px;
+    padding-left: 32px;
+  }
+}
+
+.filters-container {
+  /* outline: 1px solid blue; */
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 1280px) {
+  .filters-container {
+    padding-bottom: 7px;
+  }
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .search-container {
+    width: 278px;
+  }
+}
+
+label[for='recipe-input'],
+label[for='select-time'],
+label[for='select-area'],
+label[for='select-ingredients'] {
+  height: 46px;
+  display: block;
+  font-size: 12px;
+  color: var(--color-selector-text);
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(14 / 12);
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.search-recipe {
+  padding-left: 48px; /* 18px (ширина іконки) + 12px (відступ) */
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  border-radius: 15px;
+  border: 1px solid var(--color-selector-categ);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(14 / 18);
+  color: var(--color-selector-text);
+  background-color: inherit;
+}
+
+.search-icon {
+  fill: var(--color-selector-text);
+}
+
+.select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.time-select,
+.area-select,
+.ingredient-select {
+  margin-top: 8px;
+  width: 160px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 18px;
+  align-items: flex-start;
+  border-radius: 15px;
+  border: 1px solid var(--color-selector-categ);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(14 / 18);
+  color: var(--color-selector-text);
+  background-color: inherit;
+}
+
+.ingredient-select {
+  margin-bottom: 6px;
+  width: 188px;
+}
+
+.reset-btn-container {
+  /* outline: 1px solid tomato; */
+}
+.x-icon {
+  fill: var(--color-green-title-text);
+}
+
+.reset-filters-btn {
+  display: flex;
+  margin-left: auto;
+  padding-right: 0;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  background-color: inherit;
+  color: var(--color-selector-text);
+  border: none;
+}
+
+.recipe-container {
+  padding-top: 10px;
+}
+
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  column-gap: var(--indent-column);
-  row-gap: var(--indent-row);
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .recipe-list {
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .recipe-list {
+    row-gap: 20px;
+  }
 }
 
 .recipe-list-item {
@@ -26,30 +192,6 @@ root {
   max-width: auto;
   height: 100%;
   object-fit: cover;
-}
-
-.recipe-container {
-  min-width: 320px;
-  max-width: 375px;
-  /* padding: 0 20px; */
-  padding-top: 40px;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 768px) {
-  .recipe-container {
-    max-width: 560px;
-    /* padding-right: 32px; */
-    padding-left: 32px;
-    padding-top: 0;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .recipe-container {
-    max-width: 910px;
-    /* padding-right: 64px; */
-    padding-left: 64px;
-  }
 }
 
 .recipe-list {
@@ -191,69 +333,4 @@ root {
 
 .recipe-heart-checkbox:checked + .recipe-heart-icon path {
   fill: rgb(248, 248, 248);
-}
-
-.time-select,
-.area-select,
-.ingredients-select {
-  display: none;
-}
-
-/* стилі на інпут */
-
-.search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-label[for='recipe-input'] {
-  font-size: 14px;
-  color: rgba(5, 5, 5, 0.5);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.28;
-  margin-bottom: 8px;
-}
-
-.input-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 278px;
-  margin-bottom: 44px;
-}
-
-.search-icon {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-.search-recipe {
-  padding-left: 48px; /* 18px (ширина іконки) + 12px (відступ) */
-  padding-top: 14px;
-  padding-bottom: 14px;
-  min-width: 335px;
-
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  border-radius: 15px;
-  border: 1px solid rgba(5, 5, 5, 0.2);
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.25;
-}
-
-.search-recipe::placeholder {
-  color: var(--color-selector-text);
-}
-
-.search-icon {
-  fill: var(--color-selector-text);
 }
