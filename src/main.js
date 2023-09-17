@@ -39,12 +39,14 @@ function loadDataOnHomePage() {
   switchOnRecipeCardsListner();
   onSwitchHeroListners();
   onSwitchHeaderListners();
+  stylesAfterReload();
 }
 
 function loadDataOnFavoritesPage() {
   console.log('Data Favorites was loaded');
   loadFavoritesData();
   onSwitchHeaderListners();
+  stylesAfterReload();
 }
 
 // const currentPage = window.location.href;
