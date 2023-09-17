@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header container">
   <div class="header-container">
     <ul class="header-pages">
       <li><a class="header-pages-item" href="index.html">Home</a></li>
@@ -12,22 +12,26 @@
     <ul class="header-list-svg">
       <li class="header-icon-svg">
         <button class="header-basket">
-          <svg width="24" height="24">
-            <use href="../img/sprite.svg#icon-shopping-cart"></use>
+          <svg class="header-icon-svg-img" width="24" height="24">
+            <use href="./img/sprite.svg#icon-shopping-cart"></use>
           </svg>
         </button>
       </li>
       <li class="header-icon-svg burger-svg">
         <button class="header-menu-toggle js-header-open-menu">
-          <svg width="32" height="32">
-            <use href="../img/sprite.svg#icon-burger"></use>
+          <svg class="header-icon-svg-img" width="32" height="32">
+            <use href="./img/sprite.svg#icon-burger"></use>
           </svg>
         </button>
       </li>
     </ul>
     <label class="header-switch toggle">
-      <input type="checkbox" id="themeSwitch" />
-      <span class="slider round"></span>
+      <div class="pretty p-switch p-fill">
+        <input type="checkbox" id="themeSwitch" />
+        <div class="state">
+          <label></label>
+        </div>
+      </div>
     </label>
   </div>
   <!-- Header Mob menu -->
@@ -37,10 +41,10 @@
   >
     <div class="mobile-menu-container">
       <button
-        class="header-mobile_close-btn js-header-close-menu header-menu-toggle"
+        class="header-mobile-close-btn js-header-close-menu header-menu-toggle"
       >
-        <svg class="header-mobile-menu_close-icon" width="16" height="16">
-          <use href="../img/sprite.svg#icon-close"></use>
+        <svg class="header-mobile-menu-close-icon" width="32" height="32">
+          <use href="./img/sprite.svg#icon-close"></use>
         </svg>
       </button>
 
@@ -55,8 +59,6 @@
         </li>
       </ul>
     </div>
-
-    <button class="header-mob-switcher"></button>
+    <!-- <button class="header-mob-switcher"></button> -->
   </div>
-  <script src="../js/partials/burger-menu.js"></script>
 </header>

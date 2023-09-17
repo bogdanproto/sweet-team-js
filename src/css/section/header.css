@@ -1,6 +1,7 @@
 .header-container {
   display: flex;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   align-items: center;
 }
 .header-name {
@@ -31,10 +32,16 @@
   transition: color var(--transition-dur-func);
 }
 .header-icon-svg {
+  display: flex;
+  align-items: center;
   margin-left: 14px;
 }
 
-.header-mobile_close-btn {
+.header-icon-svg-img {
+  fill: var(--color-title-text);
+}
+
+.header-mobile-close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,8 +49,12 @@
   top: 20px;
   right: 20px;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+}
+
+.header-mobile-menu-close-icon {
   fill: #fff;
   background-color: transparent;
 }
