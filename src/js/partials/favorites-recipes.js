@@ -6,10 +6,18 @@ import { createRecipeMarkup } from '../utils/markup/recipe-markup';
 import { refs } from '../refs/refs';
 
 import { onLikeClickAsync } from '../utils/localestorage/local-storage-service';
+import { addStarRating } from '../utils/markup/star-rating';
+
+let currentFilter = null;
 
 // Listeners-----------------------------
 function onKitListnerFavorites() {
   refs.filterFavorites.addEventListener('click', toFilterRecipes);
+  addListenerOnElement(
+    refs.recipesContainerFavorites,
+    'click',
+    handleRecipesFavorites
+  );
 }
 
 //main function for favorites-------------------
@@ -27,39 +35,40 @@ export function loadFavoritesData() {
 
   const recipesList = createRecipeMarkup(arrayRecipes);
   refs.recipesContainerFavorites.insertAdjacentHTML('beforeend', recipesList);
+  addStarRating(arrayRecipes);
 
-  getFilterBtn(arrayRecipes);
-
+  toRenderFilterBtn(arrayRecipes);
   onKitListnerFavorites(); //switch listner kit for page
-  addListenerOnElement(
-    refs.recipesContainerFavorites,
-    'click',
-    handleRecipesFavorites
-  );
-
   refs.recipesContainerFavorites.classList.remove('hidden-empty');
 }
 
+function toRenderFilterBtn(arr) {
+  const buttonList = toMarkUpFilterFavorites(arr);
+  refs.filterFavorites.insertAdjacentHTML('beforeend', buttonList);
+}
+
 //get filter button
-function getFilterBtn(arr) {
+function toUpdateFilterBtn(arr) {
   if (!arr.length) {
     refs.filterFavorites.innerHTML = '';
     return;
   }
 
-  // const recipesList =
-  //   refs.recipesContainerFavorites.querySelectorAll('.js-recipe');
-  // console.log([...recipesList]);
-  // const isAviable = [...recipesList].some(recipe =>
-  //   recipe.classList.contains('hidden-empty')
-  // );
+  const recipesList =
+    refs.recipesContainerFavorites.querySelectorAll('.js-recipe');
+  const isShowRecipes = [...recipesList].some(
+    recipe =>
+      recipe.dataset.category === currentFilter &&
+      !recipe.classList.contains('hidden-empty')
+  );
 
-  // console.log(isAviable);
+  if (isShowRecipes) {
+    return;
+  }
 
   refs.filterFavorites.innerHTML = '';
-
-  const buttonList = toMarkUpFilterFavorites(arr);
-  refs.filterFavorites.insertAdjacentHTML('beforeend', buttonList);
+  setDefaultFilterBtn();
+  toRenderFilterBtn(arr);
 }
 
 // filter cards function--------------------------
@@ -72,7 +81,7 @@ function toFilterRecipes(evt) {
 
   evt.target.classList.add('btn-favorites-filter-active');
 
-  const currentFilter = evt.target.dataset.category;
+  currentFilter = evt.target.dataset.category;
   const recipesList =
     refs.recipesContainerFavorites.querySelectorAll('.js-recipe');
 
@@ -85,7 +94,7 @@ function toFilterRecipes(evt) {
 }
 
 //clearButtonFilter-------------------------
-function clearBtnFilter(evt) {
+function clearBtnFilter() {
   const listBtn = refs.filterFavorites.querySelectorAll(
     '.btn-favorites-filter '
   );
@@ -93,6 +102,21 @@ function clearBtnFilter(evt) {
   listBtn.forEach(btn => btn.classList.remove('btn-favorites-filter-active'));
 }
 
+function setDefaultFilterBtn() {
+  clearBtnFilter();
+  currentFilter = 'all';
+  const recipesList =
+    refs.recipesContainerFavorites.querySelectorAll('.js-recipe');
+
+  recipesList.forEach(recipe => {
+    recipe.classList.remove('hidden-empty');
+    if (recipe.dataset.category !== currentFilter && currentFilter !== 'all') {
+      recipe.classList.add('hidden-empty');
+    }
+  });
+}
+
+//handler card recipes
 async function handleRecipesFavorites(evt) {
   if (
     evt.target.classList.contains('recipe-heart-checkbox') ||
@@ -105,9 +129,9 @@ async function handleRecipesFavorites(evt) {
     const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
 
     await onLikeClickAsync(id, isHeartChecked);
-    const arr = await getFavRec();
-    getFilterBtn(arr);
+    const arr = getFavRec();
     currentRecipes.remove();
+    toUpdateFilterBtn(arr);
     if (!arr.length) {
       refs.emptyContainerFavorites.classList.remove('hidden-empty');
     }
