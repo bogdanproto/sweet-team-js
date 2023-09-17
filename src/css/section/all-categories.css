@@ -1,21 +1,31 @@
 /* Тимчасові стилі, просто для візуалізації секції */
 
 .all-categories {
-  /* outline: 1px solid blue; */
-  padding-top: 40px;
+  /* outline: 1px solid red; */
+  padding: 40px 9px 20px 0;
+  min-width: 335px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .all-categories {
-    padding-top: 26px;
+    padding: 53px 16px 32px 0;
+    min-width: 192px;
+    width: 192px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .all-categories {
+    padding: 63px 32px 32px 0px;
+    width: 267px;
   }
 }
 
 /* Дивна поведінка click */
 .all-categories-btn {
-  padding: 14px 29px;
+  padding: 14px 28px;
   border-radius: 15px;
 
-  font-size: 16px;
+  font-size: 18px;
 
   color: var(--color-selector-text);
   background-color: var(--color-page-bcg);
@@ -24,8 +34,6 @@
   transition: color var(--transition-dur-func),
     background-color var(--transition-dur-func),
     border-color var(--transition-dur-func);
-  transition: color var(--transition-dur-func), background-color var(--transition-dur-func), border-color var(--transition-dur-func);
-
 }
 
 .all-categories-btn:hover,
@@ -35,21 +43,48 @@
   border-color: var(--color-hover-bcg);
 }
 
+@media screen and (min-width: 1280px) {
+  .all-categories-btn {
+    padding: 14px 28px;
+  }
+}
+
 .all-categories-list {
   /* outline: 1px solid tomato; */
-  height: 200px;
+  height: 198px;
   margin-top: 24px;
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .all-categories-list {
+    height: 416px;
+    margin-top: 30px
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .all-categories-list {
+    margin-top: 42px;
+  }
 }
 
 .all-categories-item {
   padding: 9px 0;
 
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 18px;
   color: var(--color-selector-categ-text);
   transition: color var(--transition-dur-func);
 
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .all-categories-item {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .all-categories-item:hover,

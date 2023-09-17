@@ -2,7 +2,7 @@ import { refs } from '../../refs/refs';
 import { onLikeClick } from '../localestorage/local-storage-service';
 import { modalRecipeOpen } from '../../partials/modal-recipe';
 
-function addListenerOnElement(element, eventType, callback) {
+export function addListenerOnElement(element, eventType, callback) {
   element.addEventListener(eventType, callback);
 }
 

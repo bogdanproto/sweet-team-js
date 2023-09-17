@@ -30,8 +30,9 @@ function sendForm() {
       comments: comments,
     };
 
-    const result = await addOrder(data);
-  };
+      const result = addOrder(data);
+
+  }
 
   form.addEventListener('submit', handleSubmit);
 
