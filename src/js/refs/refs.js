@@ -39,7 +39,6 @@ export const refs = {
   modalRecipe: document.querySelector('.js-modal-recipe'),
   modalRecipeOpenBtn: document.querySelector('.js-modal-recipe-open'),
   modalRecipeCloseBtn: document.querySelector('.js-modal-recipe-close'),
-  modalRecipeFavorite: document.querySelector('.modal-recipe-favorite-btn'),
 
   //modal window
   openModalBtn: document.querySelector('[data-modal-open]'),
