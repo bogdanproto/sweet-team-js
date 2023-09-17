@@ -23,8 +23,8 @@ export const refs = {
 
   // Modal recipe
   modalRecipe: document.querySelector('.js-modal-recipe'),
-  modalRecipeOpen: document.querySelector('.js-modal-recipe-open'),
-  modalRecipeClose: document.querySelector('.js-modal-recipe-close'),
+  modalRecipeOpenBtn: document.querySelector('.js-modal-recipe-open'),
+  modalRecipeCloseBtn: document.querySelector('.js-modal-recipe-close'),
 
   //modal window
   openModalBtn: document.querySelector('[data-modal-open]'),

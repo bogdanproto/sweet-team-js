@@ -66,6 +66,8 @@
   --color-modal-recipe-text: rgb(5, 5, 5, 80%);
   --color-modal-recipe-rating-text: rgb(5, 5, 5, 50%);
   --color-modal-recipe-tags-border: rgb(5, 5, 5, 20%);
+  --color-modal-recipe-backdrop: rgb(5, 5, 5, 30%);
+  --color-modal-recipe-backdground: rgb(255, 255, 255, 100%);
 
   /* ---------------animation --------------------------*/
 

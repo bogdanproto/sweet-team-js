@@ -45,7 +45,7 @@ function findParentWithClass(element, className) {
 }
 
 function handleSeeRecipeClick(cardId) {
-  console.log(`See Recipe button clicked for card with ID: ${cardId}`);
+  // console.log(`See Recipe button clicked for card with ID: ${cardId}`);
   modalRecipeOpen(cardId);
 }
 
