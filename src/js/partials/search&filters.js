@@ -14,7 +14,13 @@ import {
 
 // =============================================
 
-refs.searchInput.addEventListener('input', debounce(onSearchInput, 300));
+function onKitListenerSearchAndFilters() {
+  refs.searchInput.addEventListener('input', debounce(onSearchInput, 300));
+  refs.timeFilter.addEventListener('change', onTimeChange);
+  refs.areaFilter.addEventListener('change', onAreaChange);
+  refs.ingredientFilter.addEventListener('change', onIngredientChange);
+  // refs.resetFiltersBtn.addEventListener('click', resetFilters);
+}
 
 function onSearchInput(evt) {
   const searchQuery = evt.target.value.trim();
@@ -37,7 +43,6 @@ function loadTimeOptions() {
     },
   });
 }
-loadTimeOptions();
 
 // =========================================================================
 
@@ -58,8 +63,6 @@ async function loadAreaOptions() {
   }
 }
 
-loadAreaOptions();
-
 // =========================================================================
 
 async function loadIngredientsOptions() {
@@ -79,13 +82,6 @@ async function loadIngredientsOptions() {
     console.log(error);
   }
 }
-
-loadIngredientsOptions();
-
-refs.timeFilter.addEventListener('change', onTimeChange);
-refs.areaFilter.addEventListener('change', onAreaChange);
-refs.ingredientFilter.addEventListener('change', onIngredientChange);
-refs.resetFiltersBtn.addEventListener('click', resetFilters);
 
 function onTimeChange(evt) {
   clearRecipes();
@@ -109,8 +105,16 @@ function onIngredientChange(evt) {
   loadRecipes();
 }
 
-function resetFilters(evt) {
-  evt.preventDefault();
+// function resetFilters(evt) {
+//   evt.preventDefault();
 
-  refs.filterForm.reset();
+//   refs.filterForm.reset();
+// }
+
+function loadFiltersOption() {
+  loadTimeOptions();
+  loadAreaOptions();
+  loadIngredientsOptions();
+  onKitListenerSearchAndFilters()
 }
+export { loadFiltersOption };
