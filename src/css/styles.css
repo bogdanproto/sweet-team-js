@@ -8,6 +8,7 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 @import url('../../node_modules/slim-select/dist/slimselect.css');
 @import url(../../node_modules/swiper/swiper-bundle.css);
+@import url('../../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css');
 @import url('./reset.css');
 @import url('./common.css');
 @import url('./section/section-main.css');
@@ -80,7 +81,7 @@
 
 [dark] {
   /* text */
-  --color-page-bcg: rgb(255, 255, 255, 100%);
+  --color-page-bcg: rgb(22, 22, 22, 100%);
   --color-title-text: rgb(5, 5, 5, 100%);
   --color-element-bcg: rgb(255, 255, 255, 100%);
   --color-title-text: rgb(255, 255, 255, 100%);
