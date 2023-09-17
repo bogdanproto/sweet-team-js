@@ -303,7 +303,7 @@ label[for='select-ingredients'] {
 
 .recipe-heart-label {
   position: absolute;
-  z-index: 100;
+  z-index: 2;
 
   top: 16px;
   right: 16px;
