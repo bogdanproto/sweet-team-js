@@ -107,7 +107,7 @@
 
   /* swiper */
   --color-swiper-pagination-bcg: rgb(255, 255, 255);
-  --color-poprecipe-text: rgb(255, 255, 255, 80%)
+  --color-poprecipe-text: rgb(255, 255, 255, 80%);
 
   /* modal recipe */
   --color-modal-recipe-backdrop: rgb(255, 255, 255, 30%);
