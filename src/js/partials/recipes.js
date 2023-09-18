@@ -54,7 +54,6 @@ function clearRecipes() {
   observer.unobserve(refs.recipesGuard);
   refs.recipesList.innerHTML = '';
   params.page = 1;
-  params.category = '';
 }
 
 export { loadRecipes, clearRecipes };

@@ -14,6 +14,8 @@ import {
 
 // =============================================
 
+const idArr = [];
+
 function onKitListenerSearchAndFilters() {
   refs.searchInput.addEventListener('focus', onSearchFocus);
   refs.searchInput.addEventListener('focusout', onSearchFocusout);
@@ -24,12 +26,18 @@ function onKitListenerSearchAndFilters() {
   refs.resetFiltersBtn.addEventListener('click', onResetFiltersBtn);
 }
 
-function onSearchFocus() {
+function onSearchFocus(evt) {
   refs.searchIcon.classList.add('search-icon-active');
+  if (!evt.currentTarget.value) {
+    onResetSearchBtn();
+  }
 }
 
-function onSearchFocusout() {
+function onSearchFocusout(evt) {
   refs.searchIcon.classList.remove('search-icon-active');
+  if (!evt.currentTarget.value) {
+    onResetSearchBtn();
+  }
 }
 
 function onSearchInput(evt) {
@@ -43,7 +51,6 @@ function onSearchInput(evt) {
   refs.resetSearchBtn.classList.remove('is-hidden');
   refs.resetSearchBtn.addEventListener('click', onResetSearchBtn);
 }
-
 
 function onResetSearchBtn() {
   refs.resetSearchBtn.classList.add('is-hidden');
@@ -80,9 +87,8 @@ function onAreaChange(evt) {
 
 function onIngredientChange(evt) {
   clearRecipes();
-  console.dir(evt.target.value);
-
-  params.ingredient = evt.target.value === '-' ? '' : evt.target.value;
+  const ingredientForSearch = idArr.find(item => item.value === evt.target.value);
+  params.ingredient = evt.target.value === '-' ? '' : ingredientForSearch.id;
   loadRecipes();
 }
 
@@ -102,7 +108,7 @@ function loadTimeOptions() {
     select: '.time-select',
     settings: {
       showSearch: false,
-      placeholderText: '40 min',
+      placeholderText: '-',
     },
   });
 }
@@ -116,7 +122,7 @@ async function loadAreaOptions() {
       select: '.area-select',
       settings: {
         showSearch: false,
-        placeholderText: 'Italian',
+        placeholderText: '-',
       },
     });
   } catch (error) {
@@ -127,7 +133,7 @@ async function loadAreaOptions() {
 async function loadIngredientsOptions() {
   try {
     const allIngredients = await getAllIngredients();
-    console.log(allIngredients);
+    allIngredients.map(({ _id, name }) => idArr.push({ value: name, id: _id }));
     refs.ingredientFilter.innerHTML =
       createIngredientOptionsMarkup(allIngredients);
 
@@ -135,7 +141,7 @@ async function loadIngredientsOptions() {
       select: '.ingredient-select',
       settings: {
         showSearch: false,
-        placeholderText: 'Tomato',
+        placeholderText: '-',
       },
     });
   } catch (error) {
