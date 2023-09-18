@@ -1,4 +1,5 @@
 import { refs } from '../../refs/refs';
+import { Notify } from 'notiflix';
 
 console.dir(refs.themeSwitch);
 
@@ -19,7 +20,7 @@ async function themeChangerTolocalStorage(event) {
     }
   }
   catch {
-    
+    Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
 }
 
@@ -32,17 +33,16 @@ async function stylesAfterReload() {
   if (currentStyle === 'white' || currentStyle === null) {
     // change the ref
     refs.themeSwitch.checked = false;
-    // Add here class with dark design to elemtnts
-    document.querySelector('body').style.backgroundColor = 'red';
+    refs.body.removeAttribute('dark', '');
+
   } else if (currentStyle === 'dark') {
     // change the ref
     refs.themeSwitch.checked = true;
-    // Add here class with dark design to elemtnts
-    document.querySelector('body').style.backgroundColor = 'black';
+      refs.body.setAttribute('dark', '');
     }
   }
   catch {
-
+    Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
 }
 

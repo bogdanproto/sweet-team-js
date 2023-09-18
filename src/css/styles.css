@@ -35,6 +35,8 @@
   /* text */
   --color-title-text: rgb(5, 5, 5, 100%);
   --color-green-title-text: rgb(155, 181, 55, 100%);
+  --color-poprecipe-text: rgb(5, 5, 5, 80%);
+
 
   /* cards */
   --color-card-hero-text: rgb(248, 248, 248, 60%);
@@ -90,4 +92,7 @@
   --color-selector-text: rgb(255, 255, 255, 50%);
   --color-selector-check: rgb(255, 255, 255, 100%);
   --color-select-open-bcg: rgb(5, 5, 5, 100%);
+  --color-selector-categ-text: rgb(255, 255, 255, 30%);
+  --color-selector-categ: rgb(255, 255, 255, 20%);
+  --color-poprecipe-text: rgb(255, 255, 255, 80%)
 }

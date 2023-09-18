@@ -20,6 +20,7 @@ import { onSwitchHeroListners } from './js/utils/listners/listeners';
 import './js/partials/burger-menu';
 import { onSwitchHeaderListners } from './js/utils/listners/listeners';
 import './js/utils/theme/theme-changer';
+import {stylesAfterReload} from './js/utils/theme/theme-changer'
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
@@ -39,6 +40,7 @@ function loadDataOnHomePage() {
   switchOnRecipeCardsListner();
   onSwitchHeroListners();
   onSwitchHeaderListners();
+  stylesAfterReload();
 }
 
 
@@ -46,6 +48,7 @@ function loadDataOnFavoritesPage() {
   console.log('Data Favorites was loaded');
   loadFavoritesData();
   onSwitchHeaderListners();
+  stylesAfterReload();
 }
 
 // const currentPage = window.location.href;
