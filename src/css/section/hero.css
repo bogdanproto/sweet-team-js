@@ -4,17 +4,21 @@
   padding-bottom: 40px;
 }
 
-
-
 @media only screen and (min-width: 768px) {
   .section-hero {
     display: flex;
+    flex-direction: column;
     gap: 40px;
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
+@media only screen and (min-width: 1158px) {
+  .section-hero {
+    flex-direction: row;
+  }
+}
 
 .hero-block-text-title {
   margin-bottom: 14px;
@@ -24,17 +28,16 @@
   font-weight: 600;
   line-height: 31px;
   text-transform: uppercase;
-
 }
 
 @media only screen and (min-width: 768px) {
   .hero-block-text-title {
-    margin-bottom: 16px;  
+    width: 446px;
+    margin-bottom: 16px;
     font-size: 36px;
     line-height: 43px;
   }
 }
-
 
 .hero-block-text {
   margin-bottom: 28px;
@@ -42,12 +45,11 @@
   font-weight: 400;
   line-height: 18px;
   color: var(--color-title-text);
-  
-  
 }
 
 @media only screen and (min-width: 768px) {
   .hero-block-text {
+    width: 408px;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 32px;
@@ -56,7 +58,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 768px) {
   .hero-block-texts {
-  display: flex;
+    display: flex;
     width: 446px;
     flex-direction: column;
     align-items: flex-start;
@@ -64,7 +66,7 @@
   }
 }
 
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .hero-block-texts {
     margin-bottom: 32px;
   }
@@ -74,7 +76,7 @@
   .hero-block-texts {
     margin-bottom: 32px;
   }
-} 
+}
 
 .hero-words {
   color: var(--color-green-title-text);
@@ -84,7 +86,6 @@
   font-weight: 400;
   line-height: 31px;
   text-transform: uppercase;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -100,16 +101,14 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero-btn{
+  .hero-btn {
     border-radius: 15px;
   }
 }
 
-
-
 .hero-btn:hover,
 .hero-btn:focus {
-  color: #F8F8F8;
+  color: #f8f8f8;
   background-color: var(--color-hover-bcg);
 }
 
@@ -119,6 +118,12 @@
   width: 100%;
   height: 304px;
   /* overflow: hidden; */
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper {
+    height: 484px;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -131,38 +136,52 @@
   background: var(--color-menu-mobile-bcg);
 }
 
+/* #swiper-wrapper-hero .swiper-wrapper-hero {
+  height: 280px;
+}
+
+@media only screen and (min-width: 768px) {
+  #swiper-wrapper-hero .swiper-wrapper-hero {
+    height: 442px;
+  }
+} */
+
 .hero-event {
   display: flex;
   gap: 8px;
   flex-wrap: nowrap;
   overflow: hidden;
-    width: 100%;
-    height: 100%; 
+  width: 100%;
+  height: 100%;
   /* overflow: visible;
   width: calc(100% + 90px); */
 }
 
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .hero-event {
-    gap:16px; 
+    gap: 16px;
     align-items: flex-start;
   }
-} 
+}
 
 .hero-block-cook {
   width: 80px;
   height: 280px;
 }
 
+@media only screen and (min-width: 768px) {
+  .hero-block-cook {
+    width: 142px;
+    height: 442px;
+  }
+}
 
 .hero-block-cook-img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: cover;
   border-radius: 15px;
-  
 }
-
 
 .hero-block-event {
   display: flex;
@@ -174,18 +193,27 @@
   border-radius: 15px;
 }
 
- @media only screen and (min-width: 768px) {
-   .hero-block-event {
+@media only screen and (min-width: 768px) {
+  .hero-block-event {
     width: 351px;
-   }
- }
+    height: 442px;
+  }
+}
 
 .hero-block-event-img {
   margin-bottom: 20px;
-  width: auto; 
+  width: auto;
   height: auto;
   border-radius: 15px;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-block-event-img {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero-block-event-title {
@@ -195,6 +223,8 @@
   font-weight: 500;
   line-height: 14px;
   text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
 
   color: rgb(248, 248, 248, 60%);
 }
@@ -204,21 +234,30 @@
   height: 280px;
   background-color: var(--color-element-bcg);
   border-radius: 15px;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-block-meal {
-    /* width: 351px; */
+    width: 351px;
     max-width: 351px;
+    height: 442px;
   }
 }
 
 .hero-block-meal-img {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 15px;
-  
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-block-meal-img {
+    width: 120%;
+    height: 120%;
+  }
 }
 
 .hero-block-event-text {
