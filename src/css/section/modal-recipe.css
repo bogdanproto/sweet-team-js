@@ -8,16 +8,17 @@
   height: 100%;
 
   background-color: var(--color-modal-recipe-backdrop);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
 
 .modal-recipe {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--color-modal-recipe-backdground);
 
-  width: 335px;
+  max-width: 335px;
   height: 95vh;
 
   overflow-y: scroll;
+  overflow-x: hidden;
 
   position: absolute;
   top: 50%;
@@ -29,7 +30,7 @@
 
 @media only screen and (min-width: 768px) {
   .modal-recipe {
-    width: 531px;
+    max-width: 531px;
   }
 }
 
@@ -52,6 +53,7 @@
 }
 
 .modal-recipe-svg {
+  fill: var(--color-modal-recipe-close-btn);
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +148,7 @@
 }
 
 .modal-recipe-ing-item {
-  color: var(--color-title-text);
+  color: var(--color-modal-recipe-ing-text);
 
   position: relative;
   top: 0px;
