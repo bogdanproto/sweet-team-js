@@ -5,6 +5,8 @@ import { modalRecipeCard } from '../utils/markup/modal-recipe-card.js';
 import { modalRecipeAddStars } from '../utils/markup/modal-recipe-stars.js';
 import { modalRecipeListeners } from '../utils/listners/modal-recipe-listeners.js';
 import { onLikeClick } from '../utils/localestorage/local-storage-service.js';
+import { getCurrentPage } from '../utils/current-page.js';
+import { toUpdateListFavorits } from './favorites-recipes.js';
 
 let dataId = null;
 
@@ -27,13 +29,24 @@ async function modalRecipeOpen(cardId) {
 
 // Действие кнопки "Add to favorite" / "Remove from favorite"
 function modalRecipeFavClick(evt) {
+  const currentPage = getCurrentPage();
   const recipeHeartCheckbox = document.querySelector(
     `[data-id="${dataId}"] .recipe-heart-checkbox`
   );
+
   const modalRecipeFavorite = evt.target;
 
   if (modalRecipeFavorite.textContent === 'Add to favorite') {
-    onLikeClick(dataId, true);
+    if (currentPage.endsWith('favorites.html')) {
+      toUpdateListFavorits({
+        id: dataId,
+        currentRecipe: null,
+        isChecked: true,
+      });
+    } else {
+      onLikeClick(dataId, true);
+    }
+
     modalRecipeFavorite.textContent = 'Remove from favorite';
     if (
       recipeHeartCheckbox &&
@@ -42,7 +55,17 @@ function modalRecipeFavClick(evt) {
       recipeHeartCheckbox.checked = true;
     }
   } else {
-    onLikeClick(dataId, false);
+    if (currentPage.endsWith('favorites.html')) {
+      const currentRecipe = recipeHeartCheckbox.closest('.js-recipe');
+
+      toUpdateListFavorits({
+        id: dataId,
+        currentRecipe: currentRecipe,
+        isChecked: false,
+      });
+    } else {
+      onLikeClick(dataId, false);
+    }
     modalRecipeFavorite.textContent = 'Add to favorite';
     if (
       recipeHeartCheckbox &&
