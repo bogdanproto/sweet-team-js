@@ -18,8 +18,7 @@ root {
   }
 }
 
-@media only screen and (min-width: 1280px) {
-
+@media only screen and (min-width: 1200px) {
   .recipes-section {
     width: 846px;
     padding-top: 37px;
@@ -32,10 +31,9 @@ root {
   padding-bottom: 3px;
 }
 
-@media only screen and (min-width: 1280px) {
-
+@media only screen and (min-width: 1200px) {
   .form-container {
-    width: 780px;
+    width: 100%;
   }
 }
 
@@ -53,9 +51,10 @@ root {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   .form-filters {
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 
@@ -330,9 +329,7 @@ root {
   }
 }
 
-
-@media only screen and (min-width: 1280px) {
-
+@media only screen and (min-width: 1200px) {
   .recipe-list {
     row-gap: 20px;
   }
