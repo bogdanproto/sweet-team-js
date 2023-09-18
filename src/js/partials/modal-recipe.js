@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix';
 import { refs } from '../refs/refs.js';
 import { getResipesById } from '../api/api-service.js';
 import { modalRecipeCard } from '../utils/markup/modal-recipe-card.js';
@@ -9,15 +10,19 @@ let dataId = null;
 
 // Открытие или закрытие окна с рецептом
 async function modalRecipeOpen(cardId) {
-  refs.modalRecipe.classList.toggle('is-hidden');
+  try {
+    refs.modalRecipe.classList.toggle('is-hidden');
 
-  const data = await getResipesById(cardId);
-  refs.modalRecipe.innerHTML = modalRecipeCard(data);
-  modalRecipeAddStars(data._id, data.rating);
+    const data = await getResipesById(cardId);
+    refs.modalRecipe.innerHTML = modalRecipeCard(data);
+    modalRecipeAddStars(data._id, data.rating);
 
-  dataId = data._id;
+    dataId = data._id;
 
-  modalRecipeListeners();
+    modalRecipeListeners();
+  } catch (error) {
+    Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
+  }
 }
 
 // Действие кнопки "Add to favorite" / "Remove from favorite"
