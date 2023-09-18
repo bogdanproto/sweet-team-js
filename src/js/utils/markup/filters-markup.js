@@ -15,19 +15,21 @@ function createTimeOptionsMarkup() {
 }
 
 function createAreaOptionsMarkup(arr) {
+  const newArr = arr.map(({ name }) => name).sort((a,b) => a.localeCompare(b));
   const markup =
     '<option data-placeholder="true"></option>' +
     '<option>-</option>' +
-    arr.map(({ name }) => `<option>${name}</option>`).join('');
+    newArr.map(( name ) => `<option>${name}</option>`).join('');
 
   return markup;
 }
 
 function createIngredientOptionsMarkup(arr) {
+  const newArr = arr.map(({ name }) => name).sort((a,b) => a.localeCompare(b));
   const markup =
     '<option data-placeholder="true"></option>' +
     '<option>-</option>' +
-    arr.map(({ name }) => `<option>${name}</option>`).join('');
+    newArr.map(( name ) => `<option>${name}</option>`).join('');
   return markup;
 }
 
