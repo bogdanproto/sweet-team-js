@@ -28,7 +28,6 @@ root {
 
 .form-container {
   min-width: 335px;
-  padding-bottom: 3px;
 }
 
 @media only screen and (min-width: 1200px) {

@@ -72,6 +72,10 @@ function onResetSearchBtn() {
 }
 
 function onResetFiltersBtn() {
+  refs.searchInput.removeEventListener('input', onSearchInput);
+  refs.timeFilter.removeEventListener('change', onTimeChange);
+  refs.areaFilter.removeEventListener('change', onAreaChange);
+  refs.ingredientFilter.removeEventListener('change', onIngredientChange);
   params.title = '';
   params.time = '';
   params.area = '';
@@ -79,9 +83,11 @@ function onResetFiltersBtn() {
   refs.filterForm.reset();
   clearRecipes();
   loadRecipes();
-  // timeSelect.setSelected();
-  // areaSelect.setSelected();
-  // ingredientSelect.setSelected();
+  timeSelect.setSelected();
+  areaSelect.setSelected();
+  ingredientSelect.setSelected();
+  onKitListenerSearchAndFilters();
+  refs.resetSearchBtn.classList.add('is-hidden');
 }
 
 function onTimeChange(evt) {
