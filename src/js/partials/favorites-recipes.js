@@ -121,19 +121,14 @@ function setDefaultFilterBtn() {
 
 //handler card recipes
 async function handleRecipesFavorites(evt) {
-  if (
-    evt.target.classList.contains('recipe-heart-checkbox') ||
-    evt.target.classList.contains('recipe-heart-icon') ||
-    evt.target.classList.contains('recipe-heart-label')
-  ) {
+  if (evt.target.classList.contains('recipe-heart-checkbox')) {
     const currentRecipe = evt.target.closest('.js-recipe');
     const id = currentRecipe.dataset.id;
-    const heartCheckbox = evt.target.querySelector('.recipe-heart-checkbox');
-    const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
+
     await toUpdateListFavorits({
       id: id,
       currentRecipe: currentRecipe,
-      isChecked: isHeartChecked,
+      isChecked: false,
     });
   } else {
     onClickHandle(evt);

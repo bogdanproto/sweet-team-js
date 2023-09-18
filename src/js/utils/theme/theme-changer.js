@@ -1,8 +1,6 @@
 import { refs } from '../../refs/refs';
 import { Notify } from 'notiflix';
 
-console.dir(refs.themeSwitch);
-
 refs.themeSwitch.addEventListener('click', themeChangerTolocalStorage); // <<<<<<<< need to change the ref
 
 async function themeChangerTolocalStorage(event) {
@@ -18,30 +16,25 @@ async function themeChangerTolocalStorage(event) {
       // Add here class with dark design to elemtnts
       refs.body.setAttribute('dark', '');
     }
-  }
-  catch {
+  } catch {
     Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
 }
 
 async function stylesAfterReload() {
-  
-  try{ 
+  try {
     let currentStyle = localStorage.getItem('themeColor');
-    console.log(currentStyle);
 
-  if (currentStyle === 'white' || currentStyle === null) {
-    // change the ref
-    refs.themeSwitch.checked = false;
-    refs.body.removeAttribute('dark', '');
-
-  } else if (currentStyle === 'dark') {
-    // change the ref
-    refs.themeSwitch.checked = true;
+    if (currentStyle === 'white' || currentStyle === null) {
+      // change the ref
+      refs.themeSwitch.checked = false;
+      refs.body.removeAttribute('dark', '');
+    } else if (currentStyle === 'dark') {
+      // change the ref
+      refs.themeSwitch.checked = true;
       refs.body.setAttribute('dark', '');
     }
-  }
-  catch {
+  } catch {
     Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
 }
