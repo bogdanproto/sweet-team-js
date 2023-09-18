@@ -101,12 +101,14 @@
   --color-selector-categ-text: rgb(255, 255, 255, 30%);
   --color-selector-categ: rgb(255, 255, 255, 20%);
   --color-poprecipe-text: rgb(255, 255, 255, 80%);
+
   /* order now  modal */
   --color-close-icon: rgb(255, 255, 255);
 
   /* swiper */
   --color-swiper-pagination-bcg: rgb(255, 255, 255);
   --color-poprecipe-text: rgb(255, 255, 255, 80%)
+
   /* modal recipe */
   --color-modal-recipe-backdrop: rgb(255, 255, 255, 30%);
   --color-modal-recipe-close-btn: rgb(255, 255, 255, 100%);
