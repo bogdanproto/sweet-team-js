@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-e0017bef.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-8cf86544.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-edc5a86c.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-475d8cad.css">
   </head>
   <body>
     <header class="header container">
@@ -188,6 +188,7 @@
               placeholder="Enter your name"
               required
               pattern="[A-Za-zA-Яа-я]+$"
+              title="Please enter a valid name using only letters."
               minlength="2"
               autofocus
               id="buyer-name"
@@ -198,11 +199,12 @@
             <label class="label-title" for="phone">Phone number</label>
             <input
               class="modal-input"
-              placeholder="123-45-67"
+              placeholder="+380000000000"
               type="tel"
               id="buyer-phone"
               name="phone"
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              pattern="\+38[0-9]{10}"
+              title="Please enter a valid phone number starting with +38 followed by 10 digits."
               required
             />
           </div>
@@ -215,9 +217,10 @@
               placeholder="Enter your email"
               id="buyer-email"
               type="email"
-              id="buyer-email"
               name="email"
               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address (e.g. example@example.com)."
+              required
             />
           </div>
           <!-- Comments-->
