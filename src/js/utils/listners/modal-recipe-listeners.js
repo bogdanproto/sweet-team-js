@@ -1,7 +1,7 @@
 import { refs } from '../../refs/refs.js';
 import { modalRecipeFavClick } from '../../partials/modal-recipe.js';
 
-// Присвоение Listeners на кнопки
+// Присвоение Listeners
 export function modalRecipeListeners() {
   const listeners = {
     modalRecipeFavorite: document.querySelector('.modal-recipe-favorite-btn'),
@@ -16,15 +16,25 @@ export function modalRecipeListeners() {
       'click',
       modalRecipeClose
     );
+
     listeners.modalRecipeBackdrop.addEventListener('click', evt => {
       if (evt.target === listeners.modalRecipeBackdrop) {
+        modalRecipeClose();
+      }
+    });
+
+    document.addEventListener('keydown', evt => {
+      if (
+        evt.key === 'Escape' &&
+        !refs.modalRecipe.classList.contains('is-hidden')
+      ) {
         modalRecipeClose();
       }
     });
   }
 }
 
-// Закрытие модального окна
+// Закрытие модального окна + удаление Listeners
 function modalRecipeClose() {
   const listeners = {
     modalRecipeCloseButton: document.querySelector('.js-modal-recipe-close'),
@@ -32,16 +42,27 @@ function modalRecipeClose() {
     modalRecipeBackdrop: document.querySelector('.modal-recipe-backdrop'),
   };
 
+  listeners.modalRecipeBackdrop.removeEventListener('click', evt => {
+    if (evt.target === listeners.modalRecipeBackdrop) {
+      modalRecipeClose();
+    }
+  });
+
   listeners.modalRecipeCloseButton.removeEventListener(
     'click',
     modalRecipeClose
   );
+
   listeners.modalRecipeFavorite.removeEventListener(
     'click',
     modalRecipeFavClick
   );
-  listeners.modalRecipeBackdrop.removeEventListener('click', evt => {
-    if (evt.target === listeners.modalRecipeBackdrop) {
+
+  document.removeEventListener('keydown', evt => {
+    if (
+      evt.key === 'Escape' &&
+      !refs.modalRecipe.classList.contains('is-hidden')
+    ) {
       modalRecipeClose();
     }
   });
