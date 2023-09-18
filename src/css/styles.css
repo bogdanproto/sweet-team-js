@@ -63,12 +63,15 @@
   --color-select-open-bcg: rgb(255, 255, 255, 100%);
 
   /* modal recipe */
+  --color-modal-recipe-backdrop: rgb(5, 5, 5, 30%);
+  --color-modal-recipe-close-btn: rgb(5, 5, 5, 100%);
+  --color-modal-recipe-backdground: rgb(255, 255, 255, 100%);
+  --color-modal-recipe-tags: rgb(5, 5, 5, 100%);
+  --color-modal-recipe-tags-border: rgb(5, 5, 5, 20%);
+  --color-modal-recipe-rating-text: rgb(5, 5, 5, 50%);
+  --color-modal-recipe-ing-text: rgb(5, 5, 5, 100%);
   --color-modal-recipe-placeholder: rgb(5, 5, 5, 10%);
   --color-modal-recipe-text: rgb(5, 5, 5, 80%);
-  --color-modal-recipe-rating-text: rgb(5, 5, 5, 50%);
-  --color-modal-recipe-tags-border: rgb(5, 5, 5, 20%);
-  --color-modal-recipe-backdrop: rgb(5, 5, 5, 30%);
-  --color-modal-recipe-backdground: rgb(255, 255, 255, 100%);
 
   /* ---------------animation --------------------------*/
 
@@ -82,7 +85,6 @@
 [dark] {
   /* text */
   --color-page-bcg: rgb(22, 22, 22, 100%);
-  --color-title-text: rgb(5, 5, 5, 100%);
   --color-element-bcg: rgb(255, 255, 255, 100%);
   --color-title-text: rgb(255, 255, 255, 100%);
   --color-button-bcg: rgb(30, 30, 30, 100%);
@@ -90,4 +92,14 @@
   --color-selector-text: rgb(255, 255, 255, 50%);
   --color-selector-check: rgb(255, 255, 255, 100%);
   --color-select-open-bcg: rgb(5, 5, 5, 100%);
+  /* modal recipe */
+  --color-modal-recipe-backdrop: rgb(255, 255, 255, 30%);
+  --color-modal-recipe-close-btn: rgb(255, 255, 255, 100%);
+  --color-modal-recipe-backdground: rgb(5, 5, 5, 100%);
+  --color-modal-recipe-tags: rgb(255, 255, 255, 100%);
+  --color-modal-recipe-tags-border: rgb(255, 255, 255, 20%);
+  --color-modal-recipe-rating-text: rgb(255, 255, 255, 50%);
+  --color-modal-recipe-ing-text: rgb(255, 255, 255, 100%);
+  --color-modal-recipe-placeholder: rgb(255, 255, 255, 10%);
+  --color-modal-recipe-text: rgb(255, 255, 255, 80%);
 }
