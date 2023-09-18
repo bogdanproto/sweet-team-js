@@ -2,8 +2,7 @@ import { refs } from '../refs/refs';
 import { addOrder } from '../api/api-service';
 import { Notify } from 'notiflix';
 
-const form = document.querySelector('.callback-form');
-
+// Обробник події для надсилання форми
 const handleSubmit = async function (event) {
   event.preventDefault();
 
@@ -20,13 +19,13 @@ const handleSubmit = async function (event) {
     comment: comment,
   };
 
+  // Відправка даних з форми на сервер
   try {
     const result = await addOrder(data);
     Notify.success("Thank you for your order! We'll be in touch shortly.");
-    console.log(result);
-    console.log(data);
+    console.log('data sent to backend:', data);
     toggleModal();
-    form.reset();
+    refs.form.reset();
   } catch (error) {
     console.error('Error while adding order:', error.message);
     console.log('Server response:', error.response.data);
@@ -34,31 +33,36 @@ const handleSubmit = async function (event) {
   }
 };
 
-const onEscKeyPress = function (event) {
+// Закриває модалку при натисненні на клавішу "Escape"
+const onEscKeyPress = event => {
   if (event.code === 'Escape') {
     toggleModal();
   }
 };
 
+// Закриває модалку при кліці за її межами
 const onBackdropClick = event => {
   if (event.target === event.currentTarget) {
     toggleModal();
   }
 };
 
+// Відкриває або закриває модальне вікно
 export function onShowOrderForm() {
   refs.modal.classList.toggle('is-hidden');
   refs.closeModalBtn.addEventListener('click', toggleModal);
   document.addEventListener('keydown', onEscKeyPress);
-  form.addEventListener('submit', handleSubmit);
+  refs.form.addEventListener('submit', handleSubmit);
   refs.modal.addEventListener('click', onBackdropClick);
 }
 
+// Перемикач для модального вікна
 const toggleModal = () => {
   refs.modal.classList.toggle('is-hidden');
   document.body.classList.toggle('no-scroll');
   document.removeEventListener('keydown', onEscKeyPress);
   refs.closeModalBtn.removeEventListener('click', toggleModal);
-  form.removeEventListener('submit', handleSubmit);
+  refs.form.removeEventListener('submit', handleSubmit);
   refs.modal.removeEventListener('click', onBackdropClick);
+  refs.form.reset();
 };
