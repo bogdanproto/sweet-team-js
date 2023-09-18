@@ -1,5 +1,5 @@
 import { refs } from '../../refs/refs';
-import { onLikeClick } from '../localestorage/local-storage-service';
+import { onLikeClickAsync } from '../localestorage/local-storage-service';
 import { modalRecipeOpen } from '../../partials/modal-recipe';
 
 export function addListenerOnElement(element, eventType, callback) {
@@ -11,23 +11,19 @@ function switchOnRecipeCardsListner() {
 }
 
 // Залежно від того на що клікнув користувач сердечко чи кнопку викликає відповідну коллбек ф-ю handleHeartClick або handleSeeRecipeClick
-function onClickHandle(event) {
+async function onClickHandle(event) {
   const clickedElement = event.target;
   const cardElement = findParentWithClass(clickedElement, 'js-recipe');
   if (!cardElement) return;
 
   const cardId = cardElement.dataset.id;
 
-  if (
-    clickedElement.classList.contains('recipe-heart-checkbox') ||
-    clickedElement.classList.contains('recipe-heart-icon') ||
-    clickedElement.classList.contains('recipe-heart-label')
-  ) {
+  if (clickedElement.classList.contains('recipe-heart-checkbox')) {
     // Отримуємо стан чекбокса
     const heartCheckbox = cardElement.querySelector('.recipe-heart-checkbox');
     const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
 
-    onLikeClick(cardId, isHeartChecked);
+    await onLikeClickAsync(cardId, isHeartChecked);
     return;
   }
 

@@ -4,15 +4,15 @@ import './js/partials/modal-recipe';
 import './js/partials/all-categories';
 import './js/partials/favorites-recipes';
 import './js/partials/recipes';
-import { loadFavoritesData } from './js/partials/favorites-recipes';
+import './js/partials/search&filters';
 import './js/partials/hero';
 import './js/partials/popular';
+import './js/utils/listners/recipe-list-listener';
+import { loadFavoritesData } from './js/partials/favorites-recipes';
 import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
 import { loadRecipes } from './js/partials/recipes';
-import './js/partials/search&filters';
 import { loadFiltersOption } from './js/partials/search&filters';
-import './js/utils/listners/recipe-list-listener';
 import { switchOnRecipeCardsListner } from './js/utils/listners/recipe-list-listener';
 import { loadHeroData } from './js/partials/hero';
 import './js/partials/order-now';
@@ -31,7 +31,6 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadDataOnHomePage() {
-  console.log('Data Home was loaded');
   loadHeroData();
   loadAllCategories();
   showPopularRecipes();
@@ -44,7 +43,6 @@ function loadDataOnHomePage() {
 }
 
 function loadDataOnFavoritesPage() {
-  console.log('Data Favorites was loaded');
   loadFavoritesData();
   onSwitchHeaderListners();
   stylesAfterReload();
