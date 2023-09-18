@@ -5,7 +5,7 @@
   padding: 40px 9px 20px 0;
   min-width: 335px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .all-categories {
     padding: 53px 16px 32px 0;
     min-width: 192px;
@@ -13,7 +13,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .all-categories {
     padding: 63px 32px 32px 0px;
     width: 267px;
@@ -37,14 +37,20 @@
 }
 
 .all-categories-btn:hover,
-.all-categories-btn:focus,
+
 .recipe-card-btn:focus {
   color: var(--color-card-text);
   background-color: var(--color-hover-bcg);
   border-color: var(--color-hover-bcg);
 }
 
-@media screen and (min-width: 1280px) {
+.all-categories-btn:focus {
+  color: var(--color-selector-text);
+  background-color: var(--color-page-bcg);
+  border-color: var(--color-selector-categ);
+}
+
+@media only screen and (min-width: 1280px) {
   .all-categories-btn {
     padding: 14px 28px;
   }
@@ -57,14 +63,14 @@
   overflow-y: scroll;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .all-categories-list {
     height: 416px;
     margin-top: 30px
   }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .all-categories-list {
     margin-top: 42px;
   }
@@ -81,7 +87,7 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .all-categories-item {
     font-size: 16px;
     line-height: 20px;

@@ -46,6 +46,7 @@ function onAllCategories() {
 }
 
 function resetCategory() {
+  params.category = '';
   const currentSelectedCategory = document.querySelector('.selected-category');
   currentSelectedCategory?.classList.remove('selected-category');
   nextSelectedCategory = null;

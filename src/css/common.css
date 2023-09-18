@@ -1,6 +1,7 @@
 body {
   font-family: 'Inter';
   background-color: var(--color-page-bcg);
+  padding-bottom: 30px;
 }
 
 .container {
