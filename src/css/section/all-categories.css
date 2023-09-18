@@ -44,10 +44,10 @@
   border-color: var(--color-hover-bcg);
 }
 
-.all-categories-btn:focus {
-  color: var(--color-selector-text);
-  background-color: var(--color-page-bcg);
-  border-color: var(--color-selector-categ);
+.all-categories-btn.selected-category {
+  color: var(--color-card-text);
+  background-color: var(--color-hover-bcg);
+  border-color: var(--color-hover-bcg);
 }
 
 @media only screen and (min-width: 1280px) {

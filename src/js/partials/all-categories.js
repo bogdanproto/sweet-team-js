@@ -39,10 +39,12 @@ function onSelectCategory(evt) {
   loadRecipes();
 }
 
-function onAllCategories() {
+function onAllCategories(evt) {
   clearRecipes();
   resetCategory();
   loadRecipes();
+  const nextSelectedCategory = evt.target;
+  nextSelectedCategory.classList.add('selected-category');
 }
 
 function resetCategory() {
