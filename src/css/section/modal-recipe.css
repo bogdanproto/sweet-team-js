@@ -9,8 +9,6 @@
 
   background-color: var(--color-modal-recipe-backdrop);
   backdrop-filter: blur(2px);
-
-  background-attachment: scroll;
 }
 
 .modal-recipe {
@@ -19,11 +17,11 @@
   width: 335px;
   height: 95vh;
 
-  overflow: auto;
+  overflow-y: scroll;
 
   position: absolute;
-  top: calc(50%);
-  left: calc(50%);
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   border-radius: 15px;
@@ -118,6 +116,8 @@
 @media only screen and (min-width: 768px) {
   .modal-recipe-info-rating {
     margin: 0 32px 0 0;
+    justify-content: flex-end;
+    min-width: 170px;
   }
 }
 
@@ -216,8 +216,7 @@
     line-height: 1.28;
 
     gap: 4px;
-    margin-left: 32px;
-    margin-top: 0;
+    margin: 0 0 0 32px;
   }
 }
 
