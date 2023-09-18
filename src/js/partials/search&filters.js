@@ -15,10 +15,14 @@ import {
 // =============================================
 
 const idArr = [];
+let timeSelect = {};
+let areaSelect = {};
+let ingredientSelect = {};
 
 function onKitListenerSearchAndFilters() {
   refs.searchInput.addEventListener('focus', onSearchFocus);
   refs.searchInput.addEventListener('focusout', onSearchFocusout);
+  refs.searchInput.addEventListener('input', onClose);
   refs.searchInput.addEventListener('input', debounce(onSearchInput, 300));
   refs.timeFilter.addEventListener('change', onTimeChange);
   refs.areaFilter.addEventListener('change', onAreaChange);
@@ -26,10 +30,17 @@ function onKitListenerSearchAndFilters() {
   refs.resetFiltersBtn.addEventListener('click', onResetFiltersBtn);
 }
 
+function onClose(evt) {
+  if (evt.currentTarget.value) {
+    refs.resetSearchBtn.classList.remove('is-hidden');
+    return;
+  }
+  refs.resetSearchBtn.classList.add('is-hidden');
+}
+
 function onSearchFocus(evt) {
   refs.searchIcon.classList.add('search-icon-active');
   if (!evt.currentTarget.value) {
-    onResetSearchBtn();
   }
 }
 
@@ -48,7 +59,6 @@ function onSearchInput(evt) {
   clearRecipes();
   loadRecipes();
 
-  refs.resetSearchBtn.classList.remove('is-hidden');
   refs.resetSearchBtn.addEventListener('click', onResetSearchBtn);
 }
 
@@ -69,6 +79,9 @@ function onResetFiltersBtn() {
   refs.filterForm.reset();
   clearRecipes();
   loadRecipes();
+  // timeSelect.setSelected();
+  // areaSelect.setSelected();
+  // ingredientSelect.setSelected();
 }
 
 function onTimeChange(evt) {
@@ -87,8 +100,10 @@ function onAreaChange(evt) {
 
 function onIngredientChange(evt) {
   clearRecipes();
-  const ingredientForSearch = idArr.find(item => item.value === evt.target.value);
-  params.ingredient = evt.target.value === '-' ? '' : ingredientForSearch.id;
+  const ingredientForSearch = idArr.find(
+    item => item.value === evt.target.value
+  );
+  params.ingredient = ingredientForSearch?.id ?? '';
   loadRecipes();
 }
 
@@ -104,7 +119,7 @@ export { loadFiltersOption };
 function loadTimeOptions() {
   refs.timeFilter.innerHTML = createTimeOptionsMarkup();
 
-  const timeSelect = new SlimSelect({
+  timeSelect = new SlimSelect({
     select: '.time-select',
     settings: {
       showSearch: false,
@@ -118,7 +133,7 @@ async function loadAreaOptions() {
     const allAreas = await getAllAreas();
     refs.areaFilter.innerHTML = createAreaOptionsMarkup(allAreas);
 
-    const areaSelect = new SlimSelect({
+    areaSelect = new SlimSelect({
       select: '.area-select',
       settings: {
         showSearch: false,
@@ -137,10 +152,10 @@ async function loadIngredientsOptions() {
     refs.ingredientFilter.innerHTML =
       createIngredientOptionsMarkup(allIngredients);
 
-    const ingredientSelect = new SlimSelect({
+    ingredientSelect = new SlimSelect({
       select: '.ingredient-select',
       settings: {
-        showSearch: false,
+        showSearch: true,
         placeholderText: '-',
       },
     });

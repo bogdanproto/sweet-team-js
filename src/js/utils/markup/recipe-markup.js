@@ -36,4 +36,16 @@ function createRecipeMarkup(arr) {
     .join('');
 }
 
-export { createRecipeMarkup };
+function noRecipes() {
+  const markup = `<div class="no-recipes-container">
+  <svg class="no-recipes-logo" width="68" height="58">
+      <use href="./img/sprite.svg#icon-empty-favorits"></use>
+    </svg>
+  <p class="no-recipes-text">
+  It appears that there are no recipes matching your search parametrs. Please try again.
+    </p>
+    </div>`
+  return markup;
+}
+
+export { createRecipeMarkup, noRecipes };

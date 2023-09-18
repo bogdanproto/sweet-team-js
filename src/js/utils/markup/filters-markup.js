@@ -15,7 +15,6 @@ function createTimeOptionsMarkup() {
 }
 
 function createAreaOptionsMarkup(arr) {
-
   const markup =
     '<option data-placeholder="true"></option>' +
     '<option>-</option>' +
@@ -25,13 +24,10 @@ function createAreaOptionsMarkup(arr) {
 }
 
 function createIngredientOptionsMarkup(arr) {
-
   const markup =
     '<option data-placeholder="true"></option>' +
     '<option>-</option>' +
-    arr
-      .map(({ _id, name }) => `<option data-id="${_id}">${name}</option>`)
-      .join('');
+    arr.map(({ name }) => `<option>${name}</option>`).join('');
   return markup;
 }
 

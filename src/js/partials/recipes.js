@@ -3,7 +3,7 @@ import { Notify } from 'notiflix';
 import { refs } from '../refs/refs';
 import { params } from '../refs/params';
 import { getAllRecipes } from '../api/api-service';
-import { createRecipeMarkup } from '../utils/markup/recipe-markup';
+import { createRecipeMarkup, noRecipes} from '../utils/markup/recipe-markup';
 import { addStarRating } from '../utils/markup/star-rating';
 
 // =====================================================================
@@ -17,9 +17,8 @@ async function loadRecipes() {
     const { results: allRecipes, totalPages } = await getAllRecipes(params);
 
     if (!allRecipes.length) {
-      Notify.warning(
-        'Sorry, there are no recipes matching your search parametrs. Please try again.'
-      );
+
+      refs.recipesList.innerHTML = noRecipes();
       return;
     }
 
