@@ -20,9 +20,9 @@ root {
     padding-bottom: 100px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .recipes-section {
-    width: 814px;
+    width: 846px;
     padding-top: 37px;
     padding-left: 32px;
   }
@@ -34,7 +34,7 @@ root {
   padding-bottom: 3px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .form-container {
     width: 780px;
   }
@@ -294,7 +294,7 @@ root {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .recipe-list {
     row-gap: 20px;
   }
@@ -325,7 +325,7 @@ root {
     --indent-row: 16px;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   .recipe-list {
     --items: 3;
     --indent-column: 16px;
@@ -348,7 +348,7 @@ root {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   .recipe-card {
     width: 250px;
     height: 287px;

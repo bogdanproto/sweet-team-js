@@ -2,7 +2,7 @@ export function createMarkupHeroEvents(arr) {
   return arr
     .map(
       ({ cook, topic }) => `
-                <div class="swiper-slide hero-event">
+                <div class="swiper-slide">
                     <div class="hero-event">
                         <div class="hero-block-cook">
                             <picture>
