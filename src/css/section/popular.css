@@ -50,7 +50,7 @@
 }
 
 .popular-recipe {
-  color: rgba(5, 5, 5, 0.8);
+  color: var(--color-poprecipe-text);
   font-size: 12px;
   line-height: 1.33;
   width: 255px;

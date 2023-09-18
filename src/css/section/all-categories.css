@@ -37,6 +37,7 @@
 }
 
 .all-categories-btn:hover,
+.all-categories-btn:focus,
 .recipe-card-btn:focus {
   color: var(--color-card-text);
   background-color: var(--color-hover-bcg);
