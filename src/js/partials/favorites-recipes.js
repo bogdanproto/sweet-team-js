@@ -33,10 +33,7 @@ export function loadFavoritesData() {
     return;
   }
 
-  const recipesList = createRecipeMarkup(arrayRecipes);
-  refs.recipesContainerFavorites.insertAdjacentHTML('beforeend', recipesList);
-  addStarRating(arrayRecipes);
-
+  toRenderRecipes(arrayRecipes);
   toRenderFilterBtn(arrayRecipes);
   onKitListnerFavorites(); //switch listner kit for page
   refs.recipesContainerFavorites.classList.remove('hidden-empty');
@@ -45,6 +42,12 @@ export function loadFavoritesData() {
 function toRenderFilterBtn(arr) {
   const buttonList = toMarkUpFilterFavorites(arr);
   refs.filterFavorites.insertAdjacentHTML('beforeend', buttonList);
+}
+
+function toRenderRecipes(arr) {
+  const recipesList = createRecipeMarkup(arr);
+  refs.recipesContainerFavorites.insertAdjacentHTML('beforeend', recipesList);
+  addStarRating(arr);
 }
 
 //get filter button
@@ -123,28 +126,38 @@ async function handleRecipesFavorites(evt) {
     evt.target.classList.contains('recipe-heart-icon') ||
     evt.target.classList.contains('recipe-heart-label')
   ) {
-    const currentRecipes = evt.target.closest('.js-recipe');
-    const id = currentRecipes.dataset.id;
+    const currentRecipe = evt.target.closest('.js-recipe');
+    const id = currentRecipe.dataset.id;
     const heartCheckbox = evt.target.querySelector('.recipe-heart-checkbox');
     const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
-    toUpdateListFavorits(id, currentRecipes, isHeartChecked);
+    await toUpdateListFavorits({
+      id: id,
+      currentRecipe: currentRecipe,
+      isChecked: isHeartChecked,
+    });
   } else {
     onClickHandle(evt);
   }
 }
 
-export async function toUpdateListFavorits(
-  id,
-  currentRecipe = null,
-  isChecked = null
-) {
-  console.log(isChecked);
+export async function toUpdateListFavorits(objOption) {
+  const { id, currentRecipe, isChecked } = objOption;
+
   await onLikeClickAsync(id, isChecked);
   const arr = getFavRec();
-  currentRecipe.remove();
+
+  if (!isChecked) {
+    currentRecipe.remove();
+  } else {
+    const recipeObjbyId = arr.find(item => item._id === id);
+    toRenderRecipes([recipeObjbyId]);
+  }
+
   toUpdateFilterBtn(arr);
-  console.log(arr);
+
   if (!arr.length) {
     refs.emptyContainerFavorites.classList.remove('hidden-empty');
+  } else {
+    refs.emptyContainerFavorites.classList.add('hidden-empty');
   }
 }
