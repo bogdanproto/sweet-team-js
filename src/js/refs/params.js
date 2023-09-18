@@ -1,8 +1,8 @@
 let perPage = 6;
 
-if (window.innerWidth > 768) {
+if (window.innerWidth > 1280) {
   perPage = 9;
-} else if (window.innerWidth > 375) {
+} else if (window.innerWidth > 768) {
   perPage = 8;
 } else {
   perPage = 6;

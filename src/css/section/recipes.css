@@ -6,21 +6,20 @@ root {
 }
 
 .recipes-section {
-  /* outline: 1px solid red; */
   min-width: 335px;
   padding-top: 20px;
-  padding-bottom: 80px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .recipes-section {
     width: 512px;
     padding-left: 16px;
     padding-top: 27px;
-    padding-bottom: 100px;
   }
 }
-@media screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 1280px) {
+
   .recipes-section {
     width: 846px;
     padding-top: 37px;
@@ -29,19 +28,18 @@ root {
 }
 
 .form-container {
-  /* outline: 1px solid blue; */
   min-width: 335px;
   padding-bottom: 3px;
 }
 
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
+
   .form-container {
     width: 780px;
   }
 }
 
 .form-filters {
-  /* outline: 2px solid purple; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -49,20 +47,21 @@ root {
   padding-bottom: 7px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .form-filters {
     gap: 16px;
   }
 }
 
-/* ================================================== */
-/* ================================================== */
-/* ================================================== */
-/* ================================================== */
+@media only screen and (min-width: 1280px) {
+  .form-filters {
+    flex-wrap: nowrap;
+  }
+}
+
 /* ================================================== */
 
 .search-wrapper {
-  /* outline: 2px solid greenyellow; */
   position: relative;
   width: 100%;
   height: 68px;
@@ -70,7 +69,7 @@ root {
   align-items: flex-start;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .search-wrapper {
     width: 278px;
     height: 74px;
@@ -78,13 +77,12 @@ root {
 }
 
 .select-wrapper {
-  /* outline: 2px solid greenyellow; */
   display: flex;
   flex-wrap: wrap;
   height: 68px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .select-wrapper {
     height: 74px;
   }
@@ -99,10 +97,10 @@ root {
 }
 
 .ingredient-wrapper {
-  width: 188px;
+  min-width: 188px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .time-wrapper {
     width: 125px;
   }
@@ -114,7 +112,6 @@ root {
 
 .search-label,
 .select-label {
-  /* outline: 1px solid blue; */
   display: block;
   width: 100%;
   height: 22px;
@@ -125,7 +122,7 @@ root {
   color: var(--color-selector-text);
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .search-label,
   .select-label {
     height: 26px;
@@ -144,6 +141,7 @@ root {
   min-height: 46px;
   padding-top: 13px;
   padding-bottom: 13px;
+  padding-left: 10px;
 
   border-radius: 15px;
   border: 1px solid var(--color-selector-categ);
@@ -153,20 +151,62 @@ root {
   font-style: normal;
   font-weight: 500;
 
+  outline: 1px solid transparent;
+
   color: var(--color-selector-text);
   background-color: inherit;
+  transition: outline var(--transition-dur-func);
 }
 
 .time-select {
   max-height: 170px;
 }
 
-.search-recipe:focus,
+.search-recipe:hover,
+.time-select:hover,
+.area-select:hover,
+.ingredient-select:hover {
+  color: var(--color-element-bcg);
+  outline: 1px solid var(--color-hover-bcg);
+  border-radius: 15px;
+  box-shadow: none;
+}
+
 .time-select:focus,
 .area-select:focus,
 .ingredient-select:focus {
-  color: var(--color-element-bcg);
-  outline: 2px solid var(--color-hover-bcg);
+  box-shadow: none;
+}
+
+.ss-content {
+  background-color: var(--color-select-open-bcg);
+}
+
+.ss-main.ss-open-below,
+.ss-main.ss-open-above {
+  border-radius: 15px;
+}
+
+.ss-content.ss-open-below,
+.ss-content.ss-open-above {
+  border-radius: 15px;
+}
+
+.ss-content .ss-list .ss-option {
+  color: var(--color-selector-categ-text);
+  transition: color var(--transition-dur-func);
+}
+
+.ss-content .ss-search input:focus {
+  box-shadow: none;
+  fill: var(--color-selector-categ-text);
+}
+
+.ss-content .ss-list .ss-option:hover,
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  color: var(--color-title-text);
+  background-color: var(--color-select-open-bcg);
 }
 
 .area-select,
@@ -174,7 +214,7 @@ root {
   max-height: 222px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .search-recipe,
   .time-select,
   .area-select,
@@ -187,7 +227,7 @@ root {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .time-select {
     max-height: 176px;
   }
@@ -215,7 +255,7 @@ root {
   fill: var(--color-hover-bcg);
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .search-icon {
     top: 56%;
   }
@@ -231,7 +271,7 @@ root {
   transition: fill var(--transition-dur-func);
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .reset-search-btn {
     top: 40%;
   }
@@ -265,17 +305,13 @@ root {
   margin-right: 4px;
 }
 
-/* ================================================== */
-/* ================================================== */
-/* ================================================== */
-/* ================================================== */
-/* ================================================== */
+/* =============   RECIPES    ================= */
 
 .recipe-container {
   padding-top: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .recipe-container {
     padding-top: 7px;
   }
@@ -288,13 +324,15 @@ root {
   gap: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .recipe-list {
     gap: 16px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 1280px) {
+
   .recipe-list {
     row-gap: 20px;
   }
@@ -452,4 +490,43 @@ root {
 
 .recipe-heart-checkbox:checked + .recipe-heart-icon path {
   fill: rgb(248, 248, 248);
+}
+
+/* =========== NO RECIPES ================= */
+
+/* no-recipes-container
+no-recipes-logo
+no-recipes-text */
+
+.no-recipes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 335px;
+}
+
+.no-recipes-logo {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.no-recipes-text {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .no-recipes-logo {
+    width: 97px;
+    height: 83px;
+  }
+
+  .no-recipes-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
