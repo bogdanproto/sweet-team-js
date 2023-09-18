@@ -161,6 +161,14 @@ root {
   max-height: 170px;
 }
 
+.search-recipe:focus,
+.time-select:focus,
+.area-select:focus,
+.ingredient-select:focus {
+  color: var(--color-element-bcg);
+  outline: 2px solid var(--color-hover-bcg);
+}
+
 .area-select,
 .ingredient-select {
   max-height: 222px;
@@ -179,7 +187,7 @@ root {
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .time-select {
     max-height: 176px;
   }
@@ -190,17 +198,8 @@ root {
   }
 }
 
-.default-value {
-  color: tomato;
-}
-
 .search-recipe {
   padding-left: 48px;
-}
-
-.search-recipe-focus {
-  color: var(--color-element-bcg);
-  outline: 1px solid var(--color-hover-bcg);
 }
 
 .search-icon {
@@ -212,7 +211,7 @@ root {
   transition: color var(--transition-dur-func);
 }
 
-.search-icon.search-icon-active {
+.search-icon-active {
   fill: var(--color-hover-bcg);
 }
 
@@ -222,8 +221,7 @@ root {
   }
 }
 
-.reset-search-icon {
-  /* outline:1px solid red; */
+.reset-search-btn {
   padding: 13px 8px 8px 8px;
   position: absolute;
   right: 8px;
@@ -233,7 +231,13 @@ root {
   transition: fill var(--transition-dur-func);
 }
 
-.reset-search-icon:hover {
+@media screen and (min-width: 768px) {
+  .reset-search-btn {
+    top: 40%;
+  }
+}
+
+.reset-search-btn:hover {
   cursor: pointer;
   fill: var(--color-hover-bcg);
 }
