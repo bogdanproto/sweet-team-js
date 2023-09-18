@@ -127,15 +127,24 @@ async function handleRecipesFavorites(evt) {
     const id = currentRecipes.dataset.id;
     const heartCheckbox = evt.target.querySelector('.recipe-heart-checkbox');
     const isHeartChecked = heartCheckbox ? heartCheckbox.checked : false;
-
-    await onLikeClickAsync(id, isHeartChecked);
-    const arr = getFavRec();
-    currentRecipes.remove();
-    toUpdateFilterBtn(arr);
-    if (!arr.length) {
-      refs.emptyContainerFavorites.classList.remove('hidden-empty');
-    }
+    toUpdateListFavorits(id, currentRecipes, isHeartChecked);
   } else {
     onClickHandle(evt);
+  }
+}
+
+export async function toUpdateListFavorits(
+  id,
+  currentRecipe = null,
+  isChecked = null
+) {
+  console.log(isChecked);
+  await onLikeClickAsync(id, isChecked);
+  const arr = getFavRec();
+  currentRecipe.remove();
+  toUpdateFilterBtn(arr);
+  console.log(arr);
+  if (!arr.length) {
+    refs.emptyContainerFavorites.classList.remove('hidden-empty');
   }
 }
