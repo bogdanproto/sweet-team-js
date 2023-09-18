@@ -44,6 +44,7 @@ function onSearchInput(evt) {
   refs.resetSearchBtn.addEventListener('click', onResetSearchBtn);
 }
 
+
 function onResetSearchBtn() {
   refs.resetSearchBtn.classList.add('is-hidden');
   refs.resetSearchBtn.removeEventListener('click', onResetSearchBtn);
