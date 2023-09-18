@@ -42,7 +42,7 @@
   top: 50%;
   left: 50%;
   border-radius: 15px;
-  background: #fff;
+  background: var(--color-page-bcg);
   transform: translate(-50%, -50%);
   box-shadow: 0px 0px 223px rgba(0, 0, 0, 0.05),
     0px 0px 130.6px rgba(0, 0, 0, 0.037963),
@@ -94,7 +94,7 @@
   top: 16px;
   right: 16px;
   border: none;
-  background-color: #fff;
+  background-color: var(--color-page-bcg);
 
   display: flex;
   justify-content: center;
@@ -105,7 +105,15 @@
   transition: 0.5s;
 }
 
+.icon-close {
+  fill: var(--color-close-icon);
+}
+
 /*-----------------Форма для заповнення------------*/
+
+.title-modal {
+  color: var(--color-title-text);
+}
 
 .callback-form-inputs {
   display: flex;
@@ -122,6 +130,7 @@
 .label-title {
   font-size: 14px;
   line-height: 18px;
+  color: var(--color-poprecipe-text);
   /* letter-spacing: -0.02em; */
 }
 
@@ -134,8 +143,10 @@
   align-items: flex-start;
   gap: 32px;
 
+  background-color: var(--color-page-bcg);
+
   border-radius: 15px;
-  border: 1px solid rgba(5, 5, 5, 0.2);
+  border: 1px solid var(--color-selector-categ);
 }
 
 /*-----------Перевірка вводу на коректність--------*/
@@ -192,7 +203,7 @@
   line-height: 1.17;
   letter-spacing: -0.02em;
 
-  color: var(--numeral-gray-color);
+  color: var(--color-poprecipe-text);
 }
 
 .link-license {
