@@ -13,15 +13,14 @@ root {
 @media only screen and (min-width: 768px) {
   .recipes-section {
     width: 512px;
+    padding-top: 0;
     padding-left: 16px;
-    padding-top: 27px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .recipes-section {
     width: 846px;
-    padding-top: 37px;
     padding-left: 32px;
   }
 }
@@ -306,6 +305,7 @@ root {
 /* =============   RECIPES    ================= */
 
 .recipe-container {
+  position:relative;
   padding-top: 10px;
 }
 
@@ -461,6 +461,7 @@ root {
   top: 16px;
   right: 16px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .recipe-heart-checkbox {

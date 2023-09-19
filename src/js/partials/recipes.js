@@ -13,6 +13,7 @@ const observer = new IntersectionObserver(loadMoreRecipes, {
 });
 
 async function loadRecipes() {
+  refs.spinnerLoader.classList.remove('spinner-is-hidden');
   try {
     const { results: allRecipes, totalPages } = await getAllRecipes(params);
 
@@ -22,6 +23,7 @@ async function loadRecipes() {
       return;
     }
 
+    // refs.spinnerLoader.classList.add('spinner-is-hidden')
     refs.recipesList.insertAdjacentHTML(
       'beforeend',
       createRecipeMarkup(allRecipes)
@@ -40,7 +42,11 @@ async function loadRecipes() {
   } catch (error) {
     Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
+  finally {
+    refs.spinnerLoader.classList.add('spinner-is-hidden')
+  }
 }
+
 function loadMoreRecipes(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
