@@ -1,6 +1,7 @@
+import { refs } from '../refs/refs';
 import { getAllPopularResipes } from '../api/api-service';
 import { createPopularMarkup } from '../utils/markup/popular-markup';
-import { refs } from '../refs/refs';
+import {modalRecipeOpen} from './modal-recipe'
 
 export async function showPopularRecipes() {
   try {
@@ -8,7 +9,7 @@ export async function showPopularRecipes() {
     const popularData = await getAllPopularResipes();
 
     const popularMarkup = createPopularMarkup(popularData);
-    console.log(refs.popularRecipesList);
+    refs.popularRecipesList.addEventListener('click', onPopularClick);
 
     refs.popularRecipesList.insertAdjacentHTML('beforeend', popularMarkup);
   } catch (error) {
@@ -17,9 +18,7 @@ export async function showPopularRecipes() {
   }
 }
 
-refs.popularRecipesList.addEventListener('click', onPopularClick);
-
 function onPopularClick(evt) {
   const popularId = evt.target.closest('.popular-item').dataset.id;
-  console.log(popularId);
+modalRecipeOpen(popularId)
 }
