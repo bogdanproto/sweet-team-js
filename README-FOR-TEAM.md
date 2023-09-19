@@ -61,3 +61,7 @@ https://docs.google.com/spreadsheets/d/18AiL3Qi3EPQ-0-WW5roQ5va287xnO_d1721FsaQZ
    призводить до того що людина яка приймає пулреквест не може протестувати код
    і якщо такий код просто змерджити з main то потім треба відкатуватись якщо є
    помилки і.т.д.
+
+<img class="modal-recipe-image" src="${thumb}" alt="${title}" width="295px" height="295px"></img>
+
+<img class="modal-recipe-image" src="${thumb}" alt="${title}">

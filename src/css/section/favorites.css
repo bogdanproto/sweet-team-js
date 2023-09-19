@@ -103,6 +103,7 @@
 .favorites-empty-container-text {
   display: block;
   text-align: center;
+  color: var(--color-title-text);
 }
 
 .favorites-empty-container-logo {
