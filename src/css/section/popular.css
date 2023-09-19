@@ -1,8 +1,8 @@
 .popular-container {
-  padding-top: 20px;
-  height: 230px;
-  overflow: hidden;
-  white-space: nowrap;
+  padding: 20px 0 20px 0;
+  width: 335px;
+  height: 242px;
+  overflow-y: hidden;
 }
 
 .popular-section-title {
@@ -16,26 +16,30 @@
   margin-bottom: 20px;
 }
 
-.popular-lists {
+.popular-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.popular-list-style {
+.popular-item {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+  padding-bottom: 3px;
 }
 
 .popular-image {
   width: 64px;
   height: 64px;
   border-radius: 8px;
+  margin-right: 16px;
 }
 
 .popular-text {
   height: 64px;
-  margin-left: 16px;
+  padding-right: 10px;
 }
 
 .popular-recipe-name {
@@ -46,41 +50,57 @@
   font-weight: 600;
   line-height: 1.28;
   text-transform: uppercase;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+}
+
+.popular-text:hover .popular-recipe-name {
+  color: var(--color-green-title-text);
 }
 
 .popular-recipe {
   color: var(--color-poprecipe-text);
   font-size: 12px;
   line-height: 1.33;
-  width: 255px;
-  height: 30px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 10px;
   white-space: normal;
 }
 
 @media only screen and (min-width: 768px) {
   .popular-container {
-    padding: 64px 0 0 0;
-    height: 436px;
-  }
-
-  .popular-lists {
-    gap: 16px;
-  }
-
-  .popular-text {
-    height: 67px;
-    width: 120px;
+    width: 192px;
+    min-height: 404px;
+    padding: 32px 16px 32px 0;
+    overflow-y: visible;
   }
 
   .popular-section-title {
     margin-bottom: 32px;
     line-height: 1.33;
+  }
+
+  .popular-list {
+    gap: 16px;
+  }
+
+  .popular-item {
+    height: 67px;
+    padding-bottom: 0;
+  }
+
+  .popular-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .popular-text {
+    height: 67px;
+    width: 120px;
   }
 
   .popular-recipe-name {
@@ -99,28 +119,27 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
-
-  .popular-image {
-    width: 48px;
-    height: 48px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
   .popular-container {
-    width: 235px;
-    height: 514px;
+    width: 267px;
+    min-height: 456px;
+    padding-bottom: 32px;
   }
 
   .popular-section-title {
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
     line-height: 1.16;
   }
 
-  .popular-lists {
+  .popular-list {
     gap: 32px;
+  }
+
+  .popular-item {
+    padding-bottom: 3px;
   }
 
   .popular-image {

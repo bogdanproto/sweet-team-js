@@ -1,0 +1,16 @@
+.sidebar {
+  width: 335px;
+}
+
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    width: 192px;
+    padding-top: 26px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sidebar {
+    width: 267px;
+  }
+}
