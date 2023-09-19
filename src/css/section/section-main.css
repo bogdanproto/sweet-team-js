@@ -1,5 +1,15 @@
+.section-main {
+  padding-top: 40px;
+}
+
 @media only screen and (min-width: 768px) {
   .section-main {
     display: flex;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-main {
+    padding-top: 50px;
   }
 }

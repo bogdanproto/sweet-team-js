@@ -14,11 +14,13 @@ let nextSelectedCategory = null;
 // Завантажує перелік категорій.
 async function loadAllCategories() {
   try {
+    refs.allCategoriesContainer.classList.remove('is-hidden');
     const allCategories = await getAllCategories();
     refs.allCategoriesList.innerHTML = createAllCategoriesMarkup(allCategories);
     onKitListenerAllCategories();
   } catch (error) {
-    Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
+    refs.allCategoriesContainer.classList.add('is-hidden');
+    console.log(error);
   }
 }
 
