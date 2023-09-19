@@ -14,6 +14,7 @@ export const refs = {
   heroBtn: document.querySelector('.hero-btn'),
 
   // All Categories
+  allCategoriesContainer: document.querySelector('.all-categories'),
   allCategoriesBtn: document.querySelector('.all-categories-btn'),
   allCategoriesList: document.querySelector('.all-categories-list'),
 
@@ -23,12 +24,20 @@ export const refs = {
   resetSearchBtn: document.querySelector('.reset-search-btn'),
   filterForm: document.querySelector('.form-filters'),
   timeFilter: document.querySelector('.time-select'),
+  areaWrapper: document.querySelector('.area-wrapper'),
   areaFilter: document.querySelector('.area-select'),
+  ingredientWrapper: document.querySelector('.ingredient-wrapper'),
   ingredientFilter: document.querySelector('.ingredient-select'),
   resetFiltersBtn: document.querySelector('.js-reset-filters-btn'),
   recipesSection: document.querySelector('.recipes'),
   recipesList: document.querySelector('.recipe-list'),
   recipesGuard: document.querySelector('.recipes-guard'),
+  spinnerLoader: document.querySelector('.spinner-loader'),
+
+  // Popular Recipes
+  popularRecipesContainer: document.querySelector('.popular-container'),
+  popularRecipesList: document.querySelector('.popular-list'),
+  popularRecipesItem: document.querySelector('.popular-item'),
 
   //favorites page
   filterFavorites: document.querySelector('.favorites-cards-filter'),

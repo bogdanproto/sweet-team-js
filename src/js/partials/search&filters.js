@@ -147,6 +147,8 @@ async function loadAreaOptions() {
       },
     });
   } catch (error) {
+    console.log(refs.areaFilter);
+    refs.areaFilter.disabled = true;
     console.log(error);
   }
 }
@@ -166,6 +168,7 @@ async function loadIngredientsOptions() {
       },
     });
   } catch (error) {
+    refs.ingredientFilter.disabled = true;
     console.log(error);
   }
 }
