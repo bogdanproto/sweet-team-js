@@ -119,7 +119,6 @@ function loadFiltersOption() {
   loadIngredientsOptions();
   onKitListenerSearchAndFilters();
 }
-export { loadFiltersOption };
 
 // Загрузка опцій для вибору часу, регіону, інгредіенту
 function loadTimeOptions() {
@@ -172,3 +171,5 @@ async function loadIngredientsOptions() {
     console.log(error);
   }
 }
+
+export { loadFiltersOption };
