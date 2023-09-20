@@ -8,6 +8,7 @@ export const refs = {
   openMenuBtn: document.querySelector('.js-header-open-menu'),
   closeMenuBtn: document.querySelector('.js-header-close-menu'),
   themeSwitch: document.querySelector('#themeSwitch'),
+  headerElem: document.querySelector('header'),
 
   //hero
   swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),
@@ -57,4 +58,7 @@ export const refs = {
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
   form: document.querySelector('.callback-form'),
+
+  //Scroll to top button
+  scrollToTopButton: document.querySelector('#scrollToTopButton'),
 };
