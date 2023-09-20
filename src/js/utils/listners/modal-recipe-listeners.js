@@ -1,5 +1,6 @@
 import { refs } from '../../refs/refs.js';
 import { modalRecipeFavClick } from '../../partials/modal-recipe.js';
+import { toShowModalRating } from '../../partials/modal-rating.js';
 
 // Присвоение Listeners
 export function modalRecipeListeners() {
@@ -7,6 +8,7 @@ export function modalRecipeListeners() {
     modalRecipeCloseButton: document.querySelector('.js-modal-recipe-close'),
     modalRecipeFavorite: document.querySelector('.modal-recipe-favorite-btn'),
     modalRecipeBackdrop: document.querySelector('.modal-recipe-backdrop'),
+    modalRecipeGiveRating: document.querySelector('.modal-recipe-rating-btn'),
   };
 
   listeners.modalRecipeFavorite.addEventListener('click', modalRecipeFavClick);
@@ -22,6 +24,8 @@ export function modalRecipeListeners() {
     'click',
     modalRecipeBackdropClick
   );
+
+  listeners.modalRecipeGiveRating.addEventListener('click', toShowModalRating);
 
   document.addEventListener('keydown', modalRecipeEscClick);
 }
@@ -50,6 +54,7 @@ function modalRecipeClose() {
     modalRecipeCloseButton: document.querySelector('.js-modal-recipe-close'),
     modalRecipeFavorite: document.querySelector('.modal-recipe-favorite-btn'),
     modalRecipeBackdrop: document.querySelector('.modal-recipe-backdrop'),
+    modalRecipeGiveRating: document.querySelector('.modal-recipe-rating-btn'),
   };
 
   if (listeners.modalRecipeCloseButton) {
@@ -69,6 +74,13 @@ function modalRecipeClose() {
     listeners.modalRecipeFavorite.removeEventListener(
       'click',
       modalRecipeFavClick
+    );
+  }
+
+  if (listeners.modalRecipeGiveRating) {
+    listeners.modalRecipeGiveRating.removeEventListener(
+      'click',
+      toShowModalRating
     );
   }
 
