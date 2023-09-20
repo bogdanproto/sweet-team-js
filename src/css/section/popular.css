@@ -1,8 +1,6 @@
 .popular-container {
-  padding: 20px 0 20px 0;
-  width: 335px;
+  padding-top: 20px;
   height: 242px;
-  overflow-y: hidden;
 }
 
 .popular-section-title {
@@ -17,17 +15,22 @@
 }
 
 .popular-list {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .popular-item {
+  height: 64px;
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  padding-bottom: 3px;
+}
+
+@media screen and (max-width: 767px) {
+  .popular-item:nth-child(n + 3) {
+    display: none;
+  }
 }
 
 .popular-image {
@@ -38,8 +41,8 @@
 }
 
 .popular-text {
-  height: 64px;
-  padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .popular-recipe-name {
@@ -51,7 +54,6 @@
   line-height: 1.28;
   text-transform: uppercase;
   margin-bottom: 8px;
-  text-overflow: ellipsis;
 }
 
 .popular-text:hover .popular-recipe-name {
@@ -66,17 +68,15 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  text-overflow: ellipsis;
+
   padding-right: 10px;
   white-space: normal;
 }
 
 @media only screen and (min-width: 768px) {
   .popular-container {
-    width: 192px;
     min-height: 404px;
-    padding: 32px 16px 32px 0;
-    overflow-y: visible;
+    padding-top: 32px;
   }
 
   .popular-section-title {
@@ -90,17 +90,11 @@
 
   .popular-item {
     height: 67px;
-    padding-bottom: 0;
   }
 
   .popular-image {
     width: 48px;
     height: 48px;
-  }
-
-  .popular-text {
-    height: 67px;
-    width: 120px;
   }
 
   .popular-recipe-name {
@@ -113,19 +107,15 @@
   .popular-recipe {
     font-size: 10px;
     line-height: 1.4;
-    width: 120px;
-    height: 41px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .popular-container {
-    width: 267px;
     min-height: 456px;
-    padding-bottom: 32px;
   }
 
   .popular-section-title {
@@ -138,21 +128,8 @@
     gap: 32px;
   }
 
-  .popular-item {
-    padding-bottom: 3px;
-  }
-
   .popular-image {
     width: 64px;
     height: 64px;
-  }
-
-  .popular-text {
-    height: 64px;
-    width: 155px;
-  }
-
-  .popular-recipe {
-    width: 155px;
   }
 }

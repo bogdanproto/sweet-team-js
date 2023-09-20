@@ -1,0 +1,265 @@
+.filters-section {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.form-container {
+  min-width: 335px;
+}
+
+.form-filters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 4px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  height: 68px;
+  display: block;
+  align-items: flex-start;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 68px;
+}
+
+.time-wrapper {
+  width: 160px;
+}
+
+.area-wrapper {
+  width: 159px;
+}
+
+.ingredient-wrapper {
+  min-width: 188px;
+}
+
+.search-label,
+.select-label {
+  display: block;
+  width: 100%;
+  height: 22px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: var(--color-selector-text);
+}
+
+.search-recipe,
+.time-select,
+.area-select,
+.ingredient-select {
+  width: 100%;
+  min-height: 46px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+
+  border-radius: 15px;
+  border: 1px solid var(--color-selector-categ);
+
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 500;
+
+  outline: 1px solid transparent;
+
+  color: var(--color-selector-text);
+  background-color: inherit;
+  transition: outline var(--transition-dur-func);
+}
+
+.time-select {
+  max-height: 170px;
+}
+
+.search-recipe:hover,
+.time-select:hover,
+.area-select:hover,
+.ingredient-select:hover {
+  color: var(--color-element-bcg);
+  outline: 1px solid var(--color-hover-bcg);
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.time-select:focus,
+.area-select:focus,
+.ingredient-select:focus {
+  box-shadow: none;
+}
+
+.ss-content {
+  background-color: var(--color-select-open-bcg);
+}
+
+.ss-main.ss-open-below,
+.ss-main.ss-open-above {
+  border-radius: 15px;
+}
+
+.ss-content.ss-open-below,
+.ss-content.ss-open-above {
+  border-radius: 15px;
+}
+
+.ss-content .ss-list .ss-option {
+  color: var(--color-selector-categ-text);
+  transition: color var(--transition-dur-func);
+}
+
+.ss-content .ss-search input:focus {
+  box-shadow: none;
+  fill: var(--color-selector-categ-text);
+}
+
+.ss-content .ss-list .ss-option:hover,
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  color: var(--color-title-text);
+  background-color: var(--color-select-open-bcg);
+}
+
+.area-select,
+.ingredient-select {
+  max-height: 222px;
+}
+
+.search-recipe {
+  padding-left: 48px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 53%;
+  z-index: 2;
+  fill: var(--color-selector-text);
+  transition: color var(--transition-dur-func);
+}
+
+.search-icon-active {
+  fill: var(--color-hover-bcg);
+}
+
+.reset-search-btn {
+  padding: 13px 8px 8px 8px;
+  position: absolute;
+  right: 8px;
+  top: 34%;
+  z-index: 2;
+  fill: var(--color-title-text);
+  transition: fill var(--transition-dur-func);
+}
+
+.reset-search-btn:hover {
+  cursor: pointer;
+  fill: var(--color-hover-bcg);
+}
+
+.reset-filters-btn {
+  padding: 10px 0;
+  display: flex;
+  margin-left: auto;
+  padding-right: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: inherit;
+  color: var(--color-selector-text);
+  border: none;
+  transition: color var(--transition-dur-func);
+}
+
+.reset-filters-btn:hover {
+  color: var(--color-green-title-text);
+}
+
+.reset-filters-icon {
+  fill: var(--color-green-title-text);
+  margin-right: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .filters-section {
+    padding-top: 0;
+  }
+
+  .form-filters {
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+
+  .search-wrapper {
+    width: 278px;
+    height: 74px;
+  }
+
+  .select-wrapper {
+    height: 74px;
+  }
+
+  .time-wrapper {
+    width: 125px;
+  }
+
+  .area-wrapper {
+    width: 141px;
+  }
+
+  .search-label,
+  .select-label {
+    height: 26px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .search-recipe,
+  .time-select,
+  .area-select,
+  .ingredient-select {
+    min-height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .time-select {
+    max-height: 176px;
+  }
+
+  .area-select,
+  .ingredient-select {
+    max-height: 236px;
+  }
+
+  .search-icon {
+    top: 56%;
+  }
+
+  .reset-search-btn {
+    top: 40%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .form-container {
+    width: 100%;
+  }
+
+  .form-filters {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

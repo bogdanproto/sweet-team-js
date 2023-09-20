@@ -1,14 +1,15 @@
 body {
   font-family: 'Inter';
   background-color: var(--color-page-bcg);
-  padding-bottom: 60px;
 }
 
 .container {
+  outline: 2px solid green;
   min-width: 320px;
   max-width: 375px;
-  padding: 0 20px;
+  padding: 0 20px 60px;
   margin: 0 auto;
+  /* overflow-x: hidden; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -19,9 +20,11 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .container {
-    max-width: 1080px;
+    max-width: 1280px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 

@@ -1,0 +1,48 @@
+<section class="filters-section">
+    <div class="form-container">
+        <form class="form-filters">
+          <div class="search-wrapper">
+            <label class="search-label" for="recipe-input">Search</label>
+            <input
+              type="text"
+              class="js-search-recipe search-recipe"
+              placeholder="Enter Text"
+            />
+            <div class="search-icon">
+              <svg width="18" height="18">
+                <use href="./img/sprite.svg#icon-search"></use>
+              </svg>
+            </div>
+            <div class="reset-search-btn is-hidden">
+              <svg width="18" height="18">
+                <use href="./img/sprite.svg#icon-close"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="select-wrapper time-wrapper">
+            <label class="select-label" for="time-select">Time</label>
+            <select class="time-select" id="time-select"></select>
+          </div>
+
+          <div class="select-wrapper area-wrapper">
+            <label class="select-label" for="area-select">Area</label>
+            <select class="area-select" id="area-select"></select>
+          </div>
+
+          <div class="select-wrapper ingredient-wrapper">
+            <label class="select-label" for="ingredient-select">Ingredients</label>
+            <select class="ingredient-select" id="ingredient-select"></select>
+          </div>
+        </form>
+
+        <div class="reset-filters-container">
+          <button class="reset-filters-btn js-reset-filters-btn">
+            <svg class="reset-filters-icon" width="16" height="16">
+              <use href="./img/sprite.svg#icon-close"></use>
+            </svg>
+            Reset all filters
+          </button>
+        </div>
+      </div>
+</section>

@@ -12,15 +12,19 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load ="./partials/header.html" />
+    <div class="container">
+      <load ="./partials/header.html" />
     <main>
       <load ="./partials/hero.html" />
-      <section class="section-main container">
+      <section class="section-main">
         <aside class="sidebar">
           <load ="./partials/all-categories.html" />
           <load ="./partials/popular.html" />
         </aside>
-        <load ="./partials/recipes.html" />
+        <div class="section-main-content">
+          <load ="./partials/filters.html" />
+          <load ="./partials/recipes.html" />
+        </div>
       </section>
     </main>
     <load ="./partials/modal-recipe.html" />

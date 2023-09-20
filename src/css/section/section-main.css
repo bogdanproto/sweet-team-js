@@ -6,10 +6,20 @@
   .section-main {
     display: flex;
   }
+
+  .section-main-content {
+    width: 512px;
+    padding-left: 16px;
+  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .section-main {
     padding-top: 50px;
+  }
+
+  .section-main-content {
+    width: 814px;
+    padding-left: 32px;
   }
 }
