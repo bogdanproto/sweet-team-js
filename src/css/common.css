@@ -9,7 +9,7 @@ body {
   max-width: 375px;
   padding: 0 20px 60px;
   margin: 0 auto;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 768px) {

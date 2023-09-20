@@ -14,6 +14,8 @@ export async function loadHeroData() {
     const heroSwiper = new Swiper('.hero-swiper', {
       slidesPerView: 1,
       spaceBetween: 32,
+      grabCursor: true,
+      loop: false,
       pagination: {
         el: '.hero-swiper-pagination',
         clickable: true,

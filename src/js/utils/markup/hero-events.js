@@ -6,7 +6,7 @@ export function createMarkupHeroEvents(arr) {
         <div class="slide-cook">
             <picture>
                 <source srcset="${cook.imgWebpUrl}" type="image/webp" />
-                <img class="slide-cook-img" src="${cook.imgUrl}" alt="${cook.name}" loading="lazy" />
+                <img class="slide-cook-img" src="${cook.imgUrl}" alt="${cook.name}" loading="eager" />
             </picture>
         </div>
 
@@ -14,7 +14,7 @@ export function createMarkupHeroEvents(arr) {
             <div class="slide-topic-pic">
                 <picture>
                     <source srcset="${topic.previewWebpUrl}" type="image/webp" />
-                    <img class="slide-topic-img" src="${topic.previewUrl}" alt="${topic.name}" loading="lazy" />
+                    <img class="slide-topic-img" src="${topic.previewUrl}" alt="${topic.name}" loading="eager" />
                 </picture>
             </div>
             <div class="slide-topic-info">
@@ -26,7 +26,7 @@ export function createMarkupHeroEvents(arr) {
         <div class="slide-dish">
             <picture>
                 <source srcset="${topic.imgWebpUrl}" type="image/webp" />
-                <img class="slide-dish-img" src="${topic.imgUrl}" alt="${topic.name}" height="280" style="border-radius: 15px;" loading="lazy" />
+                <img class="slide-dish-img" src="${topic.imgUrl}" alt="${topic.name}" height="280" style="border-radius: 15px;" loading="eager" />
             </picture>
         </div>
     </div>`
