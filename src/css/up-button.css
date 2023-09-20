@@ -1,0 +1,30 @@
+/* Scroll to top button */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  border: 2px solid var(--color-button-card-bcg);
+  background-color: var(--color-button-bcg);
+  color: var(--color-button-text);
+
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+}
+
+.fas.fa-arrow-up {
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-to-top.btn-visible {
+  opacity: 1;
+  visibility: visible;
+}

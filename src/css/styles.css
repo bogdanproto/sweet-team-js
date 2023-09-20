@@ -9,6 +9,8 @@
 @import url('../../node_modules/slim-select/dist/slimselect.css');
 @import url(../../node_modules/swiper/swiper-bundle.css);
 @import url('../../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css');
+@import url('../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css');
+@import url('../../node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
 @import url('./reset.css');
 @import url('./common.css');
 @import url('./section/section-main.css');
@@ -22,7 +24,7 @@
 @import url('./section/modal-recipe.css');
 @import url('./section/modal-rating.css');
 @import url('./section/order-now.css');
-
+@import url('./up-button.css');
 @import url('./section/favorites.css');
 
 :root {
