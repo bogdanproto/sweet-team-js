@@ -7,6 +7,7 @@ import { modalRecipeListeners } from '../utils/listners/modal-recipe-listeners.j
 import { onLikeClick } from '../utils/localestorage/local-storage-service.js';
 import { getCurrentPage } from '../utils/current-page.js';
 import { toUpdateListFavorits } from './favorites-recipes.js';
+import { getIdForRating } from './modal-rating.js';
 
 let dataId = null;
 
@@ -21,6 +22,7 @@ async function modalRecipeOpen(cardId) {
 
     dataId = data._id;
 
+    getIdForRating(dataId);
     modalRecipeListeners();
   } catch (error) {
     Notify.failure(`Oops! Something went wrong! Try reloading the page!`);

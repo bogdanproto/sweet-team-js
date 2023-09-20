@@ -20,12 +20,66 @@
   overflow-y: scroll;
   overflow-x: hidden;
 
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   border-radius: 15px;
+}
+
+.recipe-card-btn-container {
+  display: flex;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modal-recipe-rating-btn {
+  width: max-content;
+  height: 42px;
+  padding: 12px 24px;
+  background-color: var(--color-modal-recipe-backdground);
+  color: var(--color-button-text);
+  border-radius: 15px;
+  border: 1px solid var(--color-button-card-bcg);
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.modal-recipe-favorite-btn {
+  padding: 12px 24px;
+  height: 42px;
+  border-radius: 15px;
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-recipe-rating-btn {
+    height: 45px;
+    padding: 14px 28px;
+
+    font-size: 12px;
+  }
+
+  .modal-recipe-favorite-btn {
+    height: 45px;
+    padding: 14px 28px;
+
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -244,16 +298,6 @@
   .modal-recipe-text {
     width: 467px;
     margin: 40px 32px 0;
-  }
-}
-
-.modal-recipe-favorite-btn {
-  margin: 40px 0 40px 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .modal-recipe-favorite-btn {
-    margin: 32px 0 32px 32px;
   }
 }
 
