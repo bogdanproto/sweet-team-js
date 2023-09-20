@@ -8,6 +8,7 @@ import './js/partials/search&filters';
 import './js/partials/hero';
 import './js/partials/popular';
 import './js/utils/listners/recipe-list-listener';
+import './js/utils/listners/scroll-up-listeners';
 import { loadFavoritesData } from './js/partials/favorites-recipes';
 import { loadAllCategories } from './js/partials/all-categories';
 import { showPopularRecipes } from './js/partials/popular';
