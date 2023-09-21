@@ -24,5 +24,3 @@ export async function loadHeroData() {
     console.log(err);
   }
 }
-
-loadHeroData()
