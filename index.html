@@ -10,11 +10,12 @@
     />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-4b3970ec.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-bef588c9.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-7431a48d.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-2c88a053.css">
   </head>
   <body>
-    <header class="header container">
+    <div class="common-container">
+      <header class="header">
   <div class="header-container">
     <ul class="header-pages">
       <li><a class="header-pages-item" href="index.html">Home</a></li>
@@ -79,29 +80,36 @@
 </header>
 
     <main>
-      <section class="section-hero container">
-  <div class="hero-block-texts">
-    <h1 class="hero-block-text-title">
-      Learn to Cook
-      <span class="hero-words">Tasty Treats' </span> Customizable Masterclass
-    </h1>
-    <p class="hero-block-text">
-      TastyTreats - Customize Your Meal with Ingredient Options and Step-by-Step
-      Video Guides.
-    </p>
+      <section class="section-hero">
+  <div class="hero-information">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        Learn to Cook
+        <span class="hero-accent">Tasty Treats' </span> Customizable Masterclass
+      </h1>
+      <p class="hero-description">
+        TastyTreats - Customize Your Meal with Ingredient Options and
+        Step-by-Step Video Guides.
+      </p>
+    </div>
     <button class="hero-btn btn" type="button">Order now</button>
   </div>
-  <div class="swiper swiper-hero">
-    <div class="swiper-wrapper swiper-wrapper-hero"></div>
-    <div class="swiper-pagination swiper-pagination-hero"></div>
+
+<!-- ================================ -->
+
+<div class="swiper hero-swiper">
+    <div class="swiper-wrapper hero-swiper-wrapper">
+    </div>
+
+    <div class="swiper-pagination hero-swiper-pagination"></div>
   </div>
 </section>
 
-      <section class="section-main container">
+      <section class="section-main">
         <aside class="sidebar">
           <section class="all-categories is-hidden">
   <div>
-    <button class="btn all-categories-btn selected-category">All categories</button>
+    <button type="button" class="btn all-categories-btn selected-category">All categories</button>
   </div>
   <div class="all-categories-container">
     <ul class="all-categories-list"></ul>
@@ -114,54 +122,57 @@
 </section>
 
         </aside>
-        <section class="recipes-section">
-  <div class="form-container">
-    <form class="form-filters">
-      <div class="search-wrapper">
-        <label class="search-label" for="recipe-input">Search</label>
-        <input
-          type="text"
-          class="js-search-recipe search-recipe"
-          placeholder="Enter Text"
-        />
-        <div class="search-icon">
-          <svg width="18" height="18">
-            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-search"></use>
-          </svg>
+        <div class="section-main-content">
+          <section class="filters-section">
+    <div class="form-container">
+        <form class="form-filters">
+          <div class="search-wrapper">
+            <label class="search-label" for="recipe-input">Search</label>
+            <input
+              type="text"
+              class="js-search-recipe search-recipe"
+              placeholder="Enter Text"
+            />
+            <div class="search-icon">
+              <svg width="18" height="18">
+                <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-search"></use>
+              </svg>
+            </div>
+            <div class="reset-search-btn is-hidden">
+              <svg width="18" height="18">
+                <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="select-wrapper time-wrapper">
+            <label class="select-label" for="time-select">Time</label>
+            <select class="time-select" id="time-select"></select>
+          </div>
+
+          <div class="select-wrapper area-wrapper">
+            <label class="select-label" for="area-select">Area</label>
+            <select class="area-select" id="area-select"></select>
+          </div>
+
+          <div class="select-wrapper ingredient-wrapper">
+            <label class="select-label" for="ingredient-select">Ingredients</label>
+            <select class="ingredient-select" id="ingredient-select"></select>
+          </div>
+        </form>
+
+        <div class="reset-filters-container">
+          <button class="reset-filters-btn js-reset-filters-btn">
+            <svg class="reset-filters-icon" width="16" height="16">
+              <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+            </svg>
+            Reset all filters
+          </button>
         </div>
-        <div class="reset-search-btn is-hidden">
-          <svg width="18" height="18">
-            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
-          </svg>
-        </div>
       </div>
+</section>
 
-      <div class="select-wrapper time-wrapper">
-        <label class="select-label" for="time-select">Time</label>
-        <select class="time-select" id="time-select"></select>
-      </div>
-
-      <div class="select-wrapper area-wrapper">
-        <label class="select-label" for="area-select">Area</label>
-        <select class="area-select" id="area-select"></select>
-      </div>
-
-      <div class="select-wrapper ingredient-wrapper">
-        <label class="select-label" for="ingredient-select">Ingredients</label>
-        <select class="ingredient-select" id="ingredient-select"></select>
-      </div>
-    </form>
-
-    <div class="reset-filters-container">
-      <button class="reset-filters-btn js-reset-filters-btn">
-        <svg class="reset-filters-icon" width="16" height="16">
-          <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
-        </svg>
-        Reset all filters
-      </button>
-    </div>
-  </div>
-
+          <section class="recipes-section">
   <div class="recipe-container">
     <span class="spinner-loader spinner-is-hidden"></span>
     <ul class="recipe-list"></ul>
@@ -169,8 +180,10 @@
   </div>
 </section>
 
+        </div>
       </section>
     </main>
+    </div>
     <div class="modal-recipe-backdrop js-modal-recipe is-hidden"></div>
 
     
