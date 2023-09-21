@@ -16,7 +16,7 @@ import { showPopularRecipes } from './js/partials/popular';
 import { loadRecipes } from './js/partials/recipes';
 import { loadFiltersOption } from './js/partials/search&filters';
 import { switchOnRecipeCardsListner } from './js/utils/listners/recipe-list-listener';
-// import { loadHeroData } from './js/partials/hero';
+import { loadHeroData } from './js/partials/hero';
 import './js/partials/order-now';
 import { onSwitchHeroListners } from './js/utils/listners/listeners';
 import './js/partials/burger-menu';
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadDataOnHomePage() {
-  // loadHeroData();
+  loadHeroData();
   loadAllCategories();
   showPopularRecipes();
   loadRecipes();

@@ -23,12 +23,9 @@ const handleSubmit = async function (event) {
   try {
     const result = await addOrder(data);
     Notify.success("Thank you for your order! We'll be in touch shortly.");
-    console.log('data sent to backend:', data);
     toggleModal();
     refs.form.reset();
   } catch (error) {
-    console.error('Error while adding order:', error.message);
-    console.log('Server response:', error.response.data);
     Notify.failure('Oops, something went wrong. Please reloade the page');
   }
 };
