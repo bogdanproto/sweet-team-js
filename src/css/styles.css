@@ -17,6 +17,7 @@
 @import url('./section/sidebar.css');
 @import url('./section/header.css');
 @import url('./section/hero.css');
+@import url('./section/hero-swiper.css');
 @import url('./section/all-categories.css');
 @import url('./section/popular.css');
 @import url('./section/filters.css');
@@ -35,6 +36,7 @@
   --color-page-bcg: rgb(248, 248, 248, 100%);
   --color-element-bcg: rgb(5, 5, 5, 100%);
   --color-menu-mobile-bcg: rgb(155, 181, 55, 100%);
+  --color-swiper-bcg: rgb(5, 5, 5, 100%);
 
   /* text */
   --color-title-text: rgb(5, 5, 5, 100%);
