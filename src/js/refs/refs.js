@@ -62,6 +62,4 @@ export const refs = {
 
   //Scroll to top button
   scrollToTopButton: document.querySelector('#scrollToTopButton'),
-
-  backDrop: document.querySelector('.backdrop'),
 };
