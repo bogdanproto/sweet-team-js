@@ -71,6 +71,7 @@ ${youtubeInsert ? youtubeFrame : imgMobileFrame}
           name="email"
           id="rating_email"
           placeholder="Enter email"
+          aria-label="input rating"
           required
         />
       </label>
@@ -88,7 +89,7 @@ ${youtubeInsert ? youtubeFrame : imgDesktopFrame}
 <div class="modal-recipe-infos">
 <ul class="modal-recipe-tags">${
       recipeItem.tags[0] === '' ? '' : recipeTags
-    }</ul> 
+    }</ul>
 <div class="modal-recipe-info-rating desktop">
   <p class="modal-recipe-rating">${parseFloat(rating).toFixed(1)}</p>
   <div class="modal-recipe-stars" data-rating="${rating}" id="modal-recipe-rating-${_id}"></div>

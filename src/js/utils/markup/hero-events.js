@@ -18,7 +18,7 @@ export function createMarkupHeroEvents(arr) {
                 </picture>
             </div>
             <div class="slide-topic-info">
-                <h3 class="slide-topic-name">${topic.name}</h3>
+                <h2 class="slide-topic-name">${topic.name}</h2>
                 <p class="slide-topic-area">${topic.area}</p>
             </div>
         </div>
