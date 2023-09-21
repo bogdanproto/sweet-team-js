@@ -11,7 +11,8 @@ export const refs = {
   headerElem: document.querySelector('header'),
 
   //hero
-  swiperWrapperHero: document.querySelector('.swiper-wrapper-hero'),
+  heroSwiper: document.querySelector('.hero-swiper'),
+  heroSwiperWrapper: document.querySelector('.hero-swiper-wrapper'),
   heroBtn: document.querySelector('.hero-btn'),
 
   // All Categories
@@ -61,4 +62,6 @@ export const refs = {
 
   //Scroll to top button
   scrollToTopButton: document.querySelector('#scrollToTopButton'),
+
+  backDrop: document.querySelector('.backdrop'),
 };

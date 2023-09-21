@@ -1,10 +1,9 @@
 .favorites-hero {
   padding-top: 516px;
-
   max-width: 335px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('../../img/favorites/hero-favorites-mobile.jpg');
+  background-image: url('../../img/favorites/hero-favorites-mobile.webp');
 
   background-repeat: no-repeat;
   background-position: center;
@@ -18,7 +17,7 @@
 
     max-width: 704px;
 
-    background-image: url('../../img/favorites/hero-favorites-tablet.jpg');
+    background-image: url('../../img/favorites/hero-favorites-tablet.webp');
   }
 }
 
@@ -26,7 +25,7 @@
   .favorites-hero {
     max-width: 1080px;
 
-    background-image: url('../../img/favorites/hero-favorites-tablet.jpg');
+    background-image: url('../../img/favorites/hero-favorites-desktop.webp');
   }
 }
 

@@ -18,14 +18,16 @@
 @import url('./section/header.css');
 @import url('./section/hero.css');
 @import url('./section/all-categories.css');
+@import url('./section/popular.css');
+@import url('./section/filters.css');
 @import url('./section/recipes.css');
 @import url('./spinner.css');
-@import url('./section/popular.css');
 @import url('./section/modal-recipe.css');
 @import url('./section/modal-rating.css');
 @import url('./section/order-now.css');
 @import url('./up-button.css');
 @import url('./section/favorites.css');
+@import url('./backdrop.css');
 
 :root {
   /* ---------------element colors-----------------  */

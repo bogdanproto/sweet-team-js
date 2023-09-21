@@ -8,13 +8,15 @@ export async function loadHeroData() {
   try {
     const events = await getAllEvents();
     const markup = createMarkupHeroEvents(events);
-    refs.swiperWrapperHero.insertAdjacentHTML('beforeend', markup);
+    refs.heroSwiperWrapper.insertAdjacentHTML('beforeend', markup);
 
-    const heroSwiper = new Swiper('.swiper-hero', {
-      slidesPerView: 0.8,
-      spaceBetween: 40,
+    const heroSwiper = new Swiper('.hero-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      grabCursor: true,
+      loop: false,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.hero-swiper-pagination',
         clickable: true,
       },
     });
@@ -22,3 +24,5 @@ export async function loadHeroData() {
     console.log(err);
   }
 }
+
+loadHeroData()
