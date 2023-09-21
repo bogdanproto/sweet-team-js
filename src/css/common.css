@@ -3,7 +3,7 @@ body {
   background-color: var(--color-page-bcg);
 }
 
-.container {
+.common-container {
   outline: 2px solid green;
   min-width: 320px;
   max-width: 375px;
@@ -13,7 +13,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .common-container {
     max-width: 768px;
     padding-right: 32px;
     padding-left: 32px;
@@ -21,7 +21,7 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
-  .container {
+  .common-container {
     max-width: 1280px;
     padding-right: 100px;
     padding-left: 100px;

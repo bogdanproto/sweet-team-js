@@ -7,7 +7,6 @@ import Swiper from 'swiper/bundle';
 export async function loadHeroData() {
   try {
     const events = await getAllEvents();
-    console.log(events);
     const markup = createMarkupHeroEvents(events);
     refs.heroSwiperWrapper.insertAdjacentHTML('beforeend', markup);
 
