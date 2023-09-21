@@ -336,10 +336,10 @@
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
-    /* background-color: var(--color-swiper-pagination-bcg); */
-    /* transition: background-color var(--transition-dur-func); */
+    background: var(--color-swiper-pagination-bcg);
+    transition: background var(--transition-dur-func);
   }
 
   .swiper-pagination-bullet-active {
-    /* background-color: var(--color-menu-mobile-bcg); */
+    background: var(--color-menu-mobile-bcg);
   }
