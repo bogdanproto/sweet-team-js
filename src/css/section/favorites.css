@@ -21,7 +21,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .favorites-hero {
     max-width: 1080px;
 
@@ -38,6 +38,8 @@
 }
 
 .favorites-cards-filter {
+  width: 375px;
+  padding-right: 20px;
   position: relative;
   display: flex;
   justify-content: left;
@@ -60,15 +62,23 @@
   }
 
   .favorites-cards-filter {
+    width: 768px;
+    padding-right: 32px;
     gap: 15px;
     margin-top: 64px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
+
   .favorites-cards-container .js-recipe {
     width: calc((100% - 48px) / 4);
   }
+}
+
+.favorites-cards-filter {
+  width: 1280px;
+  padding-right: 100px;
 }
 
 .btn-favorites-filter {
@@ -78,6 +88,8 @@
 
   color: var(--color-selector-categ-text);
   border: 1px solid var(--color-selector-categ);
+  transition: background-color var(--transition-dur-func),
+  color var(--transition-dur-func);
 }
 
 .btn-favorites-filter-active {
