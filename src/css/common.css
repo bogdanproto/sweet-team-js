@@ -5,7 +5,6 @@ body {
 }
 
 .common-container {
-  outline: 2px solid green;
   min-width: 320px;
   max-width: 375px;
   padding: 0 20px 60px;
@@ -74,4 +73,3 @@ body {
   color: var(--color-hover-text);
   background-color: var(--color-hover-bcg);
 }
-
