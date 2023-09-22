@@ -1,10 +1,19 @@
 .section-main {
-  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.main-container {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 40px 20px 60px 20px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .section-main {
+  .main-container {
     display: flex;
+    min-width: 768px;
+    padding: 40px 32px 60px 32px;
   }
 
   .section-main-content {
@@ -14,8 +23,9 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .section-main {
-    padding-top: 50px;
+  .main-container {
+    min-width: 1280px;
+    padding: 50px 100px 60px 100px;
   }
 
   .section-main-content {
