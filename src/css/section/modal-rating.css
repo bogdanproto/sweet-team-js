@@ -62,6 +62,7 @@
 
   border-radius: 15px;
   border: 1px solid var(--color-selector-categ);
+  color: var(--color-title-text);
 }
 
 .modal-form-rating-btn {
