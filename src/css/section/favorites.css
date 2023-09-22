@@ -44,7 +44,7 @@
   display: flex;
   justify-content: left;
   flex-wrap: nowrap;
-  overflow: auto;
+  overflow-x: scroll;
   gap: 12px;
   padding-bottom: 9px;
 
@@ -70,7 +70,6 @@
 }
 
 @media only screen and (min-width: 1280px) {
-
   .favorites-cards-container .js-recipe {
     width: calc((100% - 48px) / 4);
   }
@@ -89,7 +88,7 @@
   color: var(--color-selector-categ-text);
   border: 1px solid var(--color-selector-categ);
   transition: background-color var(--transition-dur-func),
-  color var(--transition-dur-func);
+    color var(--transition-dur-func);
 }
 
 .btn-favorites-filter-active {
