@@ -5,7 +5,7 @@ export const toggleMenu = () => {
   const isMenuOpen =
     refs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
   refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-  refs.mobileMenu.classList.toggle('is-open');
+  refs.mobileMenu.classList.add('mobile-menu-is-open');
 
   // const scrollLockMethod = !isMenuOpen
   //   ? 'disableBodyScroll'
@@ -14,7 +14,7 @@ export const toggleMenu = () => {
 };
 
 const closeMenu = () => {
-  refs.mobileMenu.classList.remove('is-open');
+  refs.mobileMenu.classList.remove('mobile-menu-is-open');
   refs.openMenuBtn.setAttribute('aria-expanded', false);
   // bodyScrollLock.enableBodyScroll(document.body);
 

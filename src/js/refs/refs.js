@@ -3,12 +3,12 @@ export const refs = {
 
   //header
 
-  headerOrder: document.querySelector('.header-icon-svg'),
-  mobileMenu: document.querySelector('.js-header-menu-container'),
-  openMenuBtn: document.querySelector('.js-header-open-menu'),
-  closeMenuBtn: document.querySelector('.js-header-close-menu'),
+  headerElem: document.querySelector('.header'),
+  headerOrder: document.querySelector('.basket'),
+  mobileMenu: document.querySelector('.mobile-menu-container'),
+  openMenuBtn: document.querySelector('.open-menu-btn'),
+  closeMenuBtn: document.querySelector('.mobile-menu-close-btn'),
   themeSwitch: document.querySelector('#themeSwitch'),
-  headerElem: document.querySelector('header'),
 
   //hero
   heroSwiper: document.querySelector('.hero-swiper'),

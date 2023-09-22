@@ -10,14 +10,14 @@
 @media only screen and (min-width: 768px) {
   .section-hero {
     gap: 64px;
-    padding-top: 71px;
+    padding-top: 61px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .section-hero {
     flex-direction: row;
-    padding-top: 78px;
+    padding-top: 80px;
     padding-bottom: 50px;
     gap: 32px;
   }
@@ -118,4 +118,3 @@
   color: var(--color-card-text);
   background-color: var(--color-hover-bcg);
 }
-

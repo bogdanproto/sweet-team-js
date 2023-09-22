@@ -1,63 +1,72 @@
 <header class="header">
   <div class="header-container">
     <ul class="header-pages">
-      <li><a class="header-pages-item" href="index.html">Home</a></li>
-      <li>
-        <a class="header-pages-item" href="favorites.html">Favorites</a>
+      <li class="header-pages-item">
+        <a class="header-pages-link" href="index.html">Home</a>
+      </li>
+      <li class="header-pages-item">
+        <a class="header-pages-link" href="favorites.html">Favorites</a>
       </li>
     </ul>
-    <a class="header-name" href="index.html">
-      <span class="header-name-span">tasty</span>treats.</a
+
+    <a class="header-title" href="index.html">
+      <span class="header-title-span">tasty</span>treats.</a
     >
-    <ul class="header-list-svg">
-      <li class="header-icon-svg">
-        <button class="header-basket" aria-label="basket">
-          <svg class="header-icon-svg-img" width="24" height="24">
+
+    <ul class="header-buttons-list">
+      <li class="header-buttons-item basket">
+        <button class="header-button" aria-label="basket">
+          <svg class="header-button-icon" width="24" height="24">
             <use href="./img/sprite.svg#icon-shopping-cart"></use>
           </svg>
         </button>
       </li>
-      <li class="header-icon-svg burger-svg">
-        <button class="header-menu-toggle js-header-open-menu" aria-label="open menu">
-          <svg class="header-icon-svg-img" width="32" height="32">
+      <li class="header-buttons-item burger-menu js-burger-menu">
+        <button class="header-button open-menu-btn" aria-label="open menu">
+          <svg class="header-button-icon" width="32" height="32">
             <use href="./img/sprite.svg#icon-burger"></use>
           </svg>
         </button>
       </li>
-    </ul>
-    <label class="header-switch toggle">
-      <div class="pretty p-switch p-fill">
-        <input type="checkbox" id="themeSwitch" />
-        <div class="state">
-          <label></label>
-        </div>
-      </div>
-    </label>
-  </div>
-  <!-- Header Mob menu -->
-  <div
-    class="mobile-menu header-menu-container js-header-menu-container"
-    id="mobile-menu"
-  >
-    <div class="mobile-menu-container">
-      <button
-        class="header-mobile-close-btn js-header-close-menu header-menu-toggle" aria-label="close menu"
-      >
-        <svg class="header-mobile-menu-close-icon" width="32" height="32">
-          <use href="./img/sprite.svg#icon-close"></use>
-        </svg>
-      </button>
+      <li class="header-buttons-item">
+        <div class="mobile-menu-container">
+          <div class="mobile-menu-close">
+            <button class="mobile-menu-close-btn" aria-label="close menu">
+              <svg class="mobile-menu-close-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
 
-      <ul class="header-mobile_modal-menu list">
-        <li class="header-mobile_modal-item header-mob-home">
-          <a class="header-mobile_modal-link link" href="index.html">Home</a>
-        </li>
-        <li class="header-mobile_modal-item">
-          <a class="header-mobile_modal-link link" href="favorites.html"
-            >Favorites</a
-          >
-        </li>
-      </ul>
-    </div>
+          <div class="mobile-menu-pages">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="header-mobile_modal-link link" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a class="header-mobile_modal-link link" href="favorites.html"
+                  >Favorites</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="theme-switcher">
+            <div class="pretty p-switch p-fill">
+              <input
+                type="checkbox"
+                id="themeSwitch"
+                aria-label="theme-switcher"
+              />
+              <div class="state">
+                <label></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </header>
