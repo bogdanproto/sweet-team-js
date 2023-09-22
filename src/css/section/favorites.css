@@ -3,6 +3,25 @@
   margin: 0 auto;
 }
 
+
+.favorites-main {
+ width: 375px;
+ padding: 0 20px;
+ margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .favorites-main {
+    width: 768px;
+   }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .favorites-main {
+      width: 1280px;
+     }
+    }
+
 .favorites-hero-image {
   margin: 0 auto;
   width: 335px;
@@ -46,7 +65,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  overflow: scroll;
+  overflow-x: scroll;
   padding: 20px 20px 12px 20px;
 }
 
@@ -67,6 +86,7 @@
   height: 48px;
   justify-content: left;
   flex-wrap: nowrap;
+  overflow: visible;
   gap: 12px;
 }
 
