@@ -20,3 +20,6 @@ const closeMenu = () => {
 
   refs.closeMenuBtn.removeEventListener('click', closeMenu);
 };
+
+
+
