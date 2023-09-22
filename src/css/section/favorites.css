@@ -44,7 +44,7 @@
   display: flex;
   justify-content: left;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow: auto;
   gap: 12px;
   padding-bottom: 9px;
 
@@ -73,11 +73,11 @@
   .favorites-cards-container .js-recipe {
     width: calc((100% - 48px) / 4);
   }
-}
 
-.favorites-cards-filter {
-  width: 1280px;
-  padding-right: 100px;
+  .favorites-cards-filter {
+    width: 1280px;
+    padding-right: 100px;
+  }
 }
 
 .btn-favorites-filter {
