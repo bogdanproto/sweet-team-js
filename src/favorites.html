@@ -27,13 +27,37 @@
       crossorigin
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="preload"
+      href="./fonts/inter-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-medium.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-semibold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="common-container">
-      <load ="./partials/header.html" />
+    <load ="./partials/header.html" />
       <main>
         <load ="./partials/favorites-hero.html" />
-        <load ="./partials/favorites-recipes.html" />
+        <section class="favorites-cards container">
+          <load ="./partials/favorites-categories.html" />
+          <load ="./partials/favorites-recipes.html" />
+      </section>
       </main>
     </div>
     <load ="./partials/order-now.html" />
