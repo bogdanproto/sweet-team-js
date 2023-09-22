@@ -230,17 +230,3 @@
     gap: 24px;
   }
 }
-
-.pretty.p-switch.p-fill input:checked~.state:before {
-  background-color: tomato;
-}
-
-.pretty.p-switch.p-fill input:checked~.state:before {
-  color: tomato;
-  background-color: tomato;
-}
-
-.pretty.p-switch .state label {
-  color: tomato;
-  background-color: tomato!important;
-}
