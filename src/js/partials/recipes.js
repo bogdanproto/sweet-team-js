@@ -26,7 +26,7 @@ async function loadRecipes() {
     // refs.spinnerLoader.classList.add('spinner-is-hidden')
     refs.recipesList.insertAdjacentHTML(
       'beforeend',
-      createRecipeMarkup(allRecipes)
+      await createRecipeMarkup(allRecipes)
     );
 
     // Raiting
