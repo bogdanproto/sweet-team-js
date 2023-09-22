@@ -4,14 +4,6 @@ body {
   background-color: var(--color-page-bcg);
 }
 
-.common-container {
-  min-width: 320px;
-  max-width: 375px;
-  padding: 0 20px 60px;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
 @media only screen and (min-width: 768px) {
   .common-container {
     max-width: 768px;

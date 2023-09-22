@@ -1,9 +1,23 @@
 .header-container {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header-container {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
 }
 
 .header-pages {
