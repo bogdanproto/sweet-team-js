@@ -31,10 +31,116 @@
       crossorigin
     />
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-c486fdce.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-5328b833.css">
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-f449a559.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-bb084f1d.css">
   </head>
   <body>
+    <header class="header">
+  <div class="header-container">
+    <ul class="header-pages">
+      <li class="header-pages-item home-page">
+        <a class="header-pages-link" href="index.html">Home</a>
+      </li>
+      <li class="header-pages-item favorite-page">
+        <a class="header-pages-link" href="favorites.html">Favorites</a>
+      </li>
+    </ul>
+
+    <a class="header-title" href="index.html">
+      <span class="header-title-span">tasty</span>treats.</a
+    >
+
+    <ul class="header-buttons-list">
+      <li class="header-buttons-item basket">
+        <button class="header-button" aria-label="basket">
+          <svg class="header-button-icon" width="24" height="24">
+            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-buttons-item burger-menu js-burger-menu">
+        <button class="header-button open-menu-btn" aria-label="open menu">
+          <svg class="header-button-icon" width="32" height="32">
+            <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-buttons-item">
+        <div class="mobile-menu-container">
+          <div class="mobile-menu-close">
+            <button class="mobile-menu-close-btn" aria-label="close menu">
+              <svg class="mobile-menu-close-icon" width="32" height="32">
+                <use href="/sweet-team-js/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu-pages">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item home-page">
+                <a class="header-mobile_modal-link link" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="mobile-menu-item favorite-page">
+                <a class="header-mobile_modal-link link" href="favorites.html"
+                  >Favorites</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="theme-switcher">
+            <div class="pretty p-switch p-fill">
+              <input
+                type="checkbox"
+                id="themeSwitch"
+                aria-label="theme-switcher"
+              />
+              <div class="state">
+                <label></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+      <section class="section-hero">
+  <div class="hero-container">
+  <div class="hero-content">
+    <div class="hero-information">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Learn to Cook
+          <span class="hero-accent">Tasty Treats' </span> Customizable Masterclass
+        </h1>
+        <p class="hero-description">
+          TastyTreats - Customize Your Meal with Ingredient Options and
+          Step-by-Step Video Guides.
+        </p>
+      </div>
+      <button class="hero-btn btn" type="button">Order now</button>
+    </div>
+
+  <!-- ================================ -->
+
+  <div class="swiper hero-swiper">
+      <div class="swiper-wrapper hero-swiper-wrapper">
+      </div>
+
+      <div class="swiper-pagination hero-swiper-pagination"></div>
+    </div>
+  </div>
+  </div>
+
+</section>
+
+      <section class="section-main">
+        <div class="main-container">
     <div class="common-container">
       <header class="header">
   <div class="header-container">
@@ -111,28 +217,33 @@
 
       <main>
         <section class="section-hero">
-  <div class="hero-information">
-    <div class="hero-text">
-      <h1 class="hero-title">
-        Learn to Cook
-        <span class="hero-accent">Tasty Treats' </span> Customizable Masterclass
-      </h1>
-      <p class="hero-description">
-        TastyTreats - Customize Your Meal with Ingredient Options and
-        Step-by-Step Video Guides.
-      </p>
-    </div>
-    <button class="hero-btn btn" type="button">Order now</button>
-  </div>
-
-<!-- ================================ -->
-
-<div class="swiper hero-swiper">
-    <div class="swiper-wrapper hero-swiper-wrapper">
+  <div class="hero-container">
+  <div class="hero-content">
+    <div class="hero-information">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Learn to Cook
+          <span class="hero-accent">Tasty Treats' </span> Customizable Masterclass
+        </h1>
+        <p class="hero-description">
+          TastyTreats - Customize Your Meal with Ingredient Options and
+          Step-by-Step Video Guides.
+        </p>
+      </div>
+      <button class="hero-btn btn" type="button">Order now</button>
     </div>
 
-    <div class="swiper-pagination hero-swiper-pagination"></div>
+  <!-- ================================ -->
+
+  <div class="swiper hero-swiper">
+      <div class="swiper-wrapper hero-swiper-wrapper">
+      </div>
+
+      <div class="swiper-pagination hero-swiper-pagination"></div>
+    </div>
   </div>
+  </div>
+
 </section>
 
         <section class="section-main">
@@ -211,6 +322,10 @@
 </section>
 
           </div>
+
+        </div>
+      </section>
+    </main>
         </section>
       </main>
     </div>
