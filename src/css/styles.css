@@ -17,6 +17,7 @@
 @import url('./section/sidebar.css');
 @import url('./section/header.css');
 @import url('./section/hero.css');
+@import url('./section/hero-swiper.css');
 @import url('./section/all-categories.css');
 @import url('./section/popular.css');
 @import url('./section/filters.css');
@@ -35,6 +36,7 @@
   --color-page-bcg: rgb(248, 248, 248, 100%);
   --color-element-bcg: rgb(5, 5, 5, 100%);
   --color-menu-mobile-bcg: rgb(155, 181, 55, 100%);
+  --color-swiper-bcg: rgb(5, 5, 5, 100%);
 
   /* text */
   --color-title-text: rgb(5, 5, 5, 100%);
@@ -85,6 +87,11 @@
   --color-swiper-pagination-bcg: rgba(0, 0, 0, 0.4);
   /* ---------------animation --------------------------*/
 
+  /* mobile-menu */
+  --color-mob-menu-bgc: rgb(155, 181, 55, 100%);
+  --color-mob-menu-el: rgb(248, 248, 248, 100%);
+  --color-mob-menu-el-hover: rgb(5, 5, 5, 100%);
+
   /* Transition */
   --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -112,6 +119,11 @@
   /* swiper */
   --color-swiper-pagination-bcg: rgb(255, 255, 255);
   --color-poprecipe-text: rgb(255, 255, 255, 80%);
+
+  /* mobile-menu */
+  --color-mob-menu-bgc: rgb(5, 5, 5, 100%);
+  --color-mob-menu-el: rgb(248, 248, 248, 100%);
+  --color-mob-menu-el-hover: rgb(155, 181, 55, 100%);
 
   /* modal recipe */
   --color-modal-recipe-backdrop: rgb(255, 255, 255, 30%);

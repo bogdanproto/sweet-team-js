@@ -12,7 +12,7 @@ function createRecipeMarkup(arr) {
       return `<li class="recipe-list-item recipe-card js-recipe" data-id="${_id}" data-category="${category.toLowerCase()}">
           <img src="${preview}" alt="${title}" loading="lazy">
           <label class="recipe-heart-label">
-            <input type="checkbox" data-id="${_id}" class="recipe-heart-checkbox" ${
+            <input aria-label="add to favorite" type="checkbox" data-id="${_id}" class="recipe-heart-checkbox" ${
         isFavorite ? 'checked' : ''
       }>
 

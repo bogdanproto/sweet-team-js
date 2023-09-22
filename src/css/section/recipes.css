@@ -203,10 +203,6 @@ root {
 
 /* =========== NO RECIPES ================= */
 
-/* no-recipes-container
-no-recipes-logo
-no-recipes-text */
-
 .no-recipes-container {
   display: flex;
   flex-direction: column;
