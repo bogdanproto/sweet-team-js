@@ -4,6 +4,8 @@ export const refs = {
   //header
 
   headerElem: document.querySelector('.header'),
+  homePage: document.querySelector('.home-page'),
+  favoritePage: document.querySelector('.favorite-page'),
   headerOrder: document.querySelector('.basket'),
   mobileMenu: document.querySelector('.mobile-menu-container'),
   openMenuBtn: document.querySelector('.open-menu-btn'),

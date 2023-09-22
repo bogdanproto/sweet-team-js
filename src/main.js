@@ -23,12 +23,17 @@ import './js/partials/burger-menu';
 import { onSwitchHeaderListners } from './js/utils/listners/listeners';
 import './js/utils/theme/theme-changer';
 import { stylesAfterReload } from './js/utils/theme/theme-changer';
+import { refs } from './js/refs/refs';
 
 window.addEventListener('DOMContentLoaded', function () {
   if (document.URL.endsWith('favorites.html')) {
+    refs.favoritePage.classList.add('current-page');
+    refs.homePage.classList.remove('current-page');
     loadDataOnFavoritesPage();
     return;
   }
+  refs.favoritePage.classList.remove('current-page');
+  refs.homePage.classList.add('current-page');
   loadDataOnHomePage();
 });
 

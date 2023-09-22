@@ -180,7 +180,7 @@
     padding-bottom: 4px;
   }
 
-  .active-page {
+  .current-page {
     font-weight: 500;
     color: var(--color-green-title-text);
   }
