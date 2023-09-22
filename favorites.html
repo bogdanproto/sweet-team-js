@@ -27,12 +27,33 @@
       crossorigin
     />
     
-    <script type="module" crossorigin src="/sweet-team-js/assets/main-408179e6.js"></script>
-    <link rel="stylesheet" href="/sweet-team-js/assets/main-bb084f1d.css">
+    <link
+      rel="preload"
+      href="/sweet-team-js/assets/inter-regular-1907e8c7.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js/assets/inter-medium-f8bcde4c.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js/assets/inter-semibold-fc5108ef.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    
+    <script type="module" crossorigin src="/sweet-team-js/assets/main-b11e1ddc.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js/assets/main-17ac5e00.css">
   </head>
   <body>
-    <div class="common-container">
-      <header class="header">
+    <header class="header">
   <div class="header-container">
     <ul class="header-pages">
       <li class="header-pages-item home-page">
@@ -106,11 +127,19 @@
 </header>
 
       <main>
-        <section class="favorites-hero container"></section>
+        <section>
+    <div class="favorites-hero container">
+        <div class="favorites-hero-image"></div>
+    </div>
+</section>
 
         <section class="favorites-cards container">
-  <!-- favorites-cards-filter -->
-  <div class="favorites-cards-filter"></div>
+          <div class="favorites-categories-container">
+    <div class="favorites-cards-filter"></div>
+</div>
+
+          
+<div class="favorites-recipes-container">
   <div class="favorites-cards-container"></div>
 
   <div class="favorites-empty-container hidden-empty">
@@ -123,8 +152,9 @@
       easier access in the future.
     </p>
   </div>
-</section>
+</div>
 
+      </section>
       </main>
     </div>
     <section>
