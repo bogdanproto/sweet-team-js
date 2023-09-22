@@ -9,6 +9,27 @@
       content="Explore a treasure trove of culinary delights! From savory main courses to delectable desserts, our food recipe collection has something for every palate. Step into our kitchen and discover easy-to-follow recipes that will make you a home chef extraordinaire. Start cooking and savor the flavors today!"
     />
     <title>Tasty Treats</title>
+    <link
+      rel="preload"
+      href="./fonts/inter-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-medium.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-semibold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -17,6 +38,11 @@
       <load ="./partials/hero.html" />
       <section class="section-main">
         <div class="main-container">
+    <div class="common-container">
+      <load ="./partials/header.html" />
+      <main>
+        <load ="./partials/hero.html" />
+        <section class="section-main">
           <aside class="sidebar">
             <load ="./partials/all-categories.html" />
             <load ="./partials/popular.html" />
@@ -25,9 +51,13 @@
             <load ="./partials/filters.html" />
             <load ="./partials/recipes.html" />
           </div>
+
         </div>
       </section>
     </main>
+        </section>
+      </main>
+    </div>
     <load ="./partials/modal-recipe.html" />
     <load ="./partials/modal-rating.html" />
     <load ="./partials/order-now.html" />
