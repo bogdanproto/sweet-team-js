@@ -1,11 +1,11 @@
 import { getFavRec } from '../localestorage/local-storage-service';
 
 // get from Local Storage favorite recipes and create array of IDs
-const favoriteRecipes = getFavRec();
-const favoriteIds = favoriteRecipes.map(favorite => favorite._id);
 
 // create recipe markup based on favorite recipes info
-function createRecipeMarkup(arr) {
+async function createRecipeMarkup(arr) {
+  const favoriteRecipes = await getFavRec();
+  const favoriteIds = favoriteRecipes.map(favorite => favorite._id);
   return arr
     .map(({ _id, title, category, description, preview, rating }) => {
       const isFavorite = favoriteIds.includes(_id);
