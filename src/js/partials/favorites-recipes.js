@@ -44,8 +44,8 @@ function toRenderFilterBtn(arr) {
   refs.filterFavorites.insertAdjacentHTML('beforeend', buttonList);
 }
 
-function toRenderRecipes(arr) {
-  const recipesList = createRecipeMarkup(arr);
+async function toRenderRecipes(arr) {
+  const recipesList = await createRecipeMarkup(arr);
   refs.recipesContainerFavorites.insertAdjacentHTML('beforeend', recipesList);
   addStarRating(arr);
 }
