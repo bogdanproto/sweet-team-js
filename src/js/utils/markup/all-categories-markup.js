@@ -1,8 +1,8 @@
 export function createAllCategoriesMarkup(array) {
   return array
     .map(
-      ({ _id, name }) =>
-        `<li class="all-categories-item" id=${_id}>${name}</li>`
+      ({ name }) =>
+        `<button class="all-categories-item" aria-label="category ${name}" data-value="${name}">${name}</button>`
     )
     .join('');
 }

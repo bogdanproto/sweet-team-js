@@ -35,10 +35,18 @@
   height: 198px;
   margin-top: 24px;
   overflow-y: scroll;
+  background-color: transparent;
 }
 
 .all-categories-item {
-  padding: 9px 0;
+  display: flex;
+  justify-content: left;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 0;
+  width: 100%;
+  border: none;
+  background-color: transparent;
 
   font-size: 14px;
   line-height: 18px;
@@ -73,8 +81,9 @@
   }
 
   .all-categories-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-size: 16px;
     line-height: 20px;
   }
 }
-
