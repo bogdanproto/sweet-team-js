@@ -30,8 +30,12 @@ function onKitListenerAllCategories() {
 
 // Дає вибрати лише 1 категорію
 function onSelectCategory(evt) {
-  if(evt.target.classList.contains('selected-category')) {
-    return
+  if (evt.target.nodeName !== 'BUTTON') {
+    return;
+  }
+
+  if (evt.target.classList.contains('selected-category')) {
+    return;
   }
   console.log(evt.target.dataset.value);
 
@@ -44,7 +48,6 @@ function onSelectCategory(evt) {
   params.category = nameOfCategory;
   loadRecipes();
 }
-
 
 function resetCategory() {
   params.category = '';
