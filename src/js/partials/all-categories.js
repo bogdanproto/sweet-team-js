@@ -25,8 +25,7 @@ async function loadAllCategories() {
 }
 
 function onKitListenerAllCategories() {
-  refs.allCategoriesList.addEventListener('click', onSelectCategory);
-  refs.allCategoriesBtn.addEventListener('click', onAllCategories);
+  refs.allCategoriesContainer.addEventListener('click', onSelectCategory);
 }
 
 // Дає вибрати лише 1 категорію
@@ -34,28 +33,18 @@ function onSelectCategory(evt) {
   if(evt.target.classList.contains('selected-category')) {
     return
   }
+  console.log(evt.target.dataset.value);
 
   resetCategory();
   clearRecipes();
 
   const nextSelectedCategory = evt.target;
   nextSelectedCategory.classList.add('selected-category');
-  const nameOfCategory = nextSelectedCategory.textContent;
+  const nameOfCategory = nextSelectedCategory.dataset.value;
   params.category = nameOfCategory;
   loadRecipes();
 }
 
-function onAllCategories(evt) {
-  if(evt.target.classList.contains('selected-category')) {
-    return
-  }
-  
-  clearRecipes();
-  resetCategory();
-  loadRecipes();
-  const nextSelectedCategory = evt.target;
-  nextSelectedCategory.classList.add('selected-category');
-}
 
 function resetCategory() {
   params.category = '';

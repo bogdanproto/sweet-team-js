@@ -1,8 +1,8 @@
 export function createAllCategoriesMarkup(array) {
   return array
     .map(
-      ({ _id, name }) =>
-        `<li class="all-categories-item" id=${_id}>${name}</li>`
+      ({ name }) =>
+        `<li class="all-categories-item" data-value=${name}>${name}</li>`
     )
     .join('');
 }
