@@ -31,6 +31,10 @@ function onKitListenerAllCategories() {
 
 // Дає вибрати лише 1 категорію
 function onSelectCategory(evt) {
+  if(evt.target.classList.contains('selected-category')) {
+    return
+  }
+
   resetCategory();
   clearRecipes();
 
@@ -42,6 +46,10 @@ function onSelectCategory(evt) {
 }
 
 function onAllCategories(evt) {
+  if(evt.target.classList.contains('selected-category')) {
+    return
+  }
+  
   clearRecipes();
   resetCategory();
   loadRecipes();
