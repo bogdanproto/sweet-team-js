@@ -2,7 +2,7 @@ export function createAllCategoriesMarkup(array) {
   return array
     .map(
       ({ name }) =>
-        `<button class="all-categories-item" data-value=${name}>${name}</button>`
+        `<button class="all-categories-item" aria-label="category ${name}" data-value="${name}">${name}</button>`
     )
     .join('');
 }
